@@ -72,6 +72,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A55DE6825606BCA00B3A4CA /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3A55DE6925606BFF00B3A4CA /* Entities */,
+				3A55DE6A25606C0700B3A4CA /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3A55DE6925606BFF00B3A4CA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3A55DE6A25606C0700B3A4CA /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		3A55DE6B25606C2000B3A4CA /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		3A55DE6C25606C3300B3A4CA /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
 		3A940866255D9F390090DB55 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +132,9 @@
 		3A940871255D9F390090DB55 /* MyEnglishDiary */ = {
 			isa = PBXGroup;
 			children = (
+				3A55DE6825606BCA00B3A4CA /* Domain */,
+				3A55DE6C25606C3300B3A4CA /* ServiceLayer */,
+				3A55DE6B25606C2000B3A4CA /* PresentationLayer */,
 				3A940872255D9F390090DB55 /* MyEnglishDiaryApp.swift */,
 				3A940874255D9F390090DB55 /* ContentView.swift */,
 				3A940876255D9F390090DB55 /* Assets.xcassets */,
