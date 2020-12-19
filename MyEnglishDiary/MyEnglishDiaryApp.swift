@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct MyEnglishDiaryApp: App {
+
+    let dependencyContainer = DependencyContainer()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
