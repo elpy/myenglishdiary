@@ -136,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				3A55DE6925606BFF00B3A4CA /* Entities */,
+				3AD88CAD258DF4EB002D4B07 /* UseCases */,
 				3AE49E7A256D7A7B00FBD65F /* Abstractions */,
 			);
 			path = Domain;
@@ -147,7 +148,6 @@
 				3AF05DB2258A4EE100E300C3 /* Language */,
 				3AE49E52256D74F000FBD65F /* Search */,
 				3A55DE6D256070A400B3A4CA /* Diary */,
-				3AD88CAD258DF4EB002D4B07 /* UseCases */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
