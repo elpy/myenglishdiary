@@ -8,6 +8,5 @@
 import Foundation
 
 struct Group {
-
     let name: String
 }

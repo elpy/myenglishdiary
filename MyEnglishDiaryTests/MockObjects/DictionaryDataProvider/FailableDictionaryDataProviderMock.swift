@@ -5,9 +5,10 @@
 //  Created by Антон Скворцов on 19.12.2020.
 //
 
-import Foundation
+import XCTest
+@testable import MyEnglishDiary
 
-class FailingDictionaryDataProvider: DictionaryDataProvider {
+final class FailableDictionaryDataProviderMock: DictionaryDataProvider {
 
     func search(for text: String) throws -> [Lexeme] {
         throw DataProviderError.error

@@ -7,8 +7,33 @@
 
 import Foundation
 
-protocol MakeNoteUseCase {
+final class MakeNoteUseCase: UseCase {
 
-    init(from lexeme: Lexeme)
-    func execute(completion handler: (Result<Note, Error>) -> Void)
+    private let note: Note
+    private let diaryDataProvider: DiaryDataProvider
+
+    init(from lexeme: Lexeme, _ diaryDataProvider: DiaryDataProvider) {
+        let note = Note(
+            group: nil,
+            date: Date(),
+            language: lexeme.language,
+            lexeme: lexeme.lexeme,
+            partOfSpeech: lexeme.partOfSpeech,
+            transcription: lexeme.transcription,
+            meanings: lexeme.meanings,
+            tags: []
+        )
+
+        self.note = note
+        self.diaryDataProvider = diaryDataProvider
+    }
+
+    func execute(_ completion: (Result<Void, Error>) -> Void) {
+        do {
+            try diaryDataProvider.addNewNote(note)
+            completion(.success(()))
+        } catch {
+            completion(.failure(error))
+        }
+    }
 }

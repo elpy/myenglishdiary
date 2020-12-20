@@ -8,7 +8,6 @@
 import Foundation
 
 struct Note {
-
     let group: Group?
     let date: Date
     let language: Language
@@ -16,6 +15,5 @@ struct Note {
     let partOfSpeech: PartOfSpeech?
     let transcription: String?
     let meanings: [Meaning]
-    // TODO: replace String type with real Tag type
-    let tags: [String]
+    let tags: [Tag]
 }

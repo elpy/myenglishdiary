@@ -1,13 +1,13 @@
 //
-//  TestDictionaryDataProvider.swift
-//  MyEnglishDiaryTests
+//  DevelopmentDictionaryDataProvider.swift
+//  MyEnglishDiary
 //
-//  Created by Антон Скворцов on 19.12.2020.
+//  Created by Антон Скворцов on 20.12.2020.
 //
 
 import Foundation
 
-class TestDictionaryDataProvider: DictionaryDataProvider {
+final class DevelopmentDictionaryDataProvider: DictionaryDataProvider {
 
     let searchResult = [
         Lexeme(

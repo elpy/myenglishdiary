@@ -7,58 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A469CF2258F6D55003561AE /* FailableSearchUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469CF1258F6D55003561AE /* FailableSearchUseCaseTest.swift */; };
+		3A469CFD258F6F15003561AE /* DiaryDataProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469CFC258F6F14003561AE /* DiaryDataProviderMock.swift */; };
+		3A469D02258F7515003561AE /* FailableDiaryDataProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D01258F7515003561AE /* FailableDiaryDataProviderMock.swift */; };
+		3A469D07258F7889003561AE /* FailableMakeNoteUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D06258F7889003561AE /* FailableMakeNoteUseCaseTest.swift */; };
+		3A469D0F258F79C5003561AE /* MakeGroupUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D0E258F79C5003561AE /* MakeGroupUseCaseTest.swift */; };
+		3A469D14258F7A40003561AE /* FailableMakeGroupUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D13258F7A40003561AE /* FailableMakeGroupUseCaseTest.swift */; };
+		3A469D1C258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D1B258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift */; };
 		3A548691258BAC9E000EF8B0 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A548690258BAC9E000EF8B0 /* UseCase.swift */; };
 		3A5AE23625841C4B00C5DB17 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE23525841C4B00C5DB17 /* DependencyContainer.swift */; };
 		3A940873255D9F390090DB55 /* MyEnglishDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A940872255D9F390090DB55 /* MyEnglishDiaryApp.swift */; };
 		3A940875255D9F390090DB55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A940874255D9F390090DB55 /* ContentView.swift */; };
 		3A940877255D9F390090DB55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A940876255D9F390090DB55 /* Assets.xcassets */; };
 		3A94087A255D9F390090DB55 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A940879255D9F390090DB55 /* Preview Assets.xcassets */; };
-		3A940885255D9F390090DB55 /* MyEnglishDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A940884255D9F390090DB55 /* MyEnglishDiaryTests.swift */; };
 		3A940890255D9F3A0090DB55 /* MyEnglishDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A94088F255D9F3A0090DB55 /* MyEnglishDiaryUITests.swift */; };
 		3AD88C9A258DED7B002D4B07 /* DictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88C99258DED7B002D4B07 /* DictionaryDataProvider.swift */; };
-		3AD88CA0258DEE4C002D4B07 /* TestDictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88C9F258DEE4C002D4B07 /* TestDictionaryDataProvider.swift */; };
 		3AD88CB4258DF8A0002D4B07 /* SearchUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88CB3258DF8A0002D4B07 /* SearchUseCaseTest.swift */; };
-		3AD88CC9258E0058002D4B07 /* TestDictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88C9F258DEE4C002D4B07 /* TestDictionaryDataProvider.swift */; };
-		3AD88CCD258E008A002D4B07 /* TestDictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88C9F258DEE4C002D4B07 /* TestDictionaryDataProvider.swift */; };
-		3AD88CD2258E00C7002D4B07 /* FailingDictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88CD1258E00C7002D4B07 /* FailingDictionaryDataProvider.swift */; };
-		3AD88CD6258E010F002D4B07 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A548690258BAC9E000EF8B0 /* UseCase.swift */; };
-		3AD88CDA258E010F002D4B07 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A548690258BAC9E000EF8B0 /* UseCase.swift */; };
-		3AD88CDE258E0112002D4B07 /* DictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88C99258DED7B002D4B07 /* DictionaryDataProvider.swift */; };
-		3AD88CE2258E0112002D4B07 /* DictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88C99258DED7B002D4B07 /* DictionaryDataProvider.swift */; };
-		3AD88CE6258E0116002D4B07 /* MakeNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E65256D765D00FBD65F /* MakeNoteUseCase.swift */; };
-		3AD88CEA258E0117002D4B07 /* MakeNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E65256D765D00FBD65F /* MakeNoteUseCase.swift */; };
-		3AD88CEE258E0119002D4B07 /* AddGroupUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E6A256D76DC00FBD65F /* AddGroupUseCase.swift */; };
-		3AD88CF2258E011A002D4B07 /* AddGroupUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E6A256D76DC00FBD65F /* AddGroupUseCase.swift */; };
-		3AD88CF6258E011D002D4B07 /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E60256D762400FBD65F /* SearchUseCase.swift */; };
-		3AD88CFA258E011D002D4B07 /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E60256D762400FBD65F /* SearchUseCase.swift */; };
-		3AD88CFE258E013C002D4B07 /* DictionarySearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E53256D759A00FBD65F /* DictionarySearchResult.swift */; };
-		3AD88D02258E013D002D4B07 /* DictionarySearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E53256D759A00FBD65F /* DictionarySearchResult.swift */; };
-		3AD88D06258E0144002D4B07 /* Lexeme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DB3258A4EF300E300C3 /* Lexeme.swift */; };
-		3AD88D0A258E0144002D4B07 /* Lexeme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DB3258A4EF300E300C3 /* Lexeme.swift */; };
-		3AD88D0E258E0147002D4B07 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DC0258A4F5100E300C3 /* Meaning.swift */; };
-		3AD88D12258E0147002D4B07 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DC0258A4F5100E300C3 /* Meaning.swift */; };
-		3AD88D16258E014C002D4B07 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DC5258A4FD800E300C3 /* Example.swift */; };
-		3AD88D1A258E014C002D4B07 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DC5258A4FD800E300C3 /* Example.swift */; };
-		3AD88D1E258E014F002D4B07 /* PartOfSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DCA258A532F00E300C3 /* PartOfSpeech.swift */; };
-		3AD88D22258E014F002D4B07 /* PartOfSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DCA258A532F00E300C3 /* PartOfSpeech.swift */; };
-		3AD88D26258E0152002D4B07 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DCF258A535A00E300C3 /* Language.swift */; };
-		3AD88D2A258E0152002D4B07 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DCF258A535A00E300C3 /* Language.swift */; };
-		3AD88D2E258E0157002D4B07 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E44256D745A00FBD65F /* Note.swift */; };
-		3AD88D32258E0157002D4B07 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E44256D745A00FBD65F /* Note.swift */; };
-		3AD88D36258E015A002D4B07 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E4A256D747D00FBD65F /* Group.swift */; };
-		3AD88D3A258E015A002D4B07 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E4A256D747D00FBD65F /* Group.swift */; };
-		3AD88D3E258E015D002D4B07 /* SelectNotesToStudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E75256D777300FBD65F /* SelectNotesToStudy.swift */; };
-		3AD88D42258E015D002D4B07 /* SelectNotesToStudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E75256D777300FBD65F /* SelectNotesToStudy.swift */; };
+		3AD88CC9258E0058002D4B07 /* DictionaryDataProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88C9F258DEE4C002D4B07 /* DictionaryDataProviderMock.swift */; };
+		3AD88CD2258E00C7002D4B07 /* FailableDictionaryDataProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88CD1258E00C7002D4B07 /* FailableDictionaryDataProviderMock.swift */; };
 		3AD88D56258E024C002D4B07 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88D55258E024C002D4B07 /* DataProvider.swift */; };
-		3AD88D5D258E0253002D4B07 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88D55258E024C002D4B07 /* DataProvider.swift */; };
-		3AD88D61258E0253002D4B07 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88D55258E024C002D4B07 /* DataProvider.swift */; };
+		3AD88D66258E0C83002D4B07 /* DiaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88D65258E0C83002D4B07 /* DiaryDataProvider.swift */; };
+		3AD88D77258E1325002D4B07 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88D76258E1325002D4B07 /* Tag.swift */; };
+		3AD88D82258E1671002D4B07 /* MarkNoteWithTagUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88D81258E1671002D4B07 /* MarkNoteWithTagUseCase.swift */; };
 		3AE49E45256D745A00FBD65F /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E44256D745A00FBD65F /* Note.swift */; };
 		3AE49E4B256D747D00FBD65F /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E4A256D747D00FBD65F /* Group.swift */; };
 		3AE49E54256D759A00FBD65F /* DictionarySearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E53256D759A00FBD65F /* DictionarySearchResult.swift */; };
 		3AE49E61256D762400FBD65F /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E60256D762400FBD65F /* SearchUseCase.swift */; };
 		3AE49E66256D765D00FBD65F /* MakeNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E65256D765D00FBD65F /* MakeNoteUseCase.swift */; };
-		3AE49E6B256D76DC00FBD65F /* AddGroupUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E6A256D76DC00FBD65F /* AddGroupUseCase.swift */; };
+		3AE49E6B256D76DC00FBD65F /* MakeGroupUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E6A256D76DC00FBD65F /* MakeGroupUseCase.swift */; };
 		3AE49E76256D777300FBD65F /* SelectNotesToStudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E75256D777300FBD65F /* SelectNotesToStudy.swift */; };
+		3AED4203258E72ED0068C294 /* MakeNoteUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AED4202258E72ED0068C294 /* MakeNoteUseCaseTest.swift */; };
+		3AED4209258E792C0068C294 /* DevelopmentDictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AED4208258E792C0068C294 /* DevelopmentDictionaryDataProvider.swift */; };
 		3AF05DB4258A4EF300E300C3 /* Lexeme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DB3258A4EF300E300C3 /* Lexeme.swift */; };
 		3AF05DC1258A4F5100E300C3 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DC0258A4F5100E300C3 /* Meaning.swift */; };
 		3AF05DC6258A4FD800E300C3 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DC5258A4FD800E300C3 /* Example.swift */; };
@@ -84,6 +63,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A469CF1258F6D55003561AE /* FailableSearchUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableSearchUseCaseTest.swift; sourceTree = "<group>"; };
+		3A469CFC258F6F14003561AE /* DiaryDataProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDataProviderMock.swift; sourceTree = "<group>"; };
+		3A469D01258F7515003561AE /* FailableDiaryDataProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableDiaryDataProviderMock.swift; sourceTree = "<group>"; };
+		3A469D06258F7889003561AE /* FailableMakeNoteUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableMakeNoteUseCaseTest.swift; sourceTree = "<group>"; };
+		3A469D0E258F79C5003561AE /* MakeGroupUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeGroupUseCaseTest.swift; sourceTree = "<group>"; };
+		3A469D13258F7A40003561AE /* FailableMakeGroupUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableMakeGroupUseCaseTest.swift; sourceTree = "<group>"; };
+		3A469D1B258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkNoteWithTagUseCaseTest.swift; sourceTree = "<group>"; };
 		3A548690258BAC9E000EF8B0 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		3A5AE23525841C4B00C5DB17 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		3A94086F255D9F390090DB55 /* MyEnglishDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyEnglishDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,23 +79,27 @@
 		3A940879255D9F390090DB55 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3A94087B255D9F390090DB55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A940880255D9F390090DB55 /* MyEnglishDiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyEnglishDiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A940884255D9F390090DB55 /* MyEnglishDiaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEnglishDiaryTests.swift; sourceTree = "<group>"; };
 		3A940886255D9F390090DB55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A94088B255D9F3A0090DB55 /* MyEnglishDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyEnglishDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A94088F255D9F3A0090DB55 /* MyEnglishDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEnglishDiaryUITests.swift; sourceTree = "<group>"; };
 		3A940891255D9F3A0090DB55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AD88C99258DED7B002D4B07 /* DictionaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDataProvider.swift; sourceTree = "<group>"; };
-		3AD88C9F258DEE4C002D4B07 /* TestDictionaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDictionaryDataProvider.swift; sourceTree = "<group>"; };
+		3AD88C9F258DEE4C002D4B07 /* DictionaryDataProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDataProviderMock.swift; sourceTree = "<group>"; };
 		3AD88CB3258DF8A0002D4B07 /* SearchUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCaseTest.swift; sourceTree = "<group>"; };
-		3AD88CD1258E00C7002D4B07 /* FailingDictionaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailingDictionaryDataProvider.swift; sourceTree = "<group>"; };
+		3AD88CD1258E00C7002D4B07 /* FailableDictionaryDataProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableDictionaryDataProviderMock.swift; sourceTree = "<group>"; };
 		3AD88D55258E024C002D4B07 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		3AD88D65258E0C83002D4B07 /* DiaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDataProvider.swift; sourceTree = "<group>"; };
+		3AD88D76258E1325002D4B07 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		3AD88D81258E1671002D4B07 /* MarkNoteWithTagUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkNoteWithTagUseCase.swift; sourceTree = "<group>"; };
 		3AE49E44256D745A00FBD65F /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		3AE49E4A256D747D00FBD65F /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		3AE49E53256D759A00FBD65F /* DictionarySearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionarySearchResult.swift; sourceTree = "<group>"; };
 		3AE49E60256D762400FBD65F /* SearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
 		3AE49E65256D765D00FBD65F /* MakeNoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNoteUseCase.swift; sourceTree = "<group>"; };
-		3AE49E6A256D76DC00FBD65F /* AddGroupUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGroupUseCase.swift; sourceTree = "<group>"; };
+		3AE49E6A256D76DC00FBD65F /* MakeGroupUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeGroupUseCase.swift; sourceTree = "<group>"; };
 		3AE49E75256D777300FBD65F /* SelectNotesToStudy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNotesToStudy.swift; sourceTree = "<group>"; };
+		3AED4202258E72ED0068C294 /* MakeNoteUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNoteUseCaseTest.swift; sourceTree = "<group>"; };
+		3AED4208258E792C0068C294 /* DevelopmentDictionaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentDictionaryDataProvider.swift; sourceTree = "<group>"; };
 		3AF05DB3258A4EF300E300C3 /* Lexeme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lexeme.swift; sourceTree = "<group>"; };
 		3AF05DC0258A4F5100E300C3 /* Meaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
 		3AF05DC5258A4FD800E300C3 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
@@ -181,6 +171,7 @@
 			children = (
 				3AE49E44256D745A00FBD65F /* Note.swift */,
 				3AE49E4A256D747D00FBD65F /* Group.swift */,
+				3AD88D76258E1325002D4B07 /* Tag.swift */,
 				3AE49E75256D777300FBD65F /* SelectNotesToStudy.swift */,
 			);
 			path = Diary;
@@ -197,8 +188,27 @@
 		3A5AE21B2584168100C5DB17 /* DictionaryDataProvider */ = {
 			isa = PBXGroup;
 			children = (
+				3AED4207258E78F90068C294 /* DevelopmentDictionaryDataProvider */,
 			);
 			path = DictionaryDataProvider;
+			sourceTree = "<group>";
+		};
+		3A5D4590258F69EA00EB0533 /* DictionaryDataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				3AD88C9F258DEE4C002D4B07 /* DictionaryDataProviderMock.swift */,
+				3AD88CD1258E00C7002D4B07 /* FailableDictionaryDataProviderMock.swift */,
+			);
+			path = DictionaryDataProvider;
+			sourceTree = "<group>";
+		};
+		3A5D4591258F6A0500EB0533 /* DiaryDataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				3A469CFC258F6F14003561AE /* DiaryDataProviderMock.swift */,
+				3A469D01258F7515003561AE /* FailableDiaryDataProviderMock.swift */,
+			);
+			path = DiaryDataProvider;
 			sourceTree = "<group>";
 		};
 		3A940866255D9F390090DB55 = {
@@ -251,7 +261,6 @@
 			children = (
 				3AD88CB1258DF84C002D4B07 /* Domain */,
 				3AD88CC5258DFFFA002D4B07 /* MockObjects */,
-				3A940884255D9F390090DB55 /* MyEnglishDiaryTests.swift */,
 				3A940886255D9F390090DB55 /* Info.plist */,
 			);
 			path = MyEnglishDiaryTests;
@@ -270,8 +279,9 @@
 			isa = PBXGroup;
 			children = (
 				3AE49E60256D762400FBD65F /* SearchUseCase.swift */,
-				3AE49E6A256D76DC00FBD65F /* AddGroupUseCase.swift */,
 				3AE49E65256D765D00FBD65F /* MakeNoteUseCase.swift */,
+				3AE49E6A256D76DC00FBD65F /* MakeGroupUseCase.swift */,
+				3AD88D81258E1671002D4B07 /* MarkNoteWithTagUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -288,6 +298,12 @@
 			isa = PBXGroup;
 			children = (
 				3AD88CB3258DF8A0002D4B07 /* SearchUseCaseTest.swift */,
+				3AED4202258E72ED0068C294 /* MakeNoteUseCaseTest.swift */,
+				3A469D0E258F79C5003561AE /* MakeGroupUseCaseTest.swift */,
+				3A469D1B258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift */,
+				3A469CF1258F6D55003561AE /* FailableSearchUseCaseTest.swift */,
+				3A469D06258F7889003561AE /* FailableMakeNoteUseCaseTest.swift */,
+				3A469D13258F7A40003561AE /* FailableMakeGroupUseCaseTest.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -295,8 +311,8 @@
 		3AD88CC5258DFFFA002D4B07 /* MockObjects */ = {
 			isa = PBXGroup;
 			children = (
-				3AD88C9F258DEE4C002D4B07 /* TestDictionaryDataProvider.swift */,
-				3AD88CD1258E00C7002D4B07 /* FailingDictionaryDataProvider.swift */,
+				3A5D4590258F69EA00EB0533 /* DictionaryDataProvider */,
+				3A5D4591258F6A0500EB0533 /* DiaryDataProvider */,
 			);
 			path = MockObjects;
 			sourceTree = "<group>";
@@ -315,8 +331,17 @@
 				3A548690258BAC9E000EF8B0 /* UseCase.swift */,
 				3AD88D55258E024C002D4B07 /* DataProvider.swift */,
 				3AD88C99258DED7B002D4B07 /* DictionaryDataProvider.swift */,
+				3AD88D65258E0C83002D4B07 /* DiaryDataProvider.swift */,
 			);
 			path = Abstractions;
+			sourceTree = "<group>";
+		};
+		3AED4207258E78F90068C294 /* DevelopmentDictionaryDataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				3AED4208258E792C0068C294 /* DevelopmentDictionaryDataProvider.swift */,
+			);
+			path = DevelopmentDictionaryDataProvider;
 			sourceTree = "<group>";
 		};
 		3AF05DB2258A4EE100E300C3 /* Language */ = {
@@ -489,17 +514,20 @@
 				3AE49E61256D762400FBD65F /* SearchUseCase.swift in Sources */,
 				3A940875255D9F390090DB55 /* ContentView.swift in Sources */,
 				3A940873255D9F390090DB55 /* MyEnglishDiaryApp.swift in Sources */,
-				3AE49E6B256D76DC00FBD65F /* AddGroupUseCase.swift in Sources */,
+				3AD88D77258E1325002D4B07 /* Tag.swift in Sources */,
+				3AED4209258E792C0068C294 /* DevelopmentDictionaryDataProvider.swift in Sources */,
+				3AE49E6B256D76DC00FBD65F /* MakeGroupUseCase.swift in Sources */,
+				3AD88D66258E0C83002D4B07 /* DiaryDataProvider.swift in Sources */,
 				3AF05DB4258A4EF300E300C3 /* Lexeme.swift in Sources */,
 				3AF05DC6258A4FD800E300C3 /* Example.swift in Sources */,
 				3A548691258BAC9E000EF8B0 /* UseCase.swift in Sources */,
 				3AD88D56258E024C002D4B07 /* DataProvider.swift in Sources */,
 				3AE49E54256D759A00FBD65F /* DictionarySearchResult.swift in Sources */,
+				3AD88D82258E1671002D4B07 /* MarkNoteWithTagUseCase.swift in Sources */,
 				3AE49E66256D765D00FBD65F /* MakeNoteUseCase.swift in Sources */,
 				3AE49E45256D745A00FBD65F /* Note.swift in Sources */,
 				3AF05DCB258A532F00E300C3 /* PartOfSpeech.swift in Sources */,
 				3AE49E76256D777300FBD65F /* SelectNotesToStudy.swift in Sources */,
-				3AD88CA0258DEE4C002D4B07 /* TestDictionaryDataProvider.swift in Sources */,
 				3AE49E4B256D747D00FBD65F /* Group.swift in Sources */,
 				3AF05DC1258A4F5100E300C3 /* Meaning.swift in Sources */,
 				3A5AE23625841C4B00C5DB17 /* DependencyContainer.swift in Sources */,
@@ -512,25 +540,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AD88CD6258E010F002D4B07 /* UseCase.swift in Sources */,
-				3AD88D3A258E015A002D4B07 /* Group.swift in Sources */,
-				3A940885255D9F390090DB55 /* MyEnglishDiaryTests.swift in Sources */,
-				3AD88D06258E0144002D4B07 /* Lexeme.swift in Sources */,
-				3AD88D16258E014C002D4B07 /* Example.swift in Sources */,
-				3AD88CFE258E013C002D4B07 /* DictionarySearchResult.swift in Sources */,
-				3AD88D1E258E014F002D4B07 /* PartOfSpeech.swift in Sources */,
-				3AD88D61258E0253002D4B07 /* DataProvider.swift in Sources */,
-				3AD88D2A258E0152002D4B07 /* Language.swift in Sources */,
-				3AD88CC9258E0058002D4B07 /* TestDictionaryDataProvider.swift in Sources */,
+				3AED4203258E72ED0068C294 /* MakeNoteUseCaseTest.swift in Sources */,
+				3AD88CC9258E0058002D4B07 /* DictionaryDataProviderMock.swift in Sources */,
+				3A469D0F258F79C5003561AE /* MakeGroupUseCaseTest.swift in Sources */,
+				3A469D07258F7889003561AE /* FailableMakeNoteUseCaseTest.swift in Sources */,
 				3AD88CB4258DF8A0002D4B07 /* SearchUseCaseTest.swift in Sources */,
-				3AD88D42258E015D002D4B07 /* SelectNotesToStudy.swift in Sources */,
-				3AD88CE6258E0116002D4B07 /* MakeNoteUseCase.swift in Sources */,
-				3AD88CDE258E0112002D4B07 /* DictionaryDataProvider.swift in Sources */,
-				3AD88D32258E0157002D4B07 /* Note.swift in Sources */,
-				3AD88CD2258E00C7002D4B07 /* FailingDictionaryDataProvider.swift in Sources */,
-				3AD88CEE258E0119002D4B07 /* AddGroupUseCase.swift in Sources */,
-				3AD88CF6258E011D002D4B07 /* SearchUseCase.swift in Sources */,
-				3AD88D0E258E0147002D4B07 /* Meaning.swift in Sources */,
+				3AD88CD2258E00C7002D4B07 /* FailableDictionaryDataProviderMock.swift in Sources */,
+				3A469CF2258F6D55003561AE /* FailableSearchUseCaseTest.swift in Sources */,
+				3A469D02258F7515003561AE /* FailableDiaryDataProviderMock.swift in Sources */,
+				3A469CFD258F6F15003561AE /* DiaryDataProviderMock.swift in Sources */,
+				3A469D1C258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift in Sources */,
+				3A469D14258F7A40003561AE /* FailableMakeGroupUseCaseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,22 +558,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AD88CFA258E011D002D4B07 /* SearchUseCase.swift in Sources */,
-				3AD88D22258E014F002D4B07 /* PartOfSpeech.swift in Sources */,
-				3AD88CDA258E010F002D4B07 /* UseCase.swift in Sources */,
-				3AD88D36258E015A002D4B07 /* Group.swift in Sources */,
-				3AD88D02258E013D002D4B07 /* DictionarySearchResult.swift in Sources */,
-				3AD88CF2258E011A002D4B07 /* AddGroupUseCase.swift in Sources */,
-				3AD88CCD258E008A002D4B07 /* TestDictionaryDataProvider.swift in Sources */,
-				3AD88D12258E0147002D4B07 /* Meaning.swift in Sources */,
-				3AD88D3E258E015D002D4B07 /* SelectNotesToStudy.swift in Sources */,
-				3AD88D1A258E014C002D4B07 /* Example.swift in Sources */,
-				3AD88D26258E0152002D4B07 /* Language.swift in Sources */,
-				3AD88D2E258E0157002D4B07 /* Note.swift in Sources */,
-				3AD88D0A258E0144002D4B07 /* Lexeme.swift in Sources */,
-				3AD88D5D258E0253002D4B07 /* DataProvider.swift in Sources */,
-				3AD88CE2258E0112002D4B07 /* DictionaryDataProvider.swift in Sources */,
-				3AD88CEA258E0117002D4B07 /* MakeNoteUseCase.swift in Sources */,
 				3A940890255D9F3A0090DB55 /* MyEnglishDiaryUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

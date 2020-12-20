@@ -8,7 +8,6 @@
 import Foundation
 
 struct Meaning {
-
     let meaning: String
     let lexemesWithSimilarMeaning: [String]
     let examples: [Example]
