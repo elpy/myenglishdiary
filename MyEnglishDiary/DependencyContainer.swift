@@ -8,9 +8,14 @@
 import Foundation
 
 class DependencyContainer {
+    static let shared = DependencyContainer()
+    private var dictionaryDataProvider: DictionaryDataProvider = DevelopmentDictionaryDataProvider()
 
     init() {
 
     }
 
+    func makeSearchUseCase(for text: String) -> SearchUseCase {
+        return SearchUseCase(for: text, dictionaryDataProvider)
+    }
 }

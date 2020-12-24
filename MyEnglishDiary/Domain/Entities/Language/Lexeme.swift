@@ -15,6 +15,12 @@ struct Lexeme {
     let meanings: [Meaning]
 }
 
+extension Lexeme: Identifiable {
+    var id: String {
+        return "\(lexeme)_\(partOfSpeech?.rawValue ?? "")"
+    }
+}
+
 extension Lexeme: Equatable {
     static func == (lhs: Lexeme, rhs: Lexeme) -> Bool {
         return lhs.lexeme == rhs.lexeme && lhs.partOfSpeech == rhs.partOfSpeech

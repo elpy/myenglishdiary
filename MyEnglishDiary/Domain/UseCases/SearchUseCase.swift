@@ -18,6 +18,11 @@ final class SearchUseCase: UseCase {
     }
 
     func execute(_ completion: (Result<DictionarySearchResult, Error>) -> Void) {
+        if text.isEmpty {
+            completion(.success([]))
+            return
+        }
+
         do {
             let lexemes = try dictionaryDataProvider.search(for: text)
             completion(.success(lexemes))

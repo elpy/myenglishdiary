@@ -8,7 +8,6 @@
 import Foundation
 
 final class DevelopmentDictionaryDataProvider: DictionaryDataProvider {
-
     let searchResult = [
         Lexeme(
             language: Language.ENG,
