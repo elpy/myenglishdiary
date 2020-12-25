@@ -16,6 +16,7 @@
 		3A469D1C258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D1B258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift */; };
 		3A548691258BAC9E000EF8B0 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A548690258BAC9E000EF8B0 /* UseCase.swift */; };
 		3A5AE23625841C4B00C5DB17 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE23525841C4B00C5DB17 /* DependencyContainer.swift */; };
+		3A646808259642F500D83F03 /* SearchResultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A646807259642F500D83F03 /* SearchResultCard.swift */; };
 		3A940873255D9F390090DB55 /* MyEnglishDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A940872255D9F390090DB55 /* MyEnglishDiaryApp.swift */; };
 		3A940875255D9F390090DB55 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A940874255D9F390090DB55 /* RootView.swift */; };
 		3A940877255D9F390090DB55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A940876255D9F390090DB55 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		3A469D1B258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkNoteWithTagUseCaseTest.swift; sourceTree = "<group>"; };
 		3A548690258BAC9E000EF8B0 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		3A5AE23525841C4B00C5DB17 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		3A646807259642F500D83F03 /* SearchResultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCard.swift; sourceTree = "<group>"; };
 		3A94086F255D9F390090DB55 /* MyEnglishDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyEnglishDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A940872255D9F390090DB55 /* MyEnglishDiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEnglishDiaryApp.swift; sourceTree = "<group>"; };
 		3A940874255D9F390090DB55 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				3ADB17A9258F9353004B0A80 /* SearchView.swift */,
+				3A646807259642F500D83F03 /* SearchResultCard.swift */,
 				3ADABD222594E380003DF039 /* SearchViewModel.swift */,
 			);
 			path = SearchView;
@@ -570,6 +573,7 @@
 				3AED4209258E792C0068C294 /* DevelopmentDictionaryDataProvider.swift in Sources */,
 				3AE49E6B256D76DC00FBD65F /* MakeGroupUseCase.swift in Sources */,
 				3AD88D66258E0C83002D4B07 /* DiaryDataProvider.swift in Sources */,
+				3A646808259642F500D83F03 /* SearchResultCard.swift in Sources */,
 				3AF05DB4258A4EF300E300C3 /* Lexeme.swift in Sources */,
 				3AF05DC6258A4FD800E300C3 /* Example.swift in Sources */,
 				3A548691258BAC9E000EF8B0 /* UseCase.swift in Sources */,

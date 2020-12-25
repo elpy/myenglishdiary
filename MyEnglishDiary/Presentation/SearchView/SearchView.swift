@@ -13,8 +13,8 @@ struct SearchView: View {
     var body: some View {
         VStack {
             SearchInput(text: $viewModel.text, placeholder: "Поиск")
-            List(viewModel.searchResult) { entry in
-                Text("\(entry.lexeme) \(entry.partOfSpeech?.rawValue ?? "")")
+            List(viewModel.searchResult) { result in
+                SearchResultCard(result: result)
             }
         }
     }

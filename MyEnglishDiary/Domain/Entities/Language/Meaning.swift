@@ -12,3 +12,9 @@ struct Meaning {
     let lexemesWithSimilarMeaning: [String]
     let examples: [Example]
 }
+
+extension Array where Element == Meaning {
+    func asString() -> String {
+        return self.map { $0.meaning }.joined(separator: ", ")
+    }
+}
