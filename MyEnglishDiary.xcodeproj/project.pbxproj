@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A2C599B25A6C9700068FC28 /* LexemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C599A25A6C9700068FC28 /* LexemeView.swift */; };
+		3A2C59A925A6D90E0068FC28 /* TitleLexemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C59A825A6D90E0068FC28 /* TitleLexemeView.swift */; };
+		3A2C59AE25A6DA400068FC28 /* MeaningsLexemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C59AD25A6DA3F0068FC28 /* MeaningsLexemeView.swift */; };
 		3A469CF2258F6D55003561AE /* FailableSearchUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469CF1258F6D55003561AE /* FailableSearchUseCaseTest.swift */; };
 		3A469CFD258F6F15003561AE /* DiaryDataProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469CFC258F6F14003561AE /* DiaryDataProviderMock.swift */; };
 		3A469D02258F7515003561AE /* FailableDiaryDataProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D01258F7515003561AE /* FailableDiaryDataProviderMock.swift */; };
@@ -68,6 +71,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A2C599A25A6C9700068FC28 /* LexemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexemeView.swift; sourceTree = "<group>"; };
+		3A2C59A825A6D90E0068FC28 /* TitleLexemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLexemeView.swift; sourceTree = "<group>"; };
+		3A2C59AD25A6DA3F0068FC28 /* MeaningsLexemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningsLexemeView.swift; sourceTree = "<group>"; };
 		3A469CF1258F6D55003561AE /* FailableSearchUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableSearchUseCaseTest.swift; sourceTree = "<group>"; };
 		3A469CFC258F6F14003561AE /* DiaryDataProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDataProviderMock.swift; sourceTree = "<group>"; };
 		3A469D01258F7515003561AE /* FailableDiaryDataProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableDiaryDataProviderMock.swift; sourceTree = "<group>"; };
@@ -142,6 +148,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A2C599925A6C9460068FC28 /* LexemeView */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C599A25A6C9700068FC28 /* LexemeView.swift */,
+				3A2C59A825A6D90E0068FC28 /* TitleLexemeView.swift */,
+				3A2C59AD25A6DA3F0068FC28 /* MeaningsLexemeView.swift */,
+			);
+			path = LexemeView;
+			sourceTree = "<group>";
+		};
 		3A469D23258F91A1003561AE /* RootView */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +191,7 @@
 			children = (
 				3A469D23258F91A1003561AE /* RootView */,
 				3ADB17A7258F9300004B0A80 /* SearchView */,
+				3A2C599925A6C9460068FC28 /* LexemeView */,
 				3ADB17A8258F9326004B0A80 /* DiaryView */,
 				3ADABD272594E621003DF039 /* Library */,
 			);
@@ -570,12 +587,15 @@
 				3A940875255D9F390090DB55 /* RootView.swift in Sources */,
 				3A940873255D9F390090DB55 /* MyEnglishDiaryApp.swift in Sources */,
 				3AD88D77258E1325002D4B07 /* Tag.swift in Sources */,
+				3A2C59AE25A6DA400068FC28 /* MeaningsLexemeView.swift in Sources */,
 				3AED4209258E792C0068C294 /* DevelopmentDictionaryDataProvider.swift in Sources */,
 				3AE49E6B256D76DC00FBD65F /* MakeGroupUseCase.swift in Sources */,
 				3AD88D66258E0C83002D4B07 /* DiaryDataProvider.swift in Sources */,
 				3A646808259642F500D83F03 /* SearchResultCard.swift in Sources */,
 				3AF05DB4258A4EF300E300C3 /* Lexeme.swift in Sources */,
+				3A2C599B25A6C9700068FC28 /* LexemeView.swift in Sources */,
 				3AF05DC6258A4FD800E300C3 /* Example.swift in Sources */,
+				3A2C59A925A6D90E0068FC28 /* TitleLexemeView.swift in Sources */,
 				3A548691258BAC9E000EF8B0 /* UseCase.swift in Sources */,
 				3AD88D56258E024C002D4B07 /* DataProvider.swift in Sources */,
 				3AE49E54256D759A00FBD65F /* DictionarySearchResult.swift in Sources */,
