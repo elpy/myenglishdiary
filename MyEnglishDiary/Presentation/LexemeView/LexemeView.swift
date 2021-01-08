@@ -25,12 +25,12 @@ struct LexemeView_Previews: PreviewProvider {
     static var previews: some View {
         LexemeView(lexeme: Lexeme(
             language: Language.ENG,
-            lexeme: "lounge",
+            text: "lounge",
             partOfSpeech: PartOfSpeech.VERB,
             transcription: "laʊnʤ",
             meanings: [
                 Meaning(
-                    meaning: "бездельничать",
+                    text: "бездельничать",
                     lexemesWithSimilarMeaning: ["sit"],
                     examples: []
                 )

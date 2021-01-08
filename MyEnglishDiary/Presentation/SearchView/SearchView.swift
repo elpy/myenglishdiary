@@ -16,14 +16,14 @@ struct SearchView: View {
             SearchInput(text: $viewModel.text, placeholder: "Поиск")
 
             List(viewModel.searchResult) { result in
-                SearchResultCard(result: result)
+                SearchResultCard(lexeme: result)
                     .onTapGesture {
                         self.lastPressedCard = result
                     }
             }
-            .sheet(item: $lastPressedCard) { lexeme in
+            .sheet(item: $lastPressedCard) { result in
                 NavigationView {
-                    LexemeView(lexeme: lexeme)
+                    LexemeView(lexeme: result)
                         .navigationBarItems(trailing: Button("Добавить в дневник", action: {}))
                         .navigationBarTitleDisplayMode(.inline)
                 }

@@ -8,6 +8,6 @@
 import Foundation
 
 struct Example {
-    let example: String
+    let text: String
     let meaning: String
 }

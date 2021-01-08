@@ -11,46 +11,46 @@ final class DevelopmentDictionaryDataProvider: DictionaryDataProvider {
     let searchResult = [
         Lexeme(
             language: Language.ENG,
-            lexeme: "lounge",
+            text: "lounge",
             partOfSpeech: PartOfSpeech.NOUN,
             transcription: "laʊnʤ",
             meanings: [
                 Meaning(
-                    meaning: "гостиная",
+                    text: "гостиная",
                     lexemesWithSimilarMeaning: ["hall", "lobby", "waiting room"],
                     examples: [
                         Example(
-                            example: "comfortable lounge",
+                            text: "comfortable lounge",
                             meaning: "уютный холл"
                         ),
                         Example(
-                            example: "cocktail lounge",
+                            text: "cocktail lounge",
                             meaning: "коктейльный зал"
                         )
                     ]
                 ),
                 Meaning(
-                    meaning: "комната отдыха",
+                    text: "комната отдыха",
                     lexemesWithSimilarMeaning: ["rest room"],
                     examples: []
                 ),
                 Meaning(
-                    meaning: "шезлонг",
+                    text: "шезлонг",
                     lexemesWithSimilarMeaning: ["chaise", "sun bed"],
                     examples: []
                 ),
                 Meaning(
-                    meaning: "буфет",
+                    text: "буфет",
                     lexemesWithSimilarMeaning: ["buffet", "bar"],
                     examples: []
                 ),
                 Meaning(
-                    meaning: "салон",
+                    text: "салон",
                     lexemesWithSimilarMeaning: ["salon"],
                     examples: []
                 ),
                 Meaning(
-                    meaning: "лаунжа",
+                    text: "лаунжа",
                     lexemesWithSimilarMeaning: [],
                     examples: []
                 )
@@ -58,12 +58,12 @@ final class DevelopmentDictionaryDataProvider: DictionaryDataProvider {
         ),
         Lexeme(
             language: Language.ENG,
-            lexeme: "lounge",
+            text: "lounge",
             partOfSpeech: PartOfSpeech.VERB,
             transcription: "laʊnʤ",
             meanings: [
                 Meaning(
-                    meaning: "бездельничать",
+                    text: "бездельничать",
                     lexemesWithSimilarMeaning: ["sit"],
                     examples: []
                 )

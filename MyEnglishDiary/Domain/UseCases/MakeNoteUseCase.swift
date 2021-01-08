@@ -17,7 +17,7 @@ final class MakeNoteUseCase: UseCase {
             group: nil,
             date: Date(),
             language: lexeme.language,
-            lexeme: lexeme.lexeme,
+            lexeme: lexeme.text,
             partOfSpeech: lexeme.partOfSpeech,
             transcription: lexeme.transcription,
             meanings: lexeme.meanings,

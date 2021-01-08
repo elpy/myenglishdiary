@@ -13,12 +13,12 @@ final class DictionaryDataProviderMock: DictionaryDataProvider {
     let searchResult = [
         Lexeme(
             language: Language.ENG,
-            lexeme: "Mock",
+            text: "Mock",
             partOfSpeech: PartOfSpeech.NOUN,
             transcription: "Mock",
             meanings: [
                 Meaning(
-                    meaning: "Mock",
+                    text: "Mock",
                     lexemesWithSimilarMeaning: [],
                     examples: []
                 )

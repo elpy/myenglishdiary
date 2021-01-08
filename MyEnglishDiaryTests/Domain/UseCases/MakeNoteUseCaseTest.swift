@@ -19,7 +19,7 @@ final class MakeNoteUseCaseTest: XCTestCase {
     func testMakeNote() throws {
         let lexeme = Lexeme(
             language: Language.RUS,
-            lexeme: "some lexeme",
+            text: "some lexeme",
             partOfSpeech: PartOfSpeech.INTERJECTION,
             transcription: "a",
             meanings: []
@@ -29,7 +29,7 @@ final class MakeNoteUseCaseTest: XCTestCase {
         useCase.execute {
             if case .success = $0 {
                 XCTAssertEqual(1, diaryDataProvider?.notesAdded.count)
-                XCTAssertEqual(lexeme.lexeme, diaryDataProvider?.notesAdded.first?.lexeme)
+                XCTAssertEqual(lexeme.text, diaryDataProvider?.notesAdded.first?.lexeme)
                 XCTAssertEqual(lexeme.partOfSpeech, diaryDataProvider?.notesAdded.first?.partOfSpeech)
                 expectation.fulfill()
             } else {

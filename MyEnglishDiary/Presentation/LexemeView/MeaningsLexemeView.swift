@@ -18,14 +18,14 @@ struct MeaningsLexemeView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            ForEach(meaningsWithExamples, id: \.meaning) { meaning in
+            ForEach(meaningsWithExamples, id: \.text) { meaning in
                 HStack {
                     VStack(alignment: .leading, spacing: 0) {
-                        Text(meaning.meaning.capitalized).font(.subheadline)
+                        Text(meaning.text.capitalized).font(.subheadline)
 
-                        ForEach(meaning.examples, id: \.example) { example in
+                        ForEach(meaning.examples, id: \.text) { example in
                             VStack(alignment: .leading) {
-                                Text(example.example).font(.caption)
+                                Text(example.text).font(.caption)
 
                                 Text(example.meaning).font(.footnote)
                             }.padding(Edge.Set.leading, 5)
@@ -49,12 +49,12 @@ struct MeaningsLexemeView_Previews: PreviewProvider {
     static var previews: some View {
         MeaningsLexemeView(lexeme: Lexeme(
             language: Language.ENG,
-            lexeme: "lounge",
+            text: "lounge",
             partOfSpeech: PartOfSpeech.VERB,
             transcription: "laʊnʤ",
             meanings: [
                 Meaning(
-                    meaning: "бездельничать",
+                    text: "бездельничать",
                     lexemesWithSimilarMeaning: ["sit"],
                     examples: []
                 )

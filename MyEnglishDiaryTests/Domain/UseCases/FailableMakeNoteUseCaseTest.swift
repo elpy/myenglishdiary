@@ -19,7 +19,7 @@ final class FailableMakeNoteUseCaseTest: XCTestCase {
     func testMakeNote() throws {
         let lexeme = Lexeme(
             language: Language.RUS,
-            lexeme: "some lexeme",
+            text: "some lexeme",
             partOfSpeech: PartOfSpeech.INTERJECTION,
             transcription: "a",
             meanings: []
