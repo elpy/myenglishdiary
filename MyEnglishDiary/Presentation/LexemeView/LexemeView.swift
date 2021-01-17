@@ -11,13 +11,12 @@ struct LexemeView: View {
     let lexeme: Lexeme
 
     var body: some View {
-        VStack {
-            TitleLexemeView(lexeme: lexeme)
-
-            MeaningsLexemeView(lexeme: lexeme)
-
-            Spacer()
-        }.padding()
+        ScrollView {
+            LazyVStack {
+                TitleLexemeView(lexeme: lexeme)
+                MeaningsLexemeView(lexeme: lexeme)
+            }.padding()
+        }
     }
 }
 

@@ -34,6 +34,7 @@ struct TitleLexemeView: View {
             Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                 Image(systemName: "speaker.wave.2.circle")
                     .resizable()
+                    .foregroundColor(.blue)
                     .frame(width: 30, height: 30, alignment: .center)
             })
         }

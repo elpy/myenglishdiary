@@ -17,7 +17,7 @@ final class SearchUseCase: UseCase {
     }
 
     func execute(_ completion: @escaping (Result<DictionarySearchResult, Error>) -> Void) {
-        guard text.count > 2 else {
+        guard text.count > 1 else {
             completion(.success([]))
             return
         }

@@ -15,6 +15,7 @@ struct SearchInput: UIViewRepresentable {
         let searchBar = UISearchBar()
         searchBar.delegate = context.coordinator
         searchBar.placeholder = self.placeholder
+        searchBar.backgroundImage = UIImage()
         return searchBar
     }
 
@@ -29,7 +30,6 @@ struct SearchInput: UIViewRepresentable {
     // MARK: Coordinator
 
     class Coordinator: NSObject, UISearchBarDelegate {
-
         private var text: Binding<String>
 
         init(_ text: Binding<String>) {

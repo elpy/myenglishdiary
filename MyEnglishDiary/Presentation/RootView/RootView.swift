@@ -27,6 +27,10 @@ struct RootView: View {
                 }).tag(1)
         }
     }
+
+    init() {
+        Theming.enhanceUIKitAppearance()
+    }
 }
 
 struct RootView_Previews: PreviewProvider {

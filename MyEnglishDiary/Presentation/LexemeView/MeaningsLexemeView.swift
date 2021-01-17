@@ -26,8 +26,7 @@ struct MeaningsLexemeView: View {
                         ForEach(meaning.examples, id: \.text) { example in
                             VStack(alignment: .leading) {
                                 Text(example.text).font(.caption)
-
-                                Text(example.meaning).font(.footnote)
+                                Text(example.meaning).font(.caption)
                             }.padding(Edge.Set.leading, 5)
                         }.padding(2)
                     }

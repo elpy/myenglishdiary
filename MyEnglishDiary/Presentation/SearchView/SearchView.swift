@@ -12,14 +12,20 @@ struct SearchView: View {
     @State private var lastPressedCard: Lexeme?
 
     var body: some View {
-        VStack {
+        VStack(alignment: .center, spacing: 0) {
             SearchInput(text: $viewModel.text, placeholder: "Поиск")
 
-            List(viewModel.searchResult) { result in
-                SearchResultCard(lexeme: result)
-                    .onTapGesture {
-                        self.lastPressedCard = result
+            ScrollView {
+                LazyVStack(alignment: .center, spacing: 12) {
+                    ForEach(viewModel.searchResult) { result in
+                        SearchResultCard(lexeme: result)
+                            .onTapGesture {
+                                self.lastPressedCard = result
+                            }
                     }
+                }
+                .padding(.horizontal)
+                .padding(.bottom)
             }
             .sheet(item: $lastPressedCard) { result in
                 NavigationView {
