@@ -51,15 +51,13 @@ final class RealmDictionaryDataProvider: DictionaryDataProvider {
         let database = client.database(named: realmDatabaseName)
         let collection = database.collection(withName: "eng-rus")
 
-        collection.find(filter: ["text": AnyBSON(stringLiteral: text)], { result in
+        collection.find(filter: ["text": AnyBSON(dictionaryLiteral: ("$regex", AnyBSON(stringLiteral: "^\(text)")))], { result in
             switch result {
             case .failure(let error):
                 completion(.failure(error))
                 print("Call to MongoDB failed: \(error.localizedDescription)")
 
             case .success(let documents):
-                print("Results:")
-
                 do {
                     let lexemes: [Lexeme] = try documents.map { document in
                         try document.decodeLexeme()
