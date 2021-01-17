@@ -22,7 +22,9 @@ final class SearchViewModel: ObservableObject {
                 let useCase = DependencyContainer.shared.makeSearchUseCase(for: text)
                 useCase.execute { result in
                     if case .success(let lexemes) = result {
-                        self.searchResult = lexemes
+                        DispatchQueue.main.async {
+                            self.searchResult = lexemes
+                        }
                     } else {
                         print(result)
                     }

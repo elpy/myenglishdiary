@@ -8,5 +8,5 @@
 import Foundation
 
 protocol DictionaryDataProvider {
-    func search(for text: String) throws -> [Lexeme]
+    func search(for text: String, _ completion: @escaping (Result<DictionarySearchResult, Error>) -> Void)
 }

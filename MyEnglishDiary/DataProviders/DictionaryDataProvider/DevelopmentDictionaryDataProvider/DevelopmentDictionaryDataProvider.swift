@@ -71,7 +71,7 @@ final class DevelopmentDictionaryDataProvider: DictionaryDataProvider {
         )
     ]
 
-    func search(for text: String) throws -> [Lexeme] {
-        return searchResult
+    func search(for text: String, _ completion: (Result<DictionarySearchResult, Error>) -> Void) {
+        completion(.success(searchResult))
     }
 }

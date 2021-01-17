@@ -9,7 +9,8 @@ import Foundation
 
 class DependencyContainer {
     static let shared = DependencyContainer()
-    private var dictionaryDataProvider: DictionaryDataProvider = DevelopmentDictionaryDataProvider()
+    private var dictionaryDataProvider: DictionaryDataProvider = RealmDictionaryDataProvider()
+//    private var dictionaryDataProvider: DictionaryDataProvider = DevelopmentDictionaryDataProvider()
 
     init() {
 

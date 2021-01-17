@@ -9,5 +9,5 @@ import Foundation
 
 protocol UseCase {
     associatedtype Data
-    func execute(_ completion: (Result<Data, Error>) -> Void)
+    func execute(_ completion: @escaping (Result<Data, Error>) -> Void)
 }

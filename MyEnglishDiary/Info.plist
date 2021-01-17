@@ -29,6 +29,12 @@
 	</dict>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>RealmDictionaryProviderAppId</key>
+	<string>$(REALM_DICTIONARY_PROVIDER_APP_ID)</string>
+	<key>RealmMongoDBServiceName</key>
+	<string>$(REALM_MONGODB_SERVICE_NAME)</string>
+	<key>RealmDictionaryDatabaseName</key>
+	<string>$(REALM_DICTIONARY_DATABASE_NAME)</string>
 	<key>UILaunchScreen</key>
 	<dict/>
 	<key>UIRequiredDeviceCapabilities</key>

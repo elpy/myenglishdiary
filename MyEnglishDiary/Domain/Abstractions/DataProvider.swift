@@ -8,6 +8,6 @@
 import Foundation
 
 enum DataProviderError: Error {
-    case error
+    case authRequired
     case networkError
 }

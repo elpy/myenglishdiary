@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A121DDF25B1C5BE00E24FB1 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3A121DDE25B1C5BE00E24FB1 /* Realm */; };
+		3A121DE125B1C5BE00E24FB1 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A121DE025B1C5BE00E24FB1 /* RealmSwift */; };
 		3A2C599B25A6C9700068FC28 /* LexemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C599A25A6C9700068FC28 /* LexemeView.swift */; };
 		3A2C59A925A6D90E0068FC28 /* TitleLexemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C59A825A6D90E0068FC28 /* TitleLexemeView.swift */; };
 		3A2C59AE25A6DA400068FC28 /* MeaningsLexemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C59AD25A6DA3F0068FC28 /* MeaningsLexemeView.swift */; };
@@ -17,6 +19,7 @@
 		3A469D0F258F79C5003561AE /* MakeGroupUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D0E258F79C5003561AE /* MakeGroupUseCaseTest.swift */; };
 		3A469D14258F7A40003561AE /* FailableMakeGroupUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D13258F7A40003561AE /* FailableMakeGroupUseCaseTest.swift */; };
 		3A469D1C258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D1B258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift */; };
+		3A4D83B925B451B40091FDDC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D83B825B451B40091FDDC /* Configuration.swift */; };
 		3A548691258BAC9E000EF8B0 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A548690258BAC9E000EF8B0 /* UseCase.swift */; };
 		3A5AE23625841C4B00C5DB17 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE23525841C4B00C5DB17 /* DependencyContainer.swift */; };
 		3A646808259642F500D83F03 /* SearchResultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A646807259642F500D83F03 /* SearchResultCard.swift */; };
@@ -25,6 +28,7 @@
 		3A940877255D9F390090DB55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A940876255D9F390090DB55 /* Assets.xcassets */; };
 		3A94087A255D9F390090DB55 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A940879255D9F390090DB55 /* Preview Assets.xcassets */; };
 		3A940890255D9F3A0090DB55 /* MyEnglishDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A94088F255D9F3A0090DB55 /* MyEnglishDiaryUITests.swift */; };
+		3AD460B525B1BE6B0099849A /* RealmDictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD460B425B1BE6B0099849A /* RealmDictionaryDataProvider.swift */; };
 		3AD88C9A258DED7B002D4B07 /* DictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88C99258DED7B002D4B07 /* DictionaryDataProvider.swift */; };
 		3AD88CB4258DF8A0002D4B07 /* SearchUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88CB3258DF8A0002D4B07 /* SearchUseCaseTest.swift */; };
 		3AD88CC9258E0058002D4B07 /* DictionaryDataProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88C9F258DEE4C002D4B07 /* DictionaryDataProviderMock.swift */; };
@@ -81,6 +85,7 @@
 		3A469D0E258F79C5003561AE /* MakeGroupUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeGroupUseCaseTest.swift; sourceTree = "<group>"; };
 		3A469D13258F7A40003561AE /* FailableMakeGroupUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableMakeGroupUseCaseTest.swift; sourceTree = "<group>"; };
 		3A469D1B258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkNoteWithTagUseCaseTest.swift; sourceTree = "<group>"; };
+		3A4D83B825B451B40091FDDC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		3A548690258BAC9E000EF8B0 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		3A5AE23525841C4B00C5DB17 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		3A646807259642F500D83F03 /* SearchResultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCard.swift; sourceTree = "<group>"; };
@@ -95,6 +100,7 @@
 		3A94088B255D9F3A0090DB55 /* MyEnglishDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyEnglishDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A94088F255D9F3A0090DB55 /* MyEnglishDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEnglishDiaryUITests.swift; sourceTree = "<group>"; };
 		3A940891255D9F3A0090DB55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AD460B425B1BE6B0099849A /* RealmDictionaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDictionaryDataProvider.swift; sourceTree = "<group>"; };
 		3AD88C99258DED7B002D4B07 /* DictionaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDataProvider.swift; sourceTree = "<group>"; };
 		3AD88C9F258DEE4C002D4B07 /* DictionaryDataProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDataProviderMock.swift; sourceTree = "<group>"; };
 		3AD88CB3258DF8A0002D4B07 /* SearchUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCaseTest.swift; sourceTree = "<group>"; };
@@ -131,6 +137,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A121DE125B1C5BE00E24FB1 /* RealmSwift in Frameworks */,
+				3A121DDF25B1C5BE00E24FB1 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				3AED4207258E78F90068C294 /* DevelopmentDictionaryDataProvider */,
+				3AD460B325B1BE4D0099849A /* RealmDictionaryDataProvider */,
 			);
 			path = DictionaryDataProvider;
 			sourceTree = "<group>";
@@ -284,6 +293,7 @@
 				3A940872255D9F390090DB55 /* MyEnglishDiaryApp.swift */,
 				3A940876255D9F390090DB55 /* Assets.xcassets */,
 				3A94087B255D9F390090DB55 /* Info.plist */,
+				3A4D83B825B451B40091FDDC /* Configuration.swift */,
 				3A5AE23525841C4B00C5DB17 /* DependencyContainer.swift */,
 				3A940878255D9F390090DB55 /* Preview Content */,
 			);
@@ -315,6 +325,14 @@
 				3A940891255D9F3A0090DB55 /* Info.plist */,
 			);
 			path = MyEnglishDiaryUITests;
+			sourceTree = "<group>";
+		};
+		3AD460B325B1BE4D0099849A /* RealmDictionaryDataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				3AD460B425B1BE6B0099849A /* RealmDictionaryDataProvider.swift */,
+			);
+			path = RealmDictionaryDataProvider;
 			sourceTree = "<group>";
 		};
 		3AD88CAD258DF4EB002D4B07 /* UseCases */ = {
@@ -460,6 +478,8 @@
 			);
 			name = MyEnglishDiary;
 			packageProductDependencies = (
+				3A121DDE25B1C5BE00E24FB1 /* Realm */,
+				3A121DE025B1C5BE00E24FB1 /* RealmSwift */,
 			);
 			productName = MyEnglishDiary;
 			productReference = 3A94086F255D9F390090DB55 /* MyEnglishDiary.app */;
@@ -533,6 +553,7 @@
 			);
 			mainGroup = 3A940866255D9F390090DB55;
 			packageReferences = (
+				3A121DDD25B1C5BE00E24FB1 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 3A940870255D9F390090DB55 /* Products */;
 			projectDirPath = "";
@@ -603,12 +624,14 @@
 				3AD88D77258E1325002D4B07 /* Tag.swift in Sources */,
 				3A2C59AE25A6DA400068FC28 /* MeaningsLexemeView.swift in Sources */,
 				3AED4209258E792C0068C294 /* DevelopmentDictionaryDataProvider.swift in Sources */,
+				3A4D83B925B451B40091FDDC /* Configuration.swift in Sources */,
 				3AE49E6B256D76DC00FBD65F /* MakeGroupUseCase.swift in Sources */,
 				3AD88D66258E0C83002D4B07 /* DiaryDataProvider.swift in Sources */,
 				3A646808259642F500D83F03 /* SearchResultCard.swift in Sources */,
 				3AF05DB4258A4EF300E300C3 /* Lexeme.swift in Sources */,
 				3A2C599B25A6C9700068FC28 /* LexemeView.swift in Sources */,
 				3AF05DC6258A4FD800E300C3 /* Example.swift in Sources */,
+				3AD460B525B1BE6B0099849A /* RealmDictionaryDataProvider.swift in Sources */,
 				3A2C59A925A6D90E0068FC28 /* TitleLexemeView.swift in Sources */,
 				3A548691258BAC9E000EF8B0 /* UseCase.swift in Sources */,
 				3AD88D56258E024C002D4B07 /* DataProvider.swift in Sources */,
@@ -1478,6 +1501,30 @@
 			defaultConfigurationName = ProductionRelease;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A121DDD25B1C5BE00E24FB1 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3A121DDE25B1C5BE00E24FB1 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A121DDD25B1C5BE00E24FB1 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		3A121DE025B1C5BE00E24FB1 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A121DDD25B1C5BE00E24FB1 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3A940867255D9F390090DB55 /* Project object */;
 }
