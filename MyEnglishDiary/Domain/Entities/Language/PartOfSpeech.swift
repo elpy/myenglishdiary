@@ -15,7 +15,9 @@ enum PartOfSpeech: String {
     case ADVERB = "adverb"
     case PREPOSITION = "preposition"
     case CONJUNCTION = "conjunction"
+    case NUMERAl = "numeral"
     case INTERJECTION = "interjection"
+    case PREDICATIVE = "predicative"
 }
 
 extension PartOfSpeech {
@@ -49,6 +51,10 @@ extension PartOfSpeech: Comparable {
             return 6
         case .INTERJECTION:
             return 7
+        case .NUMERAl:
+            return 8
+        case .PREDICATIVE:
+            return 9
         }
     }
 

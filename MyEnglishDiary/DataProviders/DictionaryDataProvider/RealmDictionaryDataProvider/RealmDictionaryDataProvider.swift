@@ -51,7 +51,12 @@ final class RealmDictionaryDataProvider: DictionaryDataProvider {
         let database = client.database(named: realmDatabaseName)
         let collection = database.collection(withName: "eng-rus")
 
-        collection.find(filter: ["text": AnyBSON(dictionaryLiteral: ("$regex", AnyBSON(stringLiteral: "^\(text)")))], { result in
+        // TODO: move to a server side
+        collection.aggregate(pipeline: [
+            ["$match": AnyBSON(dictionaryLiteral: ("text", AnyBSON(dictionaryLiteral: ("$regex", AnyBSON(stringLiteral: "^\(text)")))))],
+            ["$sort": AnyBSON(dictionaryLiteral: ("text", AnyBSON(integerLiteral: 1)))],
+            ["$limit": AnyBSON(integerLiteral: 20)]
+        ]) { result in
             switch result {
             case .failure(let error):
                 completion(.failure(error))
@@ -68,7 +73,7 @@ final class RealmDictionaryDataProvider: DictionaryDataProvider {
                     completion(.failure(error))
                 }
             }
-        })
+        }
     }
 }
 
