@@ -56,6 +56,8 @@
 		3AF05DC6258A4FD800E300C3 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DC5258A4FD800E300C3 /* Example.swift */; };
 		3AF05DCB258A532F00E300C3 /* PartOfSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DCA258A532F00E300C3 /* PartOfSpeech.swift */; };
 		3AF05DD0258A535A00E300C3 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DCF258A535A00E300C3 /* Language.swift */; };
+		3AF4199A25B5873300AB7741 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF4199925B5873300AB7741 /* Sentry */; };
+		3AF419A025B5887B00AB7741 /* LoggingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF4199F25B5887B00AB7741 /* LoggingService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +131,7 @@
 		3AF05DC5258A4FD800E300C3 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		3AF05DCA258A532F00E300C3 /* PartOfSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartOfSpeech.swift; sourceTree = "<group>"; };
 		3AF05DCF258A535A00E300C3 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		3AF4199F25B5887B00AB7741 /* LoggingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingService.swift; sourceTree = "<group>"; };
 		3AFB17C625B1A4FC00C72BF7 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		3AFB17C725B1A53200C72BF7 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		3AFB17C825B1A54300C72BF7 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
@@ -141,6 +144,7 @@
 			files = (
 				3A121DE125B1C5BE00E24FB1 /* RealmSwift in Frameworks */,
 				3A121DDF25B1C5BE00E24FB1 /* Realm in Frameworks */,
+				3AF4199A25B5873300AB7741 /* Sentry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +227,7 @@
 		3A55DE6C25606C3300B3A4CA /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3AF4199E25B5886700AB7741 /* LoggingService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -461,6 +466,14 @@
 			path = Language;
 			sourceTree = "<group>";
 		};
+		3AF4199E25B5886700AB7741 /* LoggingService */ = {
+			isa = PBXGroup;
+			children = (
+				3AF4199F25B5887B00AB7741 /* LoggingService.swift */,
+			);
+			path = LoggingService;
+			sourceTree = "<group>";
+		};
 		3AFB17C525B1A4CB00C72BF7 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,6 +504,7 @@
 			packageProductDependencies = (
 				3A121DDE25B1C5BE00E24FB1 /* Realm */,
 				3A121DE025B1C5BE00E24FB1 /* RealmSwift */,
+				3AF4199925B5873300AB7741 /* Sentry */,
 			);
 			productName = MyEnglishDiary;
 			productReference = 3A94086F255D9F390090DB55 /* MyEnglishDiary.app */;
@@ -565,6 +579,7 @@
 			mainGroup = 3A940866255D9F390090DB55;
 			packageReferences = (
 				3A121DDD25B1C5BE00E24FB1 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				3AF4199825B5873300AB7741 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 			);
 			productRefGroup = 3A940870255D9F390090DB55 /* Products */;
 			projectDirPath = "";
@@ -630,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AE49E61256D762400FBD65F /* SearchUseCase.swift in Sources */,
+				3AF419A025B5887B00AB7741 /* LoggingService.swift in Sources */,
 				3A940875255D9F390090DB55 /* RootView.swift in Sources */,
 				3A940873255D9F390090DB55 /* MyEnglishDiaryApp.swift in Sources */,
 				3AD88D77258E1325002D4B07 /* Tag.swift in Sources */,
@@ -1523,6 +1539,14 @@
 				minimumVersion = 10.5.0;
 			};
 		};
+		3AF4199825B5873300AB7741 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1535,6 +1559,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3A121DDD25B1C5BE00E24FB1 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
+		};
+		3AF4199925B5873300AB7741 /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AF4199825B5873300AB7741 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

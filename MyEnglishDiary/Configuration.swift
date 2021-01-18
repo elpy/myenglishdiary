@@ -12,6 +12,8 @@ enum Configuration {
     case missingKey
     case invalidValue
 
+    // MARK: mongodb/realm configuration options
+
     static var realmDictionaryProviderAppId: Configuration {
         return Configuration.readValue(for: "RealmDictionaryProviderAppId")
     }
@@ -22,6 +24,16 @@ enum Configuration {
 
     static var realmDictionaryDatabaseName: Configuration {
         return Configuration.readValue(for: "RealmDictionaryDatabaseName")
+    }
+
+    // MARK: Sentry configuration options
+
+    static var sentryDSN: Configuration {
+        return Configuration.readValue(for: "SentryDSN")
+    }
+
+    static var sentryDebug: Configuration {
+        return Configuration.readValue(for: "SentryDebug")
     }
 
     private static func readValue(for key: String) -> Configuration {

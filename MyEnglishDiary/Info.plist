@@ -35,6 +35,10 @@
 	<string>$(REALM_MONGODB_SERVICE_NAME)</string>
 	<key>RealmDictionaryDatabaseName</key>
 	<string>$(REALM_DICTIONARY_DATABASE_NAME)</string>
+	<key>SentryDSN</key>
+	<string>https://$(SENTRY_DSN)</string>
+	<key>SentryDebug</key>
+	<string>$(SENTRY_DEBUG)</string>
 	<key>UILaunchScreen</key>
 	<dict/>
 	<key>UIRequiredDeviceCapabilities</key>

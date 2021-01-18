@@ -11,6 +11,7 @@ class DependencyContainer {
     static let shared = DependencyContainer()
     private var dictionaryDataProvider: DictionaryDataProvider = RealmDictionaryDataProvider()
 //    private var dictionaryDataProvider: DictionaryDataProvider = DevelopmentDictionaryDataProvider()
+    private let loggingServer: LoggingService = LoggingService()
 
     init() {
 
