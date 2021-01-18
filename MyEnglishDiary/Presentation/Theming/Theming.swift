@@ -14,7 +14,6 @@ final class Theming {
 
         // UITabBar and TabView appearance
         let tabBarAppearance = UITabBar.appearance()
-        tabBarAppearance.backgroundColor = UIColor.white
         tabBarAppearance.backgroundImage = UIImage()
         tabBarAppearance.shadowImage = UIImage()
         tabBarAppearance.layer.shadowColor = UIColor.clear.cgColor
