@@ -8,9 +8,17 @@
 import Foundation
 import Combine
 
+// TODO: wtf?
+enum SearchFailure: String, Identifiable {
+    var id: String { rawValue }
+    case developmentError = "Error"
+}
+
 final class SearchViewModel: ObservableObject {
     @Published var text: String = ""
     @Published var searchResult: DictionarySearchResult = []
+    @Published var emptyResult: Bool = false
+    @Published var searchFailure: SearchFailure?
 
     private var cancellableSet: Set<AnyCancellable> = []
     private var activeUseCase: SearchUseCase?
@@ -29,9 +37,13 @@ final class SearchViewModel: ObservableObject {
                     if case .success(let lexemes) = result {
                         DispatchQueue.main.async {
                             self.searchResult = lexemes
+                            self.emptyResult = lexemes.isEmpty && text.count > 1
                         }
-                    } else {
-                        print(result)
+                    } else if case .failure(let error) = result {
+                        print(error)
+                        DispatchQueue.main.async {
+                            self.searchFailure = .developmentError
+                        }
                     }
 
                     self.activeUseCase = nil

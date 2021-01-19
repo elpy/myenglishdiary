@@ -15,25 +15,34 @@ struct SearchView: View {
         VStack(alignment: .center, spacing: 0) {
             SearchInput(text: $viewModel.text, placeholder: "Поиск")
 
-            ScrollView {
-                LazyVStack(alignment: .center, spacing: 12) {
-                    ForEach(viewModel.searchResult) { result in
-                        SearchResultCard(lexeme: result)
-                            .onTapGesture {
-                                self.lastPressedCard = result
-                            }
+            if viewModel.emptyResult {
+                VStack {
+                    Spacer()
+                    Text("По запросу «\(viewModel.text)» ничего не найдено")
+                    Spacer()
+                }
+            } else {
+                ScrollView {
+                    LazyVStack(alignment: .center, spacing: 12) {
+                        ForEach(viewModel.searchResult) { lexeme in
+                            SearchResultCard(lexeme: lexeme)
+                                .onTapGesture {
+                                    self.lastPressedCard = lexeme
+                                }
+                        }
                     }
-                }
-                .padding(.horizontal)
-                .padding(.bottom)
-            }
-            .sheet(item: $lastPressedCard) { result in
-                NavigationView {
-                    LexemeView(lexeme: result)
-                        .navigationBarItems(trailing: Button("Добавить в дневник", action: {}))
-                        .navigationBarTitleDisplayMode(.inline)
+                    .padding(.horizontal)
+                    .padding(.bottom)
                 }
             }
+        }.sheet(item: $lastPressedCard) { result in
+            NavigationView {
+                LexemeView(lexeme: result)
+                    .navigationBarItems(trailing: Button("Добавить в дневник", action: {}))
+                    .navigationBarTitleDisplayMode(.inline)
+            }
+        }.alert(item: $viewModel.searchFailure) { _ in
+            Alert(title: Text("Ошибка поиска"))
         }
     }
 }
