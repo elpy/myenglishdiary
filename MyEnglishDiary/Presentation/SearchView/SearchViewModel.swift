@@ -13,13 +13,18 @@ final class SearchViewModel: ObservableObject {
     @Published var searchResult: DictionarySearchResult = []
 
     private var cancellableSet: Set<AnyCancellable> = []
+    private var activeUseCase: SearchUseCase?
 
     init() {
         $text
             .throttle(for: 0.5, scheduler: RunLoop.main, latest: true)
             .removeDuplicates()
             .sink { text in
+                self.activeUseCase?.cancel()
+
                 let useCase = DependencyContainer.shared.makeSearchUseCase(for: text)
+                self.activeUseCase = useCase
+
                 useCase.execute { result in
                     if case .success(let lexemes) = result {
                         DispatchQueue.main.async {
@@ -28,6 +33,8 @@ final class SearchViewModel: ObservableObject {
                     } else {
                         print(result)
                     }
+
+                    self.activeUseCase = nil
                 }
             }
             .store(in: &cancellableSet)
