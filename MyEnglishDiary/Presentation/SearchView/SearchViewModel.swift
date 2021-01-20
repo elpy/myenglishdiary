@@ -17,8 +17,8 @@ enum SearchFailure: String, Identifiable {
 final class SearchViewModel: ObservableObject {
     @Published var text: String = ""
     @Published var searchResult: DictionarySearchResult = []
-    @Published var emptyResult: Bool = false
-    @Published var searchFailure: SearchFailure?
+    @Published var displayEmptyResultMessage: Bool = false
+    @Published var displaySearchFailure: SearchFailure?
 
     private var cancellableSet: Set<AnyCancellable> = []
     private var activeUseCase: SearchUseCase?
@@ -30,6 +30,9 @@ final class SearchViewModel: ObservableObject {
             .sink { text in
                 self.activeUseCase?.cancel()
 
+                let text = text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+                guard text.count > 1 else { return }
+
                 let useCase = DependencyContainer.shared.makeSearchUseCase(for: text)
                 self.activeUseCase = useCase
 
@@ -37,12 +40,12 @@ final class SearchViewModel: ObservableObject {
                     if case .success(let lexemes) = result {
                         DispatchQueue.main.async {
                             self.searchResult = lexemes
-                            self.emptyResult = lexemes.isEmpty && text.count > 1
+                            self.displayEmptyResultMessage = lexemes.isEmpty && text.count > 1
                         }
                     } else if case .failure(let error) = result {
                         print(error)
                         DispatchQueue.main.async {
-                            self.searchFailure = .developmentError
+                            self.displaySearchFailure = .developmentError
                         }
                     }
 

@@ -15,7 +15,7 @@ struct SearchView: View {
         VStack(alignment: .center, spacing: 0) {
             SearchInput(text: $viewModel.text, placeholder: "Поиск")
 
-            if viewModel.emptyResult {
+            if viewModel.displayEmptyResultMessage {
                 VStack {
                     Spacer()
                     Text("По запросу «\(viewModel.text)» ничего не найдено")
@@ -41,7 +41,7 @@ struct SearchView: View {
                     .navigationBarItems(trailing: Button("Добавить в дневник", action: {}))
                     .navigationBarTitleDisplayMode(.inline)
             }
-        }.alert(item: $viewModel.searchFailure) { _ in
+        }.alert(item: $viewModel.displaySearchFailure) { _ in
             Alert(title: Text("Ошибка поиска"))
         }
     }

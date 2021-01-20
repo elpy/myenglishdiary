@@ -44,6 +44,36 @@ fileprivate let notes = [
                 examples: [])
         ],
         tags: []
+    ),
+    Note(
+        group: nil,
+        date: Date(),
+        language: Language.ENG,
+        lexeme: "Dev string2",
+        partOfSpeech: PartOfSpeech.NOUN,
+        transcription: nil,
+        meanings: [
+            Meaning(
+                text: "Dev meaning2",
+                lexemesWithSimilarMeaning: [],
+                examples: [])
+        ],
+        tags: []
+    ),
+    Note(
+        group: groups.first,
+        date: Date(),
+        language: Language.ENG,
+        lexeme: "Dev string3",
+        partOfSpeech: PartOfSpeech.NOUN,
+        transcription: nil,
+        meanings: [
+            Meaning(
+                text: "Dev meaning3",
+                lexemesWithSimilarMeaning: [],
+                examples: [])
+        ],
+        tags: []
     )
 ]
 

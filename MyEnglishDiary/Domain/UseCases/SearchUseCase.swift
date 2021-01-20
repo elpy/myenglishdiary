@@ -41,6 +41,5 @@ final class SearchUseCase: UseCase, Cancellable {
 
     func cancel() {
         isCancelled = true
-        print("Cancelled search use case for: \(text)")
     }
 }
