@@ -8,8 +8,8 @@
 import Foundation
 import Combine
 
-// TODO: wtf?
-enum SearchFailure: String, Identifiable {
+// TODO: do anything with it
+enum WtfFailure: String, Identifiable {
     var id: String { rawValue }
     case developmentError = "Error"
 }
@@ -18,7 +18,7 @@ final class SearchViewModel: ObservableObject {
     @Published var text: String = ""
     @Published var searchResult: DictionarySearchResult = []
     @Published var displayEmptyResultMessage: Bool = false
-    @Published var displaySearchFailure: SearchFailure?
+    @Published var displaySearchFailure: WtfFailure?
 
     private var cancellableSet: Set<AnyCancellable> = []
     private var activeUseCase: SearchUseCase?

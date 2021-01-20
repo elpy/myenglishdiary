@@ -11,9 +11,15 @@ struct Note {
     let group: Group?
     let date: Date
     let language: Language
-    let lexeme: String
+    let text: String
     let partOfSpeech: PartOfSpeech?
     let transcription: String?
     let meanings: [Meaning]
     let tags: [Tag]
+}
+
+extension Note: Identifiable {
+    var id: String {
+        return "\(text)_\(partOfSpeech?.rawValue ?? "")_\(date)"
+    }
 }

@@ -16,8 +16,14 @@ final class Theming {
         let tabBarAppearance = UITabBar.appearance()
         tabBarAppearance.backgroundImage = UIImage()
         tabBarAppearance.backgroundColor = UIColor.white
-        tabBarAppearance.isTranslucent = false
+        // tabBarAppearance.isTranslucent = false
         tabBarAppearance.shadowImage = UIImage()
         tabBarAppearance.layer.shadowColor = UIColor.clear.cgColor
+
+        // UINavigationBar appearance
+        let navigationBarAppearance = UINavigationBar.appearance()
+        navigationBarAppearance.shadowImage = UIImage()
+        navigationBarAppearance.isTranslucent = false
+        navigationBarAppearance.backgroundColor = UIColor.red
     }
 }

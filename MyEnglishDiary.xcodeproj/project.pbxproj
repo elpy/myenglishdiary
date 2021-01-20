@@ -30,6 +30,10 @@
 		3A940877255D9F390090DB55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A940876255D9F390090DB55 /* Assets.xcassets */; };
 		3A94087A255D9F390090DB55 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A940879255D9F390090DB55 /* Preview Assets.xcassets */; };
 		3A940890255D9F3A0090DB55 /* MyEnglishDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A94088F255D9F3A0090DB55 /* MyEnglishDiaryUITests.swift */; };
+		3AC0B31F25B84FD200523745 /* DiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0B31E25B84FD200523745 /* DiaryViewModel.swift */; };
+		3AC0B32425B8527E00523745 /* ReadNotesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0B32325B8527E00523745 /* ReadNotesUseCase.swift */; };
+		3AC0B32925B854C000523745 /* ReadGroupsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0B32825B854C000523745 /* ReadGroupsUseCase.swift */; };
+		3AC0B32E25B85EC500523745 /* NoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0B32D25B85EC500523745 /* NoteCard.swift */; };
 		3AD460B525B1BE6B0099849A /* RealmDictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD460B425B1BE6B0099849A /* RealmDictionaryDataProvider.swift */; };
 		3AD88C9A258DED7B002D4B07 /* DictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88C99258DED7B002D4B07 /* DictionaryDataProvider.swift */; };
 		3AD88CB4258DF8A0002D4B07 /* SearchUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88CB3258DF8A0002D4B07 /* SearchUseCaseTest.swift */; };
@@ -106,6 +110,10 @@
 		3A94088B255D9F3A0090DB55 /* MyEnglishDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyEnglishDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A94088F255D9F3A0090DB55 /* MyEnglishDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEnglishDiaryUITests.swift; sourceTree = "<group>"; };
 		3A940891255D9F3A0090DB55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AC0B31E25B84FD200523745 /* DiaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewModel.swift; sourceTree = "<group>"; };
+		3AC0B32325B8527E00523745 /* ReadNotesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadNotesUseCase.swift; sourceTree = "<group>"; };
+		3AC0B32825B854C000523745 /* ReadGroupsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadGroupsUseCase.swift; sourceTree = "<group>"; };
+		3AC0B32D25B85EC500523745 /* NoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCard.swift; sourceTree = "<group>"; };
 		3AD460B425B1BE6B0099849A /* RealmDictionaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDictionaryDataProvider.swift; sourceTree = "<group>"; };
 		3AD88C99258DED7B002D4B07 /* DictionaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDataProvider.swift; sourceTree = "<group>"; };
 		3AD88C9F258DEE4C002D4B07 /* DictionaryDataProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDataProviderMock.swift; sourceTree = "<group>"; };
@@ -377,6 +385,8 @@
 				3AE49E65256D765D00FBD65F /* MakeNoteUseCase.swift */,
 				3AE49E6A256D76DC00FBD65F /* MakeGroupUseCase.swift */,
 				3AD88D81258E1671002D4B07 /* MarkNoteWithTagUseCase.swift */,
+				3AC0B32325B8527E00523745 /* ReadNotesUseCase.swift */,
+				3AC0B32825B854C000523745 /* ReadGroupsUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -442,6 +452,8 @@
 			isa = PBXGroup;
 			children = (
 				3ADB17AE258F9361004B0A80 /* DiaryView.swift */,
+				3AC0B32D25B85EC500523745 /* NoteCard.swift */,
+				3AC0B31E25B84FD200523745 /* DiaryViewModel.swift */,
 			);
 			path = DiaryView;
 			sourceTree = "<group>";
@@ -672,6 +684,7 @@
 				3AED4209258E792C0068C294 /* DevelopmentDictionaryDataProvider.swift in Sources */,
 				3A4D83B925B451B40091FDDC /* Configuration.swift in Sources */,
 				3AE49E6B256D76DC00FBD65F /* MakeGroupUseCase.swift in Sources */,
+				3AC0B32425B8527E00523745 /* ReadNotesUseCase.swift in Sources */,
 				3AD88D66258E0C83002D4B07 /* DiaryDataProvider.swift in Sources */,
 				3A646808259642F500D83F03 /* SearchResultCard.swift in Sources */,
 				3AF05DB4258A4EF300E300C3 /* Lexeme.swift in Sources */,
@@ -685,8 +698,11 @@
 				3AD88D82258E1671002D4B07 /* MarkNoteWithTagUseCase.swift in Sources */,
 				3ADB17AA258F9353004B0A80 /* SearchView.swift in Sources */,
 				3A36775325B493F7005DDE09 /* Theming.swift in Sources */,
+				3AC0B32E25B85EC500523745 /* NoteCard.swift in Sources */,
 				3AE49E66256D765D00FBD65F /* MakeNoteUseCase.swift in Sources */,
 				3AE49E45256D745A00FBD65F /* Note.swift in Sources */,
+				3AC0B32925B854C000523745 /* ReadGroupsUseCase.swift in Sources */,
+				3AC0B31F25B84FD200523745 /* DiaryViewModel.swift in Sources */,
 				3A3BDE0D25B841D00098A4FC /* DevelopmentDiaryDataProvider.swift in Sources */,
 				3AF05DCB258A532F00E300C3 /* PartOfSpeech.swift in Sources */,
 				3AE49E76256D777300FBD65F /* SelectNotesToStudy.swift in Sources */,

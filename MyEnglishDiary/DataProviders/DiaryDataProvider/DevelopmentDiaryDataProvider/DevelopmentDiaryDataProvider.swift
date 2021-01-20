@@ -34,7 +34,7 @@ fileprivate let notes = [
         group: nil,
         date: Date(),
         language: Language.ENG,
-        lexeme: "Dev string",
+        text: "Dev string",
         partOfSpeech: PartOfSpeech.NOUN,
         transcription: nil,
         meanings: [
@@ -49,7 +49,7 @@ fileprivate let notes = [
         group: nil,
         date: Date(),
         language: Language.ENG,
-        lexeme: "Dev string2",
+        text: "Dev string2",
         partOfSpeech: PartOfSpeech.NOUN,
         transcription: nil,
         meanings: [
@@ -64,7 +64,7 @@ fileprivate let notes = [
         group: groups.first,
         date: Date(),
         language: Language.ENG,
-        lexeme: "Dev string3",
+        text: "Dev string3",
         partOfSpeech: PartOfSpeech.NOUN,
         transcription: nil,
         meanings: [

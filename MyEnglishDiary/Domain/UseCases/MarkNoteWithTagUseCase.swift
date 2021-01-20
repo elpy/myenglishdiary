@@ -8,7 +8,6 @@
 import Foundation
 
 final class MarkNoteWithTagUseCase: UseCase {
-
     private let note: Note
     private let tag: Tag
     private let diaryDataProvider: DiaryDataProvider

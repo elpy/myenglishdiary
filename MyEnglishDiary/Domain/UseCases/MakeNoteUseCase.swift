@@ -8,7 +8,6 @@
 import Foundation
 
 final class MakeNoteUseCase: UseCase {
-
     private let note: Note
     private let diaryDataProvider: DiaryDataProvider
 
@@ -17,7 +16,7 @@ final class MakeNoteUseCase: UseCase {
             group: nil,
             date: Date(),
             language: lexeme.language,
-            lexeme: lexeme.text,
+            text: lexeme.text,
             partOfSpeech: lexeme.partOfSpeech,
             transcription: lexeme.transcription,
             meanings: lexeme.meanings,

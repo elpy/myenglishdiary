@@ -9,15 +9,32 @@ import Foundation
 
 class DependencyContainer {
     static let shared = DependencyContainer()
+
+    // MARK: data providers
+
     private var dictionaryDataProvider: DictionaryDataProvider = RealmDictionaryDataProvider()
-//    private var dictionaryDataProvider: DictionaryDataProvider = DevelopmentDictionaryDataProvider()
+    // private var dictionaryDataProvider: DictionaryDataProvider = DevelopmentDictionaryDataProvider()
+    private var diaryDataProvider: DiaryDataProvider = DevelopmentDiaryDataProvider()
+
+    // MARK: services
+
     private let loggingServer: LoggingService = LoggingService()
 
     init() {
 
     }
 
+    // MARK: use cases
+
     func makeSearchUseCase(for text: String) -> SearchUseCase {
         return SearchUseCase(for: text, dictionaryDataProvider)
+    }
+
+    func makeReadNotesUseCase() -> ReadNotesUseCase {
+        return ReadNotesUseCase(diaryDataProvider)
+    }
+
+    func makeReadGroupsUseCase() -> ReadGroupsUseCase {
+        return ReadGroupsUseCase(diaryDataProvider)
     }
 }

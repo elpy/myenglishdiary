@@ -8,7 +8,6 @@
 import Foundation
 
 final class MakeGroupUseCase: UseCase {
-
     private let group: Group
     private let diaryDataProvider: DiaryDataProvider
 

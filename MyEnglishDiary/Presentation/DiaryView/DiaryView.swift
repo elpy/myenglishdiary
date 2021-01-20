@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct DiaryView: View {
+    @ObservedObject var viewModel = DiaryViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                ScrollView {
+                    LazyVStack(alignment: .center, spacing: 12) {
+                        ForEach(viewModel.notes) { note in
+                            NoteCard(note: note)
+                        }
+                    }
+                    .padding(.horizontal)
+                    .padding(.bottom)
+                }
+            }.navigationBarTitle("Мой дневник", displayMode: .inline)
+        }.onAppear {
+            self.viewModel.fetchDiary()
+        }.alert(item: $viewModel.displayReadingFailure) { _ in
+            Alert(title: Text("Ошибка"))
+        }
     }
 }
 
