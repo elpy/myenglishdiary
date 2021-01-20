@@ -80,6 +80,7 @@ final class RealmDictionaryDataProvider: DictionaryDataProvider {
 // MARK: Document extensions
 
 // TODO: make it beautiful somehow
+// swiftlint:disable function_body_length
 extension Document {
     func decodeLexeme() throws -> Lexeme {
         let errorText = "Parsing error"

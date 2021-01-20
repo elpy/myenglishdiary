@@ -19,12 +19,12 @@ final class MarkNoteWithTagUseCase: UseCase {
         self.diaryDataProvider = diaryDataProvider
     }
 
-    func execute(_ completion: (Result<Void, Error>) -> Void) {
-        do {
-            try diaryDataProvider.markNote(note, with: tag)
-            completion(.success(()))
-        } catch {
-            completion(.failure(error))
+    func execute(_ completion: @escaping (Result<Void, Error>) -> Void) {
+        diaryDataProvider.markNote(note, with: tag) { result in
+            switch result {
+            case .success: completion(.success(()))
+            case .failure(let error): completion(.failure(error))
+            }
         }
     }
 }

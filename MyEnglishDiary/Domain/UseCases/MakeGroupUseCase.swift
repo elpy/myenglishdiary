@@ -19,12 +19,12 @@ final class MakeGroupUseCase: UseCase {
         self.diaryDataProvider = diaryDataProvider
     }
 
-    func execute(_ completion: (Result<Void, Error>) -> Void) {
-        do {
-            try diaryDataProvider.addNewGroup(group)
-            completion(.success(()))
-        } catch {
-            completion(.failure(error))
+    func execute(_ completion: @escaping (Result<Void, Error>) -> Void) {
+        diaryDataProvider.addNewGroup(group) { result in
+            switch result {
+            case .success: completion(.success(()))
+            case .failure(let error): completion(.failure(error))
+            }
         }
     }
 }

@@ -13,6 +13,7 @@
 		3A2C59A925A6D90E0068FC28 /* TitleLexemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C59A825A6D90E0068FC28 /* TitleLexemeView.swift */; };
 		3A2C59AE25A6DA400068FC28 /* MeaningsLexemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C59AD25A6DA3F0068FC28 /* MeaningsLexemeView.swift */; };
 		3A36775325B493F7005DDE09 /* Theming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A36775225B493F7005DDE09 /* Theming.swift */; };
+		3A3BDE0D25B841D00098A4FC /* DevelopmentDiaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3BDE0C25B841D00098A4FC /* DevelopmentDiaryDataProvider.swift */; };
 		3A469CF2258F6D55003561AE /* FailableSearchUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469CF1258F6D55003561AE /* FailableSearchUseCaseTest.swift */; };
 		3A469CFD258F6F15003561AE /* DiaryDataProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469CFC258F6F14003561AE /* DiaryDataProviderMock.swift */; };
 		3A469D02258F7515003561AE /* FailableDiaryDataProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D01258F7515003561AE /* FailableDiaryDataProviderMock.swift */; };
@@ -82,6 +83,7 @@
 		3A2C59A825A6D90E0068FC28 /* TitleLexemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLexemeView.swift; sourceTree = "<group>"; };
 		3A2C59AD25A6DA3F0068FC28 /* MeaningsLexemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningsLexemeView.swift; sourceTree = "<group>"; };
 		3A36775225B493F7005DDE09 /* Theming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theming.swift; sourceTree = "<group>"; };
+		3A3BDE0C25B841D00098A4FC /* DevelopmentDiaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentDiaryDataProvider.swift; sourceTree = "<group>"; };
 		3A469CF1258F6D55003561AE /* FailableSearchUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableSearchUseCaseTest.swift; sourceTree = "<group>"; };
 		3A469CFC258F6F14003561AE /* DiaryDataProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDataProviderMock.swift; sourceTree = "<group>"; };
 		3A469D01258F7515003561AE /* FailableDiaryDataProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableDiaryDataProviderMock.swift; sourceTree = "<group>"; };
@@ -183,6 +185,22 @@
 			path = Theming;
 			sourceTree = "<group>";
 		};
+		3A3BDE0B25B841BC0098A4FC /* DiaryDataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				3A3BDE1425B849B20098A4FC /* DevelopmentDiaryDataProvider */,
+			);
+			path = DiaryDataProvider;
+			sourceTree = "<group>";
+		};
+		3A3BDE1425B849B20098A4FC /* DevelopmentDiaryDataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				3A3BDE0C25B841D00098A4FC /* DevelopmentDiaryDataProvider.swift */,
+			);
+			path = DevelopmentDiaryDataProvider;
+			sourceTree = "<group>";
+		};
 		3A469D23258F91A1003561AE /* RootView */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				3A5AE21B2584168100C5DB17 /* DictionaryDataProvider */,
+				3A3BDE0B25B841BC0098A4FC /* DiaryDataProvider */,
 			);
 			path = DataProviders;
 			sourceTree = "<group>";
@@ -668,6 +687,7 @@
 				3A36775325B493F7005DDE09 /* Theming.swift in Sources */,
 				3AE49E66256D765D00FBD65F /* MakeNoteUseCase.swift in Sources */,
 				3AE49E45256D745A00FBD65F /* Note.swift in Sources */,
+				3A3BDE0D25B841D00098A4FC /* DevelopmentDiaryDataProvider.swift in Sources */,
 				3AF05DCB258A532F00E300C3 /* PartOfSpeech.swift in Sources */,
 				3AE49E76256D777300FBD65F /* SelectNotesToStudy.swift in Sources */,
 				3AE49E4B256D747D00FBD65F /* Group.swift in Sources */,

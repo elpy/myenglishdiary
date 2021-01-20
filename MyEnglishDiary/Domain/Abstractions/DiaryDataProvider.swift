@@ -8,9 +8,9 @@
 import Foundation
 
 protocol DiaryDataProvider {
-    func addNewNote(_ note: Note) throws
-    func addNewGroup(_ group: Group) throws
-    func getNotes() throws -> [Note]
-    func getGroups() throws -> [Group]
-    func markNote(_ note: Note, with tag: Tag) throws
+    func addNewNote(_ note: Note, _ completion: @escaping (Result<Void, Error>) -> Void)
+    func addNewGroup(_ group: Group, _ completion: @escaping (Result<Void, Error>) -> Void)
+    func getNotes(_ completion: @escaping (Result<[Note], Error>) -> Void)
+    func getGroups(_ completion: @escaping (Result<[Group], Error>) -> Void)
+    func markNote(_ note: Note, with tag: Tag, _ completion: @escaping (Result<Void, Error>) -> Void)
 }
