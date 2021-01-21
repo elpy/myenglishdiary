@@ -21,6 +21,7 @@
 		3A469D0F258F79C5003561AE /* MakeGroupUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D0E258F79C5003561AE /* MakeGroupUseCaseTest.swift */; };
 		3A469D14258F7A40003561AE /* FailableMakeGroupUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D13258F7A40003561AE /* FailableMakeGroupUseCaseTest.swift */; };
 		3A469D1C258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D1B258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift */; };
+		3A47A2DC25B945F70061AACF /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A47A2DB25B945F70061AACF /* NoteView.swift */; };
 		3A4D83B925B451B40091FDDC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D83B825B451B40091FDDC /* Configuration.swift */; };
 		3A548691258BAC9E000EF8B0 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A548690258BAC9E000EF8B0 /* UseCase.swift */; };
 		3A5AE23625841C4B00C5DB17 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE23525841C4B00C5DB17 /* DependencyContainer.swift */; };
@@ -95,6 +96,7 @@
 		3A469D0E258F79C5003561AE /* MakeGroupUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeGroupUseCaseTest.swift; sourceTree = "<group>"; };
 		3A469D13258F7A40003561AE /* FailableMakeGroupUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableMakeGroupUseCaseTest.swift; sourceTree = "<group>"; };
 		3A469D1B258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkNoteWithTagUseCaseTest.swift; sourceTree = "<group>"; };
+		3A47A2DB25B945F70061AACF /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		3A4D83B825B451B40091FDDC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		3A548690258BAC9E000EF8B0 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		3A5AE23525841C4B00C5DB17 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
@@ -217,6 +219,14 @@
 			path = RootView;
 			sourceTree = "<group>";
 		};
+		3A47A2DA25B945E50061AACF /* NoteView */ = {
+			isa = PBXGroup;
+			children = (
+				3A47A2DB25B945F70061AACF /* NoteView.swift */,
+			);
+			path = NoteView;
+			sourceTree = "<group>";
+		};
 		3A55DE6825606BCA00B3A4CA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +254,7 @@
 				3ADB17A7258F9300004B0A80 /* SearchView */,
 				3A2C599925A6C9460068FC28 /* LexemeView */,
 				3ADB17A8258F9326004B0A80 /* DiaryView */,
+				3A47A2DA25B945E50061AACF /* NoteView */,
 				3ADABD272594E621003DF039 /* Library */,
 				3A36775125B493BB005DDE09 /* Theming */,
 			);
@@ -701,6 +712,7 @@
 				3AC0B32E25B85EC500523745 /* NoteCard.swift in Sources */,
 				3AE49E66256D765D00FBD65F /* MakeNoteUseCase.swift in Sources */,
 				3AE49E45256D745A00FBD65F /* Note.swift in Sources */,
+				3A47A2DC25B945F70061AACF /* NoteView.swift in Sources */,
 				3AC0B32925B854C000523745 /* ReadGroupsUseCase.swift in Sources */,
 				3AC0B31F25B84FD200523745 /* DiaryViewModel.swift in Sources */,
 				3A3BDE0D25B841D00098A4FC /* DevelopmentDiaryDataProvider.swift in Sources */,

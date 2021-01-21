@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DiaryView: View {
     @ObservedObject var viewModel = DiaryViewModel()
+    @State private var lastPressedCard: Note?
 
     var body: some View {
         NavigationView {
@@ -17,12 +18,17 @@ struct DiaryView: View {
                     LazyVStack(alignment: .center, spacing: 12) {
                         ForEach(viewModel.notes) { note in
                             NoteCard(note: note)
+                                .onTapGesture {
+                                    self.lastPressedCard = note
+                                }
                         }
                     }
                     .padding(.horizontal)
                     .padding(.bottom)
                 }
             }.navigationBarTitle("Мой дневник", displayMode: .inline)
+        }.sheet(item: $lastPressedCard) { note in
+            NoteView(note: note)
         }.onAppear {
             self.viewModel.fetchDiary()
         }.alert(item: $viewModel.displayReadingFailure) { _ in

@@ -35,9 +35,9 @@ struct SearchView: View {
                     .padding(.bottom)
                 }
             }
-        }.sheet(item: $lastPressedCard) { result in
+        }.sheet(item: $lastPressedCard) { lexeme in
             NavigationView {
-                LexemeView(lexeme: result)
+                LexemeView(lexeme: lexeme)
                     .navigationBarItems(trailing: Button("Добавить в дневник", action: {}))
                     .navigationBarTitleDisplayMode(.inline)
             }
