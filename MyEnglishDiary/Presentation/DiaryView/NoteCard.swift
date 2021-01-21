@@ -12,11 +12,22 @@ struct NoteCard: View {
 
     var body: some View {
         GroupBox(
-            label: Label(note.text, systemImage: "star"),
             content: {
                 HStack(alignment: .center, spacing: nil, content: {
-                    VStack(alignment: .leading, spacing: nil, content: {
-                        Text("anything else")
+                    VStack(alignment: .leading, spacing: 6, content: {
+                        HStack {
+                            Label(note.text, systemImage: "star").font(.headline)
+
+                            if let partOfSpeech = note.partOfSpeech?.rawValue {
+                                Text(partOfSpeech)
+                                    .foregroundColor(.gray)
+                                    .italic()
+                            }
+                        }
+
+                        Text(info)
+                            .foregroundColor(.gray)
+                            .font(Font.footnote)
                             .italic()
                     })
 
@@ -24,6 +35,23 @@ struct NoteCard: View {
                 })
             }
         )
+    }
+
+    private var info: String {
+        let locale = Locale(identifier: Locale.preferredLanguages.first ?? Locale.current.identifier)
+        let noteYear = Calendar.current.dateComponents([.year], from: note.date).year ?? 0
+        let currentYear = Calendar.current.dateComponents([.year], from: Date()).year ?? 0
+        let template = noteYear == currentYear ? "dd MMMM" : "dd MMMM yyyy"
+
+        let formatter = DateFormatter()
+        formatter.locale = locale
+        formatter.dateFormat = template
+
+        if let group = note.group {
+            return "Добавлено \(formatter.string(from: note.date)) в «\(group.name)»"
+        } else {
+            return "Добавлено \(formatter.string(from: note.date))"
+        }
     }
 }
 

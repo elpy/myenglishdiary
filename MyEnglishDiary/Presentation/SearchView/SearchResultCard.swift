@@ -12,14 +12,17 @@ struct SearchResultCard: View {
 
     var body: some View {
         GroupBox(
-            label: Label(lexeme.text, systemImage: "heart"),
             content: {
                 HStack(alignment: .center, spacing: nil, content: {
-                    VStack(alignment: .leading, spacing: nil, content: {
-                        if let partOfSpeech = lexeme.partOfSpeech?.rawValue {
-                            Text(partOfSpeech)
-                                .foregroundColor(.gray)
-                                .italic()
+                    VStack(alignment: .leading, spacing: 2, content: {
+                        HStack {
+                            Label(lexeme.text, systemImage: "heart").font(Font.headline)
+
+                            if let partOfSpeech = lexeme.partOfSpeech?.rawValue {
+                                Text(partOfSpeech)
+                                    .foregroundColor(.gray)
+                                    .italic()
+                            }
                         }
 
                         if let transcription = lexeme.transcription, !transcription.isEmpty {

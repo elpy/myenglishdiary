@@ -62,7 +62,7 @@ fileprivate let notes = [
     ),
     Note(
         group: groups.first,
-        date: Date(),
+        date: Date().addingTimeInterval(TimeInterval(-1000000000)),
         language: Language.ENG,
         text: "Dev string3",
         partOfSpeech: PartOfSpeech.NOUN,
