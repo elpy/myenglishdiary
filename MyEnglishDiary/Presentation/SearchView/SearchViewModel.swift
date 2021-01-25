@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-// TODO: do anything with it
+// TODO: do anything with this
 enum WtfFailure: String, Identifiable {
     var id: String { rawValue }
     case developmentError = "Error"
@@ -17,8 +17,11 @@ enum WtfFailure: String, Identifiable {
 final class SearchViewModel: ObservableObject {
     @Published var text: String = ""
     @Published var searchResult: DictionarySearchResult = []
+    @Published var groups: [Group] = []
     @Published var displayEmptyResultMessage: Bool = false
     @Published var displaySearchFailure: WtfFailure?
+    @Published var displayFetchingFailure: WtfFailure?
+    @Published var displayMakingNoteFailure: WtfFailure?
 
     private var cancellableSet: Set<AnyCancellable> = []
     private var activeUseCase: SearchUseCase?
@@ -53,5 +56,32 @@ final class SearchViewModel: ObservableObject {
                 }
             }
             .store(in: &cancellableSet)
+    }
+
+    func fetchGroups() {
+        let readGroupsUseCase = DependencyContainer.shared.makeReadGroupsUseCase()
+        readGroupsUseCase.execute { result in
+            switch result {
+            case .success(let groups): self.groups = groups
+            case .failure: self.displayFetchingFailure = WtfFailure.developmentError
+            }
+        }
+    }
+
+    func makeNote(lexeme: Lexeme, placement: NotePlacement, _ completion: @escaping () -> Void) {
+        var group: Group?
+        if case .inGroup(let value) = placement {
+            group = value
+        }
+
+        let makeNoteUseCase = DependencyContainer.shared.makeMakeNoteUseCase(from: lexeme, in: group)
+        makeNoteUseCase.execute { result in
+            completion()
+
+            switch result {
+            case .success: print("new note has been made")
+            case .failure: self.displayMakingNoteFailure = WtfFailure.developmentError
+            }
+        }
     }
 }

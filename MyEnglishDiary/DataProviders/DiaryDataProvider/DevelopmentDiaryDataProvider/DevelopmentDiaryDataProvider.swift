@@ -9,10 +9,12 @@ import Foundation
 
 final class DevelopmentDiaryDataProvider: DiaryDataProvider {
     func addNewNote(_ note: Note, _ completion: @escaping (Result<Void, Error>) -> Void) {
+        notes.append(note)
         completion(.success(()))
     }
 
     func addNewGroup(_ group: Group, _ completion: @escaping (Result<Void, Error>) -> Void) {
+        groups.append(group)
         completion(.success(()))
     }
 
@@ -29,12 +31,12 @@ final class DevelopmentDiaryDataProvider: DiaryDataProvider {
     }
 }
 
-fileprivate let notes = [
+fileprivate var notes = [
     Note(
         group: nil,
         date: Date(),
         language: Language.ENG,
-        text: "Dev string",
+        text: "let",
         partOfSpeech: PartOfSpeech.NOUN,
         transcription: nil,
         meanings: [
@@ -49,8 +51,8 @@ fileprivate let notes = [
         group: nil,
         date: Date(),
         language: Language.ENG,
-        text: "Dev string2",
-        partOfSpeech: PartOfSpeech.NOUN,
+        text: "make",
+        partOfSpeech: PartOfSpeech.VERB,
         transcription: nil,
         meanings: [
             Meaning(
@@ -64,8 +66,8 @@ fileprivate let notes = [
         group: groups.first,
         date: Date().addingTimeInterval(TimeInterval(-1000000000)),
         language: Language.ENG,
-        text: "Dev string3",
-        partOfSpeech: PartOfSpeech.NOUN,
+        text: "last",
+        partOfSpeech: PartOfSpeech.VERB,
         transcription: nil,
         meanings: [
             Meaning(
@@ -77,7 +79,7 @@ fileprivate let notes = [
     )
 ]
 
-fileprivate let groups = [
+fileprivate var groups = [
     Group(name: "First group"),
     Group(name: "Sun and moon")
 ]

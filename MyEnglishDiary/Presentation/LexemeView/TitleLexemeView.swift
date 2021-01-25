@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+typealias MakingNewGroupHandler = () -> Void
+
 struct TitleLexemeView: View {
     let lexeme: Lexeme
 
@@ -31,7 +33,7 @@ struct TitleLexemeView: View {
 
             Spacer()
 
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            Button(action: {}, label: {
                 Image(systemName: "speaker.wave.2.circle")
                     .resizable()
                     .foregroundColor(.blue)

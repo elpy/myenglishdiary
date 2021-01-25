@@ -64,6 +64,7 @@
 		3AF05DD0258A535A00E300C3 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DCF258A535A00E300C3 /* Language.swift */; };
 		3AF4199A25B5873300AB7741 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF4199925B5873300AB7741 /* Sentry */; };
 		3AF419A025B5887B00AB7741 /* LoggingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF4199F25B5887B00AB7741 /* LoggingService.swift */; };
+		3AF465FD25BF17DA0030DBAE /* MakingNoteActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF465FC25BF17DA0030DBAE /* MakingNoteActionSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,7 @@
 		3AF05DCA258A532F00E300C3 /* PartOfSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartOfSpeech.swift; sourceTree = "<group>"; };
 		3AF05DCF258A535A00E300C3 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		3AF4199F25B5887B00AB7741 /* LoggingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingService.swift; sourceTree = "<group>"; };
+		3AF465FC25BF17DA0030DBAE /* MakingNoteActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakingNoteActionSheet.swift; sourceTree = "<group>"; };
 		3AFB17C625B1A4FC00C72BF7 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		3AFB17C725B1A53200C72BF7 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		3AFB17C825B1A54300C72BF7 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
@@ -437,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				3ADABD282594E63F003DF039 /* SearchInput */,
+				3AF465FB25BF17990030DBAE /* MakingNoteActionSheet */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -514,6 +517,14 @@
 				3AF4199F25B5887B00AB7741 /* LoggingService.swift */,
 			);
 			path = LoggingService;
+			sourceTree = "<group>";
+		};
+		3AF465FB25BF17990030DBAE /* MakingNoteActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				3AF465FC25BF17DA0030DBAE /* MakingNoteActionSheet.swift */,
+			);
+			path = MakingNoteActionSheet;
 			sourceTree = "<group>";
 		};
 		3AFB17C525B1A4CB00C72BF7 /* Configurations */ = {
@@ -694,6 +705,7 @@
 				3A2C59AE25A6DA400068FC28 /* MeaningsLexemeView.swift in Sources */,
 				3AED4209258E792C0068C294 /* DevelopmentDictionaryDataProvider.swift in Sources */,
 				3A4D83B925B451B40091FDDC /* Configuration.swift in Sources */,
+				3AF465FD25BF17DA0030DBAE /* MakingNoteActionSheet.swift in Sources */,
 				3AE49E6B256D76DC00FBD65F /* MakeGroupUseCase.swift in Sources */,
 				3AC0B32425B8527E00523745 /* ReadNotesUseCase.swift in Sources */,
 				3AD88D66258E0C83002D4B07 /* DiaryDataProvider.swift in Sources */,
