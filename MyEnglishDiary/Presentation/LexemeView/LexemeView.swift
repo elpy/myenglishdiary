@@ -9,13 +9,27 @@ import SwiftUI
 
 struct LexemeView: View {
     let lexeme: Lexeme
+    @ObservedObject var viewModel = LexemeViewModel()
+    @State private var presentingPlacementSheet = false
 
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                TitleLexemeView(lexeme: lexeme)
-                MeaningsLexemeView(lexeme: lexeme)
-            }.padding()
+        NavigationView {
+            ScrollView {
+                LazyVStack {
+                    TitleLexemeView(lexeme: lexeme)
+                    MeaningsLexemeView(lexeme: lexeme)
+                }
+                .padding()
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(trailing: Button("Добавить в дневник", action: { presentingPlacementSheet.toggle() }))
+
+        }
+        .notePlacementSelectionSheet(groups: viewModel.groups, isPresented: $presentingPlacementSheet) { placement in
+            viewModel.makeNote(lexeme: lexeme, placement: placement)
+        }
+        .onAppear {
+            viewModel.fetchGroups()
         }
     }
 }

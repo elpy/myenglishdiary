@@ -27,8 +27,10 @@ struct MeaningsLexemeView: View {
                             VStack(alignment: .leading) {
                                 Text(example.text).font(.caption)
                                 Text(example.meaning).font(.caption)
-                            }.padding(Edge.Set.leading, 5)
-                        }.padding(2)
+                            }
+                            .padding(Edge.Set.leading, 5)
+                        }
+                        .padding(2)
                     }
 
                     Spacer()

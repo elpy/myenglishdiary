@@ -1,5 +1,5 @@
 //
-//  MakingNoteActionSheet.swift
+//  NotePlacementSelection.swift
 //  MyEnglishDiary
 //
 //  Created by Антон Скворцов on 25.01.2021.
@@ -14,7 +14,7 @@ enum NotePlacement {
 }
 
 extension View {
-    func makingNoteActionSheet(
+    func notePlacementSelectionSheet(
         groups: [Group],
         isPresented: Binding<Bool>,
         _ pressHandler: @escaping (_ placement: NotePlacement) -> Void

@@ -20,14 +20,14 @@ struct TitleLexemeView: View {
 
                     if let partOfSpeech = lexeme.partOfSpeech?.rawValue {
                         Text(partOfSpeech)
-                            .foregroundColor(.gray)
-                            .italic()
+                        .foregroundColor(.gray)
+                        .italic()
                     }
                 }
 
                 if let transcription = lexeme.transcription, !transcription.isEmpty {
                     Text("[\(transcription)]")
-                        .foregroundColor(.gray)
+                    .foregroundColor(.gray)
                 }
             }
 
@@ -35,9 +35,9 @@ struct TitleLexemeView: View {
 
             Button(action: {}, label: {
                 Image(systemName: "speaker.wave.2.circle")
-                    .resizable()
-                    .foregroundColor(.blue)
-                    .frame(width: 30, height: 30, alignment: .center)
+                .resizable()
+                .foregroundColor(.blue)
+                .frame(width: 30, height: 30, alignment: .center)
             })
         }
     }
