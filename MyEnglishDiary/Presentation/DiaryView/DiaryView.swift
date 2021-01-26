@@ -22,20 +22,15 @@ struct DiaryView: View {
                                     self.lastPressedCard = note
                                 }
                         }
-                    }
-                    .padding(.horizontal)
-                    .padding(.bottom)
+                    }.padding(.horizontal).padding(.bottom)
                 }
             }
             .navigationBarTitle("Мой дневник", displayMode: .inline)
-        }
-        .sheet(item: $lastPressedCard) { note in
+        }.sheet(item: $lastPressedCard) { note in
             NoteView(note: note)
-        }
-        .alert(item: $viewModel.displayReadingFailure) { _ in
+        }.alert(item: $viewModel.displayReadingFailure) { _ in
             Alert(title: Text("Ошибка"))
-        }
-        .onAppear {
+        }.onAppear {
             self.viewModel.fetchDiary()
         }
     }

@@ -28,24 +28,18 @@ struct SearchView: View {
                             SearchResultCard(
                                 lexeme: lexeme,
                                 inDiary: viewModel.lexemeIdsInDiary.contains(lexeme.id)
-                            )
-                            .onTapGesture {
+                            ).onTapGesture {
                                 self.displayLexemeViewFor = lexeme
                             }
                         }
-                    }
-                    .padding(.horizontal)
-                    .padding(.bottom)
+                    }.padding(.horizontal).padding(.bottom)
                 }
             }
-        }
-        .sheet(item: $displayLexemeViewFor) { lexeme in
+        }.sheet(item: $displayLexemeViewFor) { lexeme in
             LexemeView(lexeme: lexeme)
-        }
-        .alert(item: $viewModel.displaySearchFailure) { _ in
+        }.alert(item: $viewModel.displaySearchFailure) { _ in
             Alert(title: Text("Ошибка поиска"))
-        }
-        .onAppear {
+        }.onAppear {
             viewModel.fetchDiary()
         }
     }

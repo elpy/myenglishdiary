@@ -32,9 +32,9 @@ struct TitleLexemeView: View {
 
             Button(action: {}, label: {
                 Image(systemName: "speaker.wave.2.circle")
-                .resizable()
-                .foregroundColor(.blue)
-                .frame(width: 30, height: 30, alignment: .center)
+                    .resizable()
+                    .foregroundColor(.blue)
+                    .frame(width: 30, height: 30, alignment: .center)
             })
         }
     }

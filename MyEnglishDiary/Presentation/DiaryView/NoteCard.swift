@@ -19,16 +19,14 @@ struct NoteCard: View {
                             Label(note.text, systemImage: "star").font(.headline)
 
                             if let partOfSpeech = note.partOfSpeech?.rawValue {
-                                Text(partOfSpeech)
-                                .foregroundColor(.gray)
-                                .italic()
+                                Text(partOfSpeech).foregroundColor(.gray).italic()
                             }
                         }
 
                         Text(info)
-                        .foregroundColor(.gray)
-                        .font(Font.footnote)
-                        .italic()
+                            .foregroundColor(.gray)
+                            .font(Font.footnote)
+                            .italic()
                     })
 
                     Spacer()

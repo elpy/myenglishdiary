@@ -7,9 +7,16 @@
 
 import SwiftUI
 
+fileprivate enum LexemeViewSegments: String {
+    case dictionary
+    case external
+    case studying
+}
+
 struct LexemeView: View {
     @ObservedObject var viewModel: LexemeViewModel
     @State private var presentingPlacementSheet = false
+    @State private var segment = LexemeViewSegments.dictionary
 
     init(lexeme: Lexeme) {
         viewModel = LexemeViewModel(lexeme: lexeme)
@@ -17,13 +24,42 @@ struct LexemeView: View {
 
     var body: some View {
         NavigationView {
-            ScrollView {
-                LazyVStack(alignment: .leading) {
-                    TitleLexemeView(lexeme: viewModel.lexeme)
-                    MeaningsLexemeView(lexeme: viewModel.lexeme)
+            VStack(alignment: .leading) {
+                TitleLexemeView(lexeme: viewModel.lexeme)
+
+                Picker(selection: $segment, label: Text("What is your favorite color?")) {
+                    Text("Словарь").tag(LexemeViewSegments.dictionary)
+                    Text("Дополнительно").tag(LexemeViewSegments.external)
+
+                    if viewModel.noteBasedOnLexeme != nil {
+                        Text("Повторения").tag(LexemeViewSegments.studying)
+                    }
+                }.pickerStyle(SegmentedPickerStyle())
+
+                if case .dictionary = segment {
+                    ScrollView {
+                        MeaningsLexemeView(lexeme: viewModel.lexeme)
+                    }
                 }
-                .padding()
-            }
+
+                if case .external = segment {
+                    VStack {
+                        HStack { Spacer() }
+                        Spacer()
+                        Text("Нет данных")
+                        Spacer()
+                    }
+                }
+
+                if case .studying = segment {
+                    VStack {
+                        HStack { Spacer() }
+                        Spacer()
+                        Text("Нет данных")
+                        Spacer()
+                    }
+                }
+            }.padding()
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
                 leading: Text(viewModel.noteBasedOnLexeme == nil ? "" : "В дневнике"),
@@ -36,11 +72,9 @@ struct LexemeView: View {
                         }
                     }
             )
-        }
-        .notePlacementSelectionSheet(groups: viewModel.groups, isPresented: $presentingPlacementSheet) { placement in
+        }.notePlacementSelectionSheet(groups: viewModel.groups, isPresented: $presentingPlacementSheet) { placement in
             viewModel.makeNote(placement: placement)
-        }
-        .onAppear {
+        }.onAppear {
             viewModel.fetchDiary()
         }
     }

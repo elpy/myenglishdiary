@@ -17,7 +17,12 @@ struct MeaningsLexemeView: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 5) {
+            Text("Перевод")
+                .font(Font.footnote)
+                .foregroundColor(Color.gray)
+                .italic()
+
             ForEach(meaningsWithExamples, id: \.text) { meaning in
                 HStack {
                     VStack(alignment: .leading, spacing: 0) {
@@ -27,10 +32,8 @@ struct MeaningsLexemeView: View {
                             VStack(alignment: .leading) {
                                 Text(example.text).font(.caption)
                                 Text(example.meaning).font(.caption)
-                            }
-                            .padding(Edge.Set.leading, 5)
-                        }
-                        .padding(2)
+                            }.padding(Edge.Set.leading, 5)
+                        }.padding(2)
                     }
 
                     Spacer()
@@ -39,7 +42,6 @@ struct MeaningsLexemeView: View {
 
             HStack {
                 Text(meanings.asString().capitalized).font(.subheadline)
-
                 Spacer()
             }
         }

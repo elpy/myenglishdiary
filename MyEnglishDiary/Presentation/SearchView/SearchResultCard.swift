@@ -20,19 +20,15 @@ struct SearchResultCard: View {
                             Label(lexeme.text, systemImage: inDiary ? "heart.fill" : "heart").font(Font.headline)
 
                             if let partOfSpeech = lexeme.partOfSpeech?.rawValue {
-                                Text(partOfSpeech)
-                                    .foregroundColor(.gray)
-                                    .italic()
+                                Text(partOfSpeech).foregroundColor(.gray).italic()
                             }
                         }
 
                         if let transcription = lexeme.transcription, !transcription.isEmpty {
-                            Text("[\(transcription)]")
-                                .foregroundColor(.gray)
+                            Text("[\(transcription)]").foregroundColor(.gray)
                         }
 
-                        Text(lexeme.meanings.asString())
-                            .italic()
+                        Text(lexeme.meanings.asString()).italic()
                     })
 
                     Spacer()
