@@ -33,7 +33,10 @@ final class SearchViewModel: ObservableObject {
                 self.activeUseCase?.cancel()
 
                 let text = text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-                guard text.count > 1 else { return }
+                guard text.count > 1 else {
+                    DispatchQueue.main.async { self.searchResult = [] }
+                    return
+                }
 
                 let useCase = DependencyContainer.shared.makeSearchUseCase(for: text)
                 self.activeUseCase = useCase
