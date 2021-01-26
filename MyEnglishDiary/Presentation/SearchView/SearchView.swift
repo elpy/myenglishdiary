@@ -25,7 +25,10 @@ struct SearchView: View {
                 ScrollView {
                     LazyVStack(alignment: .center, spacing: 12) {
                         ForEach(viewModel.searchResult) { lexeme in
-                            SearchResultCard(lexeme: lexeme)
+                            SearchResultCard(
+                                lexeme: lexeme,
+                                inDiary: viewModel.lexemeIdsInDiary.contains(lexeme.id)
+                            )
                             .onTapGesture {
                                 self.displayLexemeViewFor = lexeme
                             }
@@ -41,6 +44,9 @@ struct SearchView: View {
         }
         .alert(item: $viewModel.displaySearchFailure) { _ in
             Alert(title: Text("Ошибка поиска"))
+        }
+        .onAppear {
+            viewModel.fetchDiary()
         }
     }
 }

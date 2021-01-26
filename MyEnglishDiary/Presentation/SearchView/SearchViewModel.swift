@@ -17,6 +17,7 @@ enum WtfFailure: String, Identifiable {
 final class SearchViewModel: ObservableObject {
     @Published var text: String = ""
     @Published var searchResult: DictionarySearchResult = []
+    @Published var lexemeIdsInDiary: [String] = []
 
     @Published var displayEmptyResultMessage: Bool = false
     @Published var displaySearchFailure: WtfFailure?
@@ -54,5 +55,15 @@ final class SearchViewModel: ObservableObject {
                 }
             }
             .store(in: &cancellableSet)
+    }
+
+    func fetchDiary() {
+        let readNotesUseCase = DependencyContainer.shared.makeReadNotesUseCase()
+        readNotesUseCase.execute { result in
+            switch result {
+            case .success(let notes): self.lexemeIdsInDiary = notes.map { $0.lexemeId }
+            case .failure: fatalError("Couldn't read diary data")
+            }
+        }
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SearchResultCard: View {
     let lexeme: Lexeme
+    let inDiary: Bool
 
     var body: some View {
         GroupBox(
@@ -16,7 +17,7 @@ struct SearchResultCard: View {
                 HStack(alignment: .center, spacing: nil, content: {
                     VStack(alignment: .leading, spacing: 2, content: {
                         HStack {
-                            Label(lexeme.text, systemImage: "heart").font(Font.headline)
+                            Label(lexeme.text, systemImage: inDiary ? "heart.fill" : "heart").font(Font.headline)
 
                             if let partOfSpeech = lexeme.partOfSpeech?.rawValue {
                                 Text(partOfSpeech)
@@ -57,7 +58,6 @@ struct SearchResultCard_Previews: PreviewProvider {
             ]
         )
 
-        SearchResultCard(lexeme: result)
-            .padding()
+        SearchResultCard(lexeme: result, inDiary: true).padding()
     }
 }

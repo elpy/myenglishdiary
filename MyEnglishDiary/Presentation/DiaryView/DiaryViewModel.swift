@@ -5,7 +5,6 @@
 //  Created by Антон Скворцов on 20.01.2021.
 //
 
-import Foundation
 import Combine
 
 final class DiaryViewModel: ObservableObject {
@@ -18,7 +17,6 @@ final class DiaryViewModel: ObservableObject {
     func fetchDiary() {
         let readNotesUseCase = DependencyContainer.shared.makeReadNotesUseCase()
         readNotesUseCase.execute { result in
-            dump(result)
             switch result {
             case .success(let notes): self.notes = notes
             case .failure: self.displayReadingFailure = WtfFailure.developmentError
