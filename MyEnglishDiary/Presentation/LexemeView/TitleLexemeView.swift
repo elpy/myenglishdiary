@@ -19,15 +19,12 @@ struct TitleLexemeView: View {
                     Text(lexeme.text).bold()
 
                     if let partOfSpeech = lexeme.partOfSpeech?.rawValue {
-                        Text(partOfSpeech)
-                        .foregroundColor(.gray)
-                        .italic()
+                        Text(partOfSpeech).foregroundColor(.gray).italic()
                     }
                 }
 
                 if let transcription = lexeme.transcription, !transcription.isEmpty {
-                    Text("[\(transcription)]")
-                    .foregroundColor(.gray)
+                    Text("[\(transcription)]").foregroundColor(.gray)
                 }
             }
 

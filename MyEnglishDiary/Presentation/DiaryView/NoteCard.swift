@@ -20,15 +20,15 @@ struct NoteCard: View {
 
                             if let partOfSpeech = note.partOfSpeech?.rawValue {
                                 Text(partOfSpeech)
-                                    .foregroundColor(.gray)
-                                    .italic()
+                                .foregroundColor(.gray)
+                                .italic()
                             }
                         }
 
                         Text(info)
-                            .foregroundColor(.gray)
-                            .font(Font.footnote)
-                            .italic()
+                        .foregroundColor(.gray)
+                        .font(Font.footnote)
+                        .italic()
                     })
 
                     Spacer()

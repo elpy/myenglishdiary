@@ -27,10 +27,10 @@ final class MakeNoteUseCase: UseCase {
         self.diaryDataProvider = diaryDataProvider
     }
 
-    func execute(_ completion: @escaping (Result<Void, Error>) -> Void) {
+    func execute(_ completion: @escaping (Result<Note, Error>) -> Void) {
         diaryDataProvider.addNewNote(note) { result in
             switch result {
-            case .success: completion(.success(()))
+            case .success: completion(.success(self.note))
             case .failure(let error): completion(.failure(error))
             }
         }

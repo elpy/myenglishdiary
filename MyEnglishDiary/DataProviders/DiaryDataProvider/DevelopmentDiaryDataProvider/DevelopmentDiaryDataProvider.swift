@@ -36,8 +36,8 @@ fileprivate var notes = [
         group: nil,
         date: Date(),
         language: Language.ENG,
-        text: "let",
-        partOfSpeech: PartOfSpeech.NOUN,
+        text: "left",
+        partOfSpeech: PartOfSpeech.ADJECTIVE,
         transcription: nil,
         meanings: [
             Meaning(

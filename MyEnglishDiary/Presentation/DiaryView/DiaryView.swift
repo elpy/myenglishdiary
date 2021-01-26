@@ -26,13 +26,17 @@ struct DiaryView: View {
                     .padding(.horizontal)
                     .padding(.bottom)
                 }
-            }.navigationBarTitle("Мой дневник", displayMode: .inline)
-        }.sheet(item: $lastPressedCard) { note in
+            }
+            .navigationBarTitle("Мой дневник", displayMode: .inline)
+        }
+        .sheet(item: $lastPressedCard) { note in
             NoteView(note: note)
-        }.onAppear {
-            self.viewModel.fetchDiary()
-        }.alert(item: $viewModel.displayReadingFailure) { _ in
+        }
+        .alert(item: $viewModel.displayReadingFailure) { _ in
             Alert(title: Text("Ошибка"))
+        }
+        .onAppear {
+            self.viewModel.fetchDiary()
         }
     }
 }

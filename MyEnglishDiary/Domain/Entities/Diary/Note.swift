@@ -22,4 +22,8 @@ extension Note: Identifiable {
     var id: String {
         return "\(text)_\(partOfSpeech?.rawValue ?? "")_\(date)"
     }
+
+    var lexemeId: String {
+        return "\(text)_\(partOfSpeech?.rawValue ?? "")"
+    }
 }

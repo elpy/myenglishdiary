@@ -8,28 +8,40 @@
 import SwiftUI
 
 struct LexemeView: View {
-    let lexeme: Lexeme
-    @ObservedObject var viewModel = LexemeViewModel()
+    @ObservedObject var viewModel: LexemeViewModel
     @State private var presentingPlacementSheet = false
+
+    init(lexeme: Lexeme) {
+        viewModel = LexemeViewModel(lexeme: lexeme)
+    }
 
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVStack {
-                    TitleLexemeView(lexeme: lexeme)
-                    MeaningsLexemeView(lexeme: lexeme)
+                LazyVStack(alignment: .leading) {
+                    TitleLexemeView(lexeme: viewModel.lexeme)
+                    MeaningsLexemeView(lexeme: viewModel.lexeme)
                 }
                 .padding()
             }
             .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(trailing: Button("Добавить в дневник", action: { presentingPlacementSheet.toggle() }))
-
+            .navigationBarItems(
+                leading: Text(viewModel.noteBasedOnLexeme == nil ? "" : "В дневнике"),
+                trailing:
+                    HStack {
+                        if viewModel.noteBasedOnLexeme == nil {
+                            Button("Добавить в дневник", action: {
+                                presentingPlacementSheet.toggle()
+                            })
+                        }
+                    }
+            )
         }
         .notePlacementSelectionSheet(groups: viewModel.groups, isPresented: $presentingPlacementSheet) { placement in
-            viewModel.makeNote(lexeme: lexeme, placement: placement)
+            viewModel.makeNote(placement: placement)
         }
         .onAppear {
-            viewModel.fetchGroups()
+            viewModel.fetchDiary()
         }
     }
 }
