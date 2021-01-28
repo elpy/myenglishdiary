@@ -9,14 +9,13 @@ import XCTest
 @testable import MyEnglishDiary
 
 final class FailableMakeNoteUseCaseTest: XCTestCase {
-
     private var diaryDataProvider: FailableDiaryDataProviderMock?
 
-    override func setUpWithError() throws {
+    override func setUp() {
         diaryDataProvider = FailableDiaryDataProviderMock()
     }
 
-    func testMakeNote() throws {
+    func testMakeNote() {
         let lexeme = Lexeme(
             language: Language.RUS,
             text: "some lexeme",
@@ -24,13 +23,13 @@ final class FailableMakeNoteUseCaseTest: XCTestCase {
             transcription: "a",
             meanings: []
         )
-        let useCase = MakeNoteUseCase(from: lexeme, diaryDataProvider!)
+        let useCase = MakeNoteUseCase(from: lexeme, in: nil, diaryDataProvider!)
         let expectation = XCTestExpectation(description: "Method fails once")
         useCase.execute {
-            if case .failure(let error) = $0, case DataProviderError.error = error {
+            if case .failure(let error) = $0, case DataProviderError.networkError = error {
                 expectation.fulfill()
             } else {
-                XCTFail("\(DataProviderError.error) expected")
+                XCTFail("\(DataProviderError.networkError) expected")
             }
         }
     }

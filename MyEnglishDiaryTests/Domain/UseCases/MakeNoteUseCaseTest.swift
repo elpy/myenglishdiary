@@ -9,14 +9,13 @@ import XCTest
 @testable import MyEnglishDiary
 
 final class MakeNoteUseCaseTest: XCTestCase {
-
     private var diaryDataProvider: DiaryDataProviderMock?
 
-    override func setUpWithError() throws {
+    override func setUp() {
         diaryDataProvider = DiaryDataProviderMock()
     }
 
-    func testMakeNote() throws {
+    func testMakeNote() {
         let lexeme = Lexeme(
             language: Language.RUS,
             text: "some lexeme",
@@ -24,13 +23,13 @@ final class MakeNoteUseCaseTest: XCTestCase {
             transcription: "a",
             meanings: []
         )
-        let useCase = MakeNoteUseCase(from: lexeme, diaryDataProvider!)
+        let useCase = MakeNoteUseCase(from: lexeme, in: nil, diaryDataProvider!)
         let expectation = XCTestExpectation(description: "Method executes successfully once")
         useCase.execute {
             if case .success = $0 {
-                XCTAssertEqual(1, diaryDataProvider?.notesAdded.count)
-                XCTAssertEqual(lexeme.text, diaryDataProvider?.notesAdded.first?.lexeme)
-                XCTAssertEqual(lexeme.partOfSpeech, diaryDataProvider?.notesAdded.first?.partOfSpeech)
+                XCTAssertEqual(1, self.diaryDataProvider?.notesAdded.count)
+                XCTAssertEqual(lexeme.text, self.diaryDataProvider?.notesAdded.first?.lexeme.text)
+                XCTAssertEqual(lexeme.partOfSpeech, self.diaryDataProvider?.notesAdded.first?.lexeme.partOfSpeech)
                 expectation.fulfill()
             } else {
                 XCTFail("Success result expected")

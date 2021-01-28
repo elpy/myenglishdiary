@@ -9,7 +9,6 @@ import XCTest
 @testable import MyEnglishDiary
 
 final class DictionaryDataProviderMock: DictionaryDataProvider {
-
     let searchResult = [
         Lexeme(
             language: Language.ENG,
@@ -26,7 +25,7 @@ final class DictionaryDataProviderMock: DictionaryDataProvider {
         )
     ]
 
-    func search(for text: String) throws -> [Lexeme] {
-        return searchResult
+    func search(for text: String, _ completion: @escaping (Result<DictionarySearchResult, Error>) -> Void) {
+        completion(.success(searchResult))
     }
 }

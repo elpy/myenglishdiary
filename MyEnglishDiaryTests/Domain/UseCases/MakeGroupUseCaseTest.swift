@@ -9,21 +9,20 @@ import XCTest
 @testable import MyEnglishDiary
 
 final class MakeGroupUseCaseTest: XCTestCase {
-
     private var diaryDataProvider: DiaryDataProviderMock?
 
-    override func setUpWithError() throws {
+    override func setUp() {
         diaryDataProvider = DiaryDataProviderMock()
     }
 
-    func testMakeNote() throws {
+    func testMakeNote() {
         let groupName = "test value"
         let useCase = MakeGroupUseCase(named: "test value", diaryDataProvider!)
         let expectation = XCTestExpectation(description: "Method executes successfully once")
         useCase.execute {
             if case .success = $0 {
-                XCTAssertEqual(1, diaryDataProvider?.groupsAdded.count)
-                XCTAssertEqual(groupName, diaryDataProvider?.groupsAdded.first?.name)
+                XCTAssertEqual(1, self.diaryDataProvider?.groupsAdded.count)
+                XCTAssertEqual(groupName, self.diaryDataProvider?.groupsAdded.first?.name)
                 expectation.fulfill()
             } else {
                 XCTFail("Success result expected")

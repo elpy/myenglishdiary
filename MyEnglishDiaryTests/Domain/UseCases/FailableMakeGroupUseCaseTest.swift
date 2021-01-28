@@ -9,21 +9,20 @@ import XCTest
 @testable import MyEnglishDiary
 
 final class FailableMakeGroupUseCaseTest: XCTestCase {
-
     private var diaryDataProvider: FailableDiaryDataProviderMock?
 
-    override func setUpWithError() throws {
+    override func setUp() {
         diaryDataProvider = FailableDiaryDataProviderMock()
     }
 
-    func testMakeNote() throws {
+    func testMakeNote() {
         let useCase = MakeGroupUseCase(named: "test value", diaryDataProvider!)
         let expectation = XCTestExpectation(description: "Method fails once")
         useCase.execute {
-            if case .failure(let error) = $0, case DataProviderError.error = error {
+            if case .failure(let error) = $0, case DataProviderError.networkError = error {
                 expectation.fulfill()
             } else {
-                XCTFail("\(DataProviderError.error) expected")
+                XCTFail("\(DataProviderError.networkError) expected")
             }
         }
     }

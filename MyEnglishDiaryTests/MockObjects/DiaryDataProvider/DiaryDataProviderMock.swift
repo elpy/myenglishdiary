@@ -9,20 +9,21 @@ import XCTest
 @testable import MyEnglishDiary
 
 final class DiaryDataProviderMock: DiaryDataProvider {
-
     // MARK: test helpers
 
     var notesAdded: [Note] = []
     var groupsAdded: [Group] = []
     var notes: [Note] = [
         Note(
+            lexeme: Lexeme(
+                language: Language.ENG,
+                text: "any value",
+                partOfSpeech: PartOfSpeech.ADVERB,
+                transcription: "any value",
+                meanings: []
+            ),
             group: nil,
             date: Date(),
-            language: Language.ENG,
-            lexeme: "any value",
-            partOfSpeech: PartOfSpeech.ADVERB,
-            transcription: "any value",
-            meanings: [],
             tags: []
         )
     ]
@@ -33,34 +34,36 @@ final class DiaryDataProviderMock: DiaryDataProvider {
 
     // MARK: mock methods
 
-    func addNewNote(_ note: Note) throws {
+    func addNewNote(_ note: Note, _ completion: @escaping (Result<Void, Error>) -> Void) {
         notesAdded.append(note)
+        completion(.success(()))
     }
 
-    func addNewGroup(_ group: Group) throws {
+    func addNewGroup(_ group: Group, _ completion: @escaping (Result<Void, Error>) -> Void) {
         groupsAdded.append(group)
+        completion(.success(()))
     }
 
-    func getNotes() throws -> [Note] {
-        return notes
+    func getNotes(_ completion: @escaping (Result<[Note], Error>) -> Void) {
+        completion(.success(notes))
     }
 
-    func getGroups() throws -> [Group] {
-        return groups
+    func getGroups(_ completion: @escaping (Result<[Group], Error>) -> Void) {
+        completion(.success(groups))
     }
 
-    func markNote(_ note: Note, with tag: Tag) throws {
+    func markNote(_ note: Note, with tag: Tag, _ completion: @escaping (Result<Void, Error>) -> Void) {
+        var tags: [Tag] = note.tags
+        tags.append(tag)
+
         let newNote = Note(
+            lexeme: note.lexeme,
             group: note.group,
             date: note.date,
-            language: note.language,
-            lexeme: note.lexeme,
-            partOfSpeech: note.partOfSpeech,
-            transcription: note.transcription,
-            meanings: note.meanings ,
-            tags: [tag]
+            tags: tags
         )
 
         notesMarked.append(newNote)
+        completion(.success(()))
     }
 }

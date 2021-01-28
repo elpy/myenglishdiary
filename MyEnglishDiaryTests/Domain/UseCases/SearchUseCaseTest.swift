@@ -9,14 +9,13 @@ import XCTest
 @testable import MyEnglishDiary
 
 final class SearchUseCaseTest: XCTestCase {
-
     private var dictionaryDataProvider: DictionaryDataProvider?
 
-    override func setUpWithError() throws {
+    override func setUp() {
         dictionaryDataProvider = DictionaryDataProviderMock()
     }
 
-    func testSearch() throws {
+    func testSearch() {
         let dictionaryDataProvider = DictionaryDataProviderMock()
         let useCase = SearchUseCase(for: "AnyString", dictionaryDataProvider)
 

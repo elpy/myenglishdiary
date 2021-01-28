@@ -9,24 +9,23 @@ import XCTest
 @testable import MyEnglishDiary
 
 final class FailableDiaryDataProviderMock: DiaryDataProvider {
-
-    func addNewNote(_ note: Note) throws {
-        throw DataProviderError.error
+    func addNewNote(_ note: Note, _ completion: @escaping (Result<Void, Error>) -> Void) {
+        completion(.failure(DataProviderError.networkError))
     }
 
-    func addNewGroup(_ group: Group) throws {
-        throw DataProviderError.error
+    func addNewGroup(_ group: Group, _ completion: @escaping (Result<Void, Error>) -> Void) {
+        completion(.failure(DataProviderError.networkError))
     }
 
-    func getNotes() throws -> [Note] {
-        throw DataProviderError.error
+    func getNotes(_ completion: @escaping (Result<[Note], Error>) -> Void) {
+        completion(.failure(DataProviderError.networkError))
     }
 
-    func getGroups() throws -> [Group] {
-        throw DataProviderError.error
+    func getGroups(_ completion: @escaping (Result<[Group], Error>) -> Void) {
+        completion(.failure(DataProviderError.networkError))
     }
 
-    func markNote(_ note: Note, with tag: Tag) throws {
-        throw DataProviderError.error
+    func markNote(_ note: Note, with tag: Tag, _ completion: @escaping (Result<Void, Error>) -> Void) {
+        completion(.failure(DataProviderError.networkError))
     }
 }
