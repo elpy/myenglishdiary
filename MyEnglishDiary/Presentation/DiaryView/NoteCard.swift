@@ -16,9 +16,9 @@ struct NoteCard: View {
                 HStack(alignment: .center, spacing: nil, content: {
                     VStack(alignment: .leading, spacing: 6, content: {
                         HStack {
-                            Label(note.text, systemImage: "star").font(.headline)
+                            Label(note.lexeme.text, systemImage: "star").font(.headline)
 
-                            if let partOfSpeech = note.partOfSpeech?.rawValue {
+                            if let partOfSpeech = note.lexeme.partOfSpeech?.rawValue {
                                 Text(partOfSpeech).foregroundColor(.gray).italic()
                             }
                         }
@@ -56,13 +56,17 @@ struct NoteCard: View {
 struct NoteCard_Previews: PreviewProvider {
     static var previews: some View {
         let note = Note(
+            lexeme: Lexeme(
+                language: Language.ENG,
+                text: "last",
+                partOfSpeech: PartOfSpeech.ADJECTIVE,
+                transcription: "l a s t",
+                meanings: [
+                    Meaning(text: "последний", lexemesWithSimilarMeaning: [], examples: [])
+                ]
+            ),
             group: nil,
             date: Date(),
-            language: Language.ENG,
-            text: "First note",
-            partOfSpeech: PartOfSpeech.NOUN,
-            transcription: nil,
-            meanings: [],
             tags: []
         )
 

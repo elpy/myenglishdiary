@@ -14,6 +14,16 @@ final class LexemeViewModel: ObservableObject {
     @Published var displayFetchingFailure: WtfFailure?
     @Published var displayMakingNoteFailure: WtfFailure?
 
+    var title: String {
+        guard let note = noteBasedOnLexeme else { return "" }
+
+        if let group = note.group {
+            return "«\(group.name)»"
+        }
+
+        return "В дневнике"
+    }
+
     init(lexeme: Lexeme) {
         self.lexeme = lexeme
     }
@@ -22,7 +32,7 @@ final class LexemeViewModel: ObservableObject {
         let readNotesUseCase = DependencyContainer.shared.makeReadNotesUseCase()
         readNotesUseCase.execute { result in
             switch result {
-            case .success(let notes): self.noteBasedOnLexeme = notes.first { note in note.lexemeId == self.lexeme.id }
+            case .success(let notes): self.noteBasedOnLexeme = notes.first { note in note.lexeme.id == self.lexeme.id }
             case .failure: self.displayFetchingFailure = WtfFailure.developmentError
             }
         }

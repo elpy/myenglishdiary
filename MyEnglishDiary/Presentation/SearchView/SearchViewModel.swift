@@ -64,7 +64,7 @@ final class SearchViewModel: ObservableObject {
         let readNotesUseCase = DependencyContainer.shared.makeReadNotesUseCase()
         readNotesUseCase.execute { result in
             switch result {
-            case .success(let notes): self.lexemeIdsInDiary = notes.map { $0.lexemeId }
+            case .success(let notes): self.lexemeIdsInDiary = notes.map { $0.lexeme.id }
             case .failure: fatalError("Couldn't read diary data")
             }
         }

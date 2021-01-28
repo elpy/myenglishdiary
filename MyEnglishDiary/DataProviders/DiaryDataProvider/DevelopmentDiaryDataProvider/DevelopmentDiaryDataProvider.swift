@@ -33,48 +33,20 @@ final class DevelopmentDiaryDataProvider: DiaryDataProvider {
 
 fileprivate var notes = [
     Note(
+        lexeme: Lexeme(
+            language: Language.ENG,
+            text: "left",
+            partOfSpeech: PartOfSpeech.ADJECTIVE,
+            transcription: nil,
+            meanings: [
+                Meaning(
+                    text: "Dev meaning",
+                    lexemesWithSimilarMeaning: [],
+                    examples: [])
+            ]
+        ),
         group: nil,
         date: Date(),
-        language: Language.ENG,
-        text: "left",
-        partOfSpeech: PartOfSpeech.ADJECTIVE,
-        transcription: nil,
-        meanings: [
-            Meaning(
-                text: "Dev meaning",
-                lexemesWithSimilarMeaning: [],
-                examples: [])
-        ],
-        tags: []
-    ),
-    Note(
-        group: nil,
-        date: Date(),
-        language: Language.ENG,
-        text: "make",
-        partOfSpeech: PartOfSpeech.VERB,
-        transcription: nil,
-        meanings: [
-            Meaning(
-                text: "Dev meaning2",
-                lexemesWithSimilarMeaning: [],
-                examples: [])
-        ],
-        tags: []
-    ),
-    Note(
-        group: groups.first,
-        date: Date().addingTimeInterval(TimeInterval(-1000000000)),
-        language: Language.ENG,
-        text: "last",
-        partOfSpeech: PartOfSpeech.VERB,
-        transcription: nil,
-        meanings: [
-            Meaning(
-                text: "Dev meaning3",
-                lexemesWithSimilarMeaning: [],
-                examples: [])
-        ],
         tags: []
     )
 ]

@@ -13,13 +13,9 @@ final class MakeNoteUseCase: UseCase {
 
     init(from lexeme: Lexeme, in group: Group?, _ diaryDataProvider: DiaryDataProvider) {
         let note = Note(
+            lexeme: lexeme,
             group: group,
             date: Date(),
-            language: lexeme.language,
-            text: lexeme.text,
-            partOfSpeech: lexeme.partOfSpeech,
-            transcription: lexeme.transcription,
-            meanings: lexeme.meanings,
             tags: []
         )
 

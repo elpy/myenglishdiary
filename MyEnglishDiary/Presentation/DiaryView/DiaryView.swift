@@ -27,7 +27,7 @@ struct DiaryView: View {
             }
             .navigationBarTitle("Мой дневник", displayMode: .inline)
         }.sheet(item: $lastPressedCard) { note in
-            NoteView(note: note)
+            LexemeView(lexeme: note.lexeme)
         }.alert(item: $viewModel.displayReadingFailure) { _ in
             Alert(title: Text("Ошибка"))
         }.onAppear {

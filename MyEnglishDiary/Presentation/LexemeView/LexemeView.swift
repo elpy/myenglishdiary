@@ -62,7 +62,7 @@ struct LexemeView: View {
             }.padding()
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(
-                leading: Text(viewModel.noteBasedOnLexeme == nil ? "" : "В дневнике"),
+                leading: Text(viewModel.title),
                 trailing:
                     HStack {
                         if viewModel.noteBasedOnLexeme == nil {
