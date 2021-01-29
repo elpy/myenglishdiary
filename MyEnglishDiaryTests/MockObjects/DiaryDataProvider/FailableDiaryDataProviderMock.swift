@@ -13,7 +13,7 @@ final class FailableDiaryDataProviderMock: DiaryDataProvider {
         completion(.failure(DataProviderError.networkError))
     }
 
-    func addNewGroup(_ group: Group, _ completion: @escaping (Result<Void, Error>) -> Void) {
+    func addNewGroup(_ group: NotesGroup, _ completion: @escaping (Result<Void, Error>) -> Void) {
         completion(.failure(DataProviderError.networkError))
     }
 
@@ -21,7 +21,7 @@ final class FailableDiaryDataProviderMock: DiaryDataProvider {
         completion(.failure(DataProviderError.networkError))
     }
 
-    func getGroups(_ completion: @escaping (Result<[Group], Error>) -> Void) {
+    func getGroups(_ completion: @escaping (Result<[NotesGroup], Error>) -> Void) {
         completion(.failure(DataProviderError.networkError))
     }
 

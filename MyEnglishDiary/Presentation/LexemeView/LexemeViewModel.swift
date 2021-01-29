@@ -10,7 +10,7 @@ import Combine
 final class LexemeViewModel: ObservableObject {
     let lexeme: Lexeme
     @Published var noteBasedOnLexeme: Note?
-    @Published var groups: [Group] = []
+    @Published var groups: [NotesGroup] = []
     @Published var displayFetchingFailure: WtfFailure?
     @Published var displayMakingNoteFailure: WtfFailure?
 
@@ -47,7 +47,7 @@ final class LexemeViewModel: ObservableObject {
     }
 
     func makeNote(placement: NotePlacement) {
-        var group: Group?
+        var group: NotesGroup?
         if case .inGroup(let value) = placement {
             group = value
         }

@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Group {
+struct NotesGroup {
     let name: String
 }

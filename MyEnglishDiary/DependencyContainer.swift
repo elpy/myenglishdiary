@@ -38,7 +38,7 @@ class DependencyContainer {
         return ReadGroupsUseCase(diaryDataProvider)
     }
 
-    func makeMakeNoteUseCase(from lexeme: Lexeme, in group: Group? = nil) -> MakeNoteUseCase {
+    func makeMakeNoteUseCase(from lexeme: Lexeme, in group: NotesGroup? = nil) -> MakeNoteUseCase {
         return MakeNoteUseCase(from: lexeme, in: group, diaryDataProvider)
     }
 }

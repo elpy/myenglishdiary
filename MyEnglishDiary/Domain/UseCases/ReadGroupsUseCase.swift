@@ -14,7 +14,7 @@ final class ReadGroupsUseCase: UseCase {
         self.diaryDataProvider = diaryDataProvider
     }
 
-    func execute(_ completion: @escaping (Result<[Group], Error>) -> Void) {
+    func execute(_ completion: @escaping (Result<[NotesGroup], Error>) -> Void) {
         diaryDataProvider.getGroups { result in
             switch result {
             case .success(let groups): completion(.success(groups))

@@ -16,11 +16,8 @@ enum WtfFailure: String, Identifiable {
 
 final class SearchViewModel: ObservableObject {
     @Published var text: String = ""
-    @Published var searchResult: DictionarySearchResult = []
+    @Published var searchState: LoadingState<DictionarySearchResult> = .loaded([])
     @Published var lexemeIdsInDiary: [String] = []
-
-    @Published var displayEmptyResultMessage: Bool = false
-    @Published var displaySearchFailure: WtfFailure?
 
     private var cancellableSet: Set<AnyCancellable> = []
     private var activeUseCase: SearchUseCase?
@@ -33,9 +30,15 @@ final class SearchViewModel: ObservableObject {
                 self.activeUseCase?.cancel()
 
                 let text = text.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-                guard text.count > 1 else {
-                    DispatchQueue.main.async { self.searchResult = [] }
+                guard !text.isEmpty else {
+                    DispatchQueue.main.async { self.searchState = .loaded([]) }
                     return
+                }
+
+                if case .loaded(let data) = self.searchState, !data.isEmpty {
+                    self.searchState = .updating(data)
+                } else {
+                    self.searchState = .loading
                 }
 
                 let useCase = DependencyContainer.shared.makeSearchUseCase(for: text)
@@ -44,13 +47,12 @@ final class SearchViewModel: ObservableObject {
                 useCase.execute { result in
                     if case .success(let lexemes) = result {
                         DispatchQueue.main.async {
-                            self.searchResult = lexemes
-                            self.displayEmptyResultMessage = lexemes.isEmpty && text.count > 1
+                            self.searchState = .loaded(lexemes)
                         }
                     } else if case .failure(let error) = result {
                         print(error)
                         DispatchQueue.main.async {
-                            self.displaySearchFailure = .developmentError
+                            self.searchState = .failed(error)
                         }
                     }
 

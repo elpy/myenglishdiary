@@ -12,7 +12,7 @@ final class DiaryDataProviderMock: DiaryDataProvider {
     // MARK: test helpers
 
     var notesAdded: [Note] = []
-    var groupsAdded: [Group] = []
+    var groupsAdded: [NotesGroup] = []
     var notes: [Note] = [
         Note(
             lexeme: Lexeme(
@@ -27,8 +27,8 @@ final class DiaryDataProviderMock: DiaryDataProvider {
             tags: []
         )
     ]
-    var groups: [Group] = [
-        Group(name: "Any value")
+    var groups: [NotesGroup] = [
+        NotesGroup(name: "Any value")
     ]
     var notesMarked: [Note] = []
 
@@ -39,7 +39,7 @@ final class DiaryDataProviderMock: DiaryDataProvider {
         completion(.success(()))
     }
 
-    func addNewGroup(_ group: Group, _ completion: @escaping (Result<Void, Error>) -> Void) {
+    func addNewGroup(_ group: NotesGroup, _ completion: @escaping (Result<Void, Error>) -> Void) {
         groupsAdded.append(group)
         completion(.success(()))
     }
@@ -48,7 +48,7 @@ final class DiaryDataProviderMock: DiaryDataProvider {
         completion(.success(notes))
     }
 
-    func getGroups(_ completion: @escaping (Result<[Group], Error>) -> Void) {
+    func getGroups(_ completion: @escaping (Result<[NotesGroup], Error>) -> Void) {
         completion(.success(groups))
     }
 

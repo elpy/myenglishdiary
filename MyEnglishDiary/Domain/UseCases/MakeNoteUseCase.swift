@@ -11,7 +11,7 @@ final class MakeNoteUseCase: UseCase {
     private let note: Note
     private let diaryDataProvider: DiaryDataProvider
 
-    init(from lexeme: Lexeme, in group: Group?, _ diaryDataProvider: DiaryDataProvider) {
+    init(from lexeme: Lexeme, in group: NotesGroup?, _ diaryDataProvider: DiaryDataProvider) {
         let note = Note(
             lexeme: lexeme,
             group: group,

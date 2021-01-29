@@ -8,17 +8,17 @@
 import Foundation
 
 final class MakeGroupUseCase: UseCase {
-    private let group: Group
+    private let group: NotesGroup
     private let diaryDataProvider: DiaryDataProvider
 
     init(named name: String, _ diaryDataProvider: DiaryDataProvider) {
-        let group = Group(name: name)
+        let group = NotesGroup(name: name)
 
         self.group = group
         self.diaryDataProvider = diaryDataProvider
     }
 
-    func execute(_ completion: @escaping (Result<Group, Error>) -> Void) {
+    func execute(_ completion: @escaping (Result<NotesGroup, Error>) -> Void) {
         diaryDataProvider.addNewGroup(group) { result in
             switch result {
             case .success: completion(.success(self.group))

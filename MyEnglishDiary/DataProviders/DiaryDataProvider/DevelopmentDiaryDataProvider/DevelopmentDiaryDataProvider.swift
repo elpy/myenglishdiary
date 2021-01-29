@@ -13,7 +13,7 @@ final class DevelopmentDiaryDataProvider: DiaryDataProvider {
         completion(.success(()))
     }
 
-    func addNewGroup(_ group: Group, _ completion: @escaping (Result<Void, Error>) -> Void) {
+    func addNewGroup(_ group: NotesGroup, _ completion: @escaping (Result<Void, Error>) -> Void) {
         groups.append(group)
         completion(.success(()))
     }
@@ -22,7 +22,7 @@ final class DevelopmentDiaryDataProvider: DiaryDataProvider {
         completion(.success(notes))
     }
 
-    func getGroups(_ completion: @escaping (Result<[Group], Error>) -> Void) {
+    func getGroups(_ completion: @escaping (Result<[NotesGroup], Error>) -> Void) {
         completion(.success(groups))
     }
 
@@ -52,6 +52,6 @@ fileprivate var notes = [
 ]
 
 fileprivate var groups = [
-    Group(name: "First group"),
-    Group(name: "Sun and moon")
+    NotesGroup(name: "First group"),
+    NotesGroup(name: "Sun and moon")
 ]

@@ -12,33 +12,35 @@ struct SearchView: View {
     @State private var displayLexemeViewFor: Lexeme?
 
     var body: some View {
-        VStack(alignment: .center, spacing: 0) {
+        VStack(alignment: .center, spacing: 4) {
             SearchInput(text: $viewModel.text, placeholder: "Поиск")
 
-            if viewModel.displayEmptyResultMessage {
-                VStack {
-                    Spacer()
-                    Text("По запросу «\(viewModel.text)» ничего не найдено")
-                    Spacer()
-                }
-            } else {
-                ScrollView {
-                    LazyVStack(alignment: .center, spacing: 12) {
-                        ForEach(viewModel.searchResult) { lexeme in
-                            SearchResultCard(
-                                lexeme: lexeme,
-                                inDiary: viewModel.lexemeIdsInDiary.contains(lexeme.id)
-                            ).onTapGesture {
-                                self.displayLexemeViewFor = lexeme
+            Loadable(state: viewModel.searchState) { (lexemes: DictionarySearchResult) in
+                ZStack {
+                    ScrollView {
+                        LazyVStack(alignment: .center, spacing: 12) {
+                            ForEach(lexemes) { lexeme in
+                                SearchResultCard(
+                                    lexeme: lexeme,
+                                    inDiary: viewModel.lexemeIdsInDiary.contains(lexeme.id)
+                                ).onTapGesture {
+                                    self.displayLexemeViewFor = lexeme
+                                }
                             }
+                        }.padding(.horizontal).padding(.bottom)
+                    }
+
+                    if lexemes.isEmpty, !viewModel.text.isEmpty {
+                        VStack {
+                            Spacer()
+                            Text("По запросу «\(viewModel.text)» ничего не найдено")
+                            Spacer()
                         }
-                    }.padding(.horizontal).padding(.bottom)
+                    }
                 }
             }
         }.sheet(item: $displayLexemeViewFor) { lexeme in
             LexemeView(lexeme: lexeme)
-        }.alert(item: $viewModel.displaySearchFailure) { _ in
-            Alert(title: Text("Ошибка поиска"))
         }.onAppear {
             viewModel.fetchDiary()
         }

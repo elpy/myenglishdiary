@@ -12,5 +12,5 @@ protocol NotesSelectionStrategy {
 }
 
 protocol Studying {
-    func selectNotesToStudy(with strategy: NotesSelectionStrategy, from group: Group?) -> [Note]
+    func selectNotesToStudy(with strategy: NotesSelectionStrategy, from group: NotesGroup?) -> [Note]
 }

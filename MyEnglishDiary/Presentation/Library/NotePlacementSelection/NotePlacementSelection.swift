@@ -9,13 +9,13 @@ import SwiftUI
 
 enum NotePlacement {
     case plain
-    case inGroup(group: Group)
+    case inGroup(group: NotesGroup)
     case inNewGroup
 }
 
 extension View {
     func notePlacementSelectionSheet(
-        groups: [Group],
+        groups: [NotesGroup],
         isPresented: Binding<Bool>,
         _ pressHandler: @escaping (_ placement: NotePlacement) -> Void
     ) -> some View {

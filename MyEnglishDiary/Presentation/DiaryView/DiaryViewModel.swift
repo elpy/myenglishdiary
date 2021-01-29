@@ -9,7 +9,7 @@ import Combine
 
 final class DiaryViewModel: ObservableObject {
     @Published var notes: [Note] = []
-    @Published var groups: [Group] = []
+    @Published var groups: [NotesGroup] = []
     @Published var displayReadingFailure: WtfFailure?
 
     private var cancellableSet: Set<AnyCancellable> = []

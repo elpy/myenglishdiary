@@ -9,7 +9,7 @@ import Foundation
 
 struct Note {
     let lexeme: Lexeme
-    let group: Group?
+    let group: NotesGroup?
     let date: Date
     let tags: [Tag]
 }

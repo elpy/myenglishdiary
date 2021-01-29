@@ -20,7 +20,7 @@ final class SearchUseCase: UseCase, Cancellable {
     func execute(_ completion: @escaping (Result<DictionarySearchResult, Error>) -> Void) {
         guard isCancelled == false else { return }
 
-        guard text.count > 1 else {
+        guard !text.isEmpty else {
             completion(.success([]))
             return
         }
