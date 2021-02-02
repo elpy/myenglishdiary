@@ -11,7 +11,7 @@ enum LoadingState<T> {
     case loading
     case loaded(T)
     case updating(T)
-    case failed(Error)
+    case errored(Error)
 }
 
 struct Loadable<T, Content: View>: View {
@@ -27,7 +27,7 @@ struct Loadable<T, Content: View>: View {
         switch state {
         case .loading: return AnyView(loadingIndicator)
         case .loaded(let value), .updating(let value): return AnyView(content(value))
-        case .failed: return AnyView(failureIndicator)
+        case .errored: return AnyView(failureIndicator)
         }
     }
 

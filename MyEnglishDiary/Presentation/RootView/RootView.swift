@@ -18,13 +18,21 @@ struct RootView: View {
                     }
                 }).tag(0)
 
+            StudyingView()
+                .tabItem({
+                    VStack {
+                        Text("Повторение")
+                        Image(systemName: "graduationcap.fill").font(Font.system(size: 24.0))
+                    }
+                }).tag(1)
+
             DiaryView()
                 .tabItem({
                     VStack {
                         Text("Дневник")
                         Image(systemName: "book.fill").font(Font.system(size: 24.0))
                     }
-                }).tag(1)
+                }).tag(2)
         }
     }
 

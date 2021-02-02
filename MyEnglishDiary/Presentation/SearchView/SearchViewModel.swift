@@ -52,7 +52,7 @@ final class SearchViewModel: ObservableObject {
                     } else if case .failure(let error) = result {
                         print(error)
                         DispatchQueue.main.async {
-                            self.searchState = .failed(error)
+                            self.searchState = .errored(error)
                         }
                     }
 

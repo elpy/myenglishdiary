@@ -9,7 +9,6 @@ import SwiftUI
 
 fileprivate enum LexemeViewSegments: String {
     case dictionary
-    case external
     case studying
 }
 
@@ -29,25 +28,12 @@ struct LexemeView: View {
 
                 Picker(selection: $segment, label: Text("What is your favorite color?")) {
                     Text("Словарь").tag(LexemeViewSegments.dictionary)
-                    Text("Дополнительно").tag(LexemeViewSegments.external)
-
-                    if viewModel.noteBasedOnLexeme != nil {
-                        Text("Повторения").tag(LexemeViewSegments.studying)
-                    }
+                    Text("Повторения").tag(LexemeViewSegments.studying)
                 }.pickerStyle(SegmentedPickerStyle())
 
                 if case .dictionary = segment {
                     ScrollView {
                         MeaningsLexemeView(lexeme: viewModel.lexeme)
-                    }
-                }
-
-                if case .external = segment {
-                    VStack {
-                        HStack { Spacer() }
-                        Spacer()
-                        Text("Нет данных")
-                        Spacer()
                     }
                 }
 
