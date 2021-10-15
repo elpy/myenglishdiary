@@ -29,12 +29,6 @@
 	</dict>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
-	<key>RealmDictionaryProviderAppId</key>
-	<string>$(REALM_DICTIONARY_PROVIDER_APP_ID)</string>
-	<key>RealmMongoDBServiceName</key>
-	<string>$(REALM_MONGODB_SERVICE_NAME)</string>
-	<key>RealmDictionaryDatabaseName</key>
-	<string>$(REALM_DICTIONARY_DATABASE_NAME)</string>
 	<key>SentryDSN</key>
 	<string>https://$(SENTRY_DSN)</string>
 	<key>SentryDebug</key>
@@ -58,7 +52,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>UIUserInterfaceStyle</key>
-    <string>Light</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>

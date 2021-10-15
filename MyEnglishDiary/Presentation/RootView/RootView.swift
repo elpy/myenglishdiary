@@ -14,7 +14,8 @@ struct RootView: View {
                 .tabItem({
                     VStack {
                         Text("Поиск")
-                        Image(systemName: "doc.text.magnifyingglass").font(Font.system(size: 24.0))
+                        Image(systemName: "doc.text.magnifyingglass")
+                            .font(Font.system(size: 24.0))
                     }
                 }).tag(0)
 
@@ -22,7 +23,8 @@ struct RootView: View {
                 .tabItem({
                     VStack {
                         Text("Повторение")
-                        Image(systemName: "graduationcap.fill").font(Font.system(size: 24.0))
+                        Image(systemName: "graduationcap.fill")
+                            .font(Font.system(size: 24.0))
                     }
                 }).tag(1)
 
@@ -30,7 +32,8 @@ struct RootView: View {
                 .tabItem({
                     VStack {
                         Text("Дневник")
-                        Image(systemName: "book.fill").font(Font.system(size: 24.0))
+                        Image(systemName: "book.fill")
+                            .font(Font.system(size: 24.0))
                     }
                 }).tag(2)
         }

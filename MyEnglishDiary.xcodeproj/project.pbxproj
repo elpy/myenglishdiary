@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A121DDF25B1C5BE00E24FB1 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 3A121DDE25B1C5BE00E24FB1 /* Realm */; };
-		3A121DE125B1C5BE00E24FB1 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3A121DE025B1C5BE00E24FB1 /* RealmSwift */; };
 		3A2C599B25A6C9700068FC28 /* LexemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C599A25A6C9700068FC28 /* LexemeView.swift */; };
 		3A2C59A925A6D90E0068FC28 /* TitleLexemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C59A825A6D90E0068FC28 /* TitleLexemeView.swift */; };
 		3A2C59AE25A6DA400068FC28 /* MeaningsLexemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C59AD25A6DA3F0068FC28 /* MeaningsLexemeView.swift */; };
@@ -32,13 +30,15 @@
 		3A940877255D9F390090DB55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A940876255D9F390090DB55 /* Assets.xcassets */; };
 		3A94087A255D9F390090DB55 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A940879255D9F390090DB55 /* Preview Assets.xcassets */; };
 		3A940890255D9F3A0090DB55 /* MyEnglishDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A94088F255D9F3A0090DB55 /* MyEnglishDiaryUITests.swift */; };
+		3AB4EE9E26DA5780009768E8 /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB4EE9D26DA5780009768E8 /* AWSDataStorePlugin */; };
+		3AB4EEA026DA5780009768E8 /* AWSAPIPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB4EE9F26DA5780009768E8 /* AWSAPIPlugin */; };
+		3AB4EEA226DA5780009768E8 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 3AB4EEA126DA5780009768E8 /* Amplify */; };
 		3ABE248C25C4123A0056E5AF /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE248B25C4123A0056E5AF /* Loadable.swift */; };
 		3ABE249225C417160056E5AF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE249125C417160056E5AF /* ActivityIndicator.swift */; };
 		3AC0B31F25B84FD200523745 /* DiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0B31E25B84FD200523745 /* DiaryViewModel.swift */; };
 		3AC0B32425B8527E00523745 /* ReadNotesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0B32325B8527E00523745 /* ReadNotesUseCase.swift */; };
 		3AC0B32925B854C000523745 /* ReadGroupsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0B32825B854C000523745 /* ReadGroupsUseCase.swift */; };
 		3AC0B32E25B85EC500523745 /* NoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0B32D25B85EC500523745 /* NoteCard.swift */; };
-		3AD460B525B1BE6B0099849A /* RealmDictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD460B425B1BE6B0099849A /* RealmDictionaryDataProvider.swift */; };
 		3AD88C9A258DED7B002D4B07 /* DictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88C99258DED7B002D4B07 /* DictionaryDataProvider.swift */; };
 		3AD88CB4258DF8A0002D4B07 /* SearchUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88CB3258DF8A0002D4B07 /* SearchUseCaseTest.swift */; };
 		3AD88CC9258E0058002D4B07 /* DictionaryDataProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88C9F258DEE4C002D4B07 /* DictionaryDataProviderMock.swift */; };
@@ -68,6 +68,8 @@
 		3AF4199A25B5873300AB7741 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF4199925B5873300AB7741 /* Sentry */; };
 		3AF419A025B5887B00AB7741 /* LoggingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF4199F25B5887B00AB7741 /* LoggingService.swift */; };
 		3AF465FD25BF17DA0030DBAE /* NotePlacementSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF465FC25BF17DA0030DBAE /* NotePlacementSelection.swift */; };
+		7C9E6E35A8C53C763B324E49 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D75A88BDA9D176FF2E999DE /* awsconfiguration.json */; };
+		9A7A2D143D155CABC84BB597 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C9293FF431898331B62D2 /* amplifyconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F2C9293FF431898331B62D2 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		3A2C599A25A6C9700068FC28 /* LexemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexemeView.swift; sourceTree = "<group>"; };
 		3A2C59A825A6D90E0068FC28 /* TitleLexemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLexemeView.swift; sourceTree = "<group>"; };
 		3A2C59AD25A6DA3F0068FC28 /* MeaningsLexemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningsLexemeView.swift; sourceTree = "<group>"; };
@@ -123,7 +126,6 @@
 		3AC0B32325B8527E00523745 /* ReadNotesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadNotesUseCase.swift; sourceTree = "<group>"; };
 		3AC0B32825B854C000523745 /* ReadGroupsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadGroupsUseCase.swift; sourceTree = "<group>"; };
 		3AC0B32D25B85EC500523745 /* NoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCard.swift; sourceTree = "<group>"; };
-		3AD460B425B1BE6B0099849A /* RealmDictionaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDictionaryDataProvider.swift; sourceTree = "<group>"; };
 		3AD88C99258DED7B002D4B07 /* DictionaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDataProvider.swift; sourceTree = "<group>"; };
 		3AD88C9F258DEE4C002D4B07 /* DictionaryDataProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDataProviderMock.swift; sourceTree = "<group>"; };
 		3AD88CB3258DF8A0002D4B07 /* SearchUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCaseTest.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		3AFB17C625B1A4FC00C72BF7 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		3AFB17C725B1A53200C72BF7 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		3AFB17C825B1A54300C72BF7 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		4D75A88BDA9D176FF2E999DE /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,9 +165,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A121DE125B1C5BE00E24FB1 /* RealmSwift in Frameworks */,
-				3A121DDF25B1C5BE00E24FB1 /* Realm in Frameworks */,
+				3AB4EEA026DA5780009768E8 /* AWSAPIPlugin in Frameworks */,
+				3AB4EEA226DA5780009768E8 /* Amplify in Frameworks */,
 				3AF4199A25B5873300AB7741 /* Sentry in Frameworks */,
+				3AB4EE9E26DA5780009768E8 /* AWSDataStorePlugin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +189,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		174A495BE8A302920A247AEB /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				4D75A88BDA9D176FF2E999DE /* awsconfiguration.json */,
+				1F2C9293FF431898331B62D2 /* amplifyconfiguration.json */,
+			);
+			name = AmplifyConfig;
+			sourceTree = "<group>";
+		};
 		3A2C599925A6C9460068FC28 /* LexemeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,7 +316,6 @@
 			isa = PBXGroup;
 			children = (
 				3AED4207258E78F90068C294 /* DevelopmentDictionaryDataProvider */,
-				3AD460B325B1BE4D0099849A /* RealmDictionaryDataProvider */,
 			);
 			path = DictionaryDataProvider;
 			sourceTree = "<group>";
@@ -333,6 +345,7 @@
 				3A940883255D9F390090DB55 /* MyEnglishDiaryTests */,
 				3A94088E255D9F3A0090DB55 /* MyEnglishDiaryUITests */,
 				3A940870255D9F390090DB55 /* Products */,
+				174A495BE8A302920A247AEB /* AmplifyConfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -354,12 +367,12 @@
 				3A55DE6C25606C3300B3A4CA /* Services */,
 				3A5AE21A258415FC00C5DB17 /* DataProviders */,
 				3A55DE6B25606C2000B3A4CA /* Presentation */,
-				3A940872255D9F390090DB55 /* MyEnglishDiaryApp.swift */,
+				3A940878255D9F390090DB55 /* Preview Content */,
 				3A940876255D9F390090DB55 /* Assets.xcassets */,
 				3A94087B255D9F390090DB55 /* Info.plist */,
+				3A940872255D9F390090DB55 /* MyEnglishDiaryApp.swift */,
 				3A4D83B825B451B40091FDDC /* Configuration.swift */,
 				3A5AE23525841C4B00C5DB17 /* DependencyContainer.swift */,
-				3A940878255D9F390090DB55 /* Preview Content */,
 			);
 			path = MyEnglishDiary;
 			sourceTree = "<group>";
@@ -412,14 +425,6 @@
 				3ABE249125C417160056E5AF /* ActivityIndicator.swift */,
 			);
 			path = ActivityIndicator;
-			sourceTree = "<group>";
-		};
-		3AD460B325B1BE4D0099849A /* RealmDictionaryDataProvider */ = {
-			isa = PBXGroup;
-			children = (
-				3AD460B425B1BE6B0099849A /* RealmDictionaryDataProvider.swift */,
-			);
-			path = RealmDictionaryDataProvider;
 			sourceTree = "<group>";
 		};
 		3AD88CAD258DF4EB002D4B07 /* UseCases */ = {
@@ -588,9 +593,10 @@
 			);
 			name = MyEnglishDiary;
 			packageProductDependencies = (
-				3A121DDE25B1C5BE00E24FB1 /* Realm */,
-				3A121DE025B1C5BE00E24FB1 /* RealmSwift */,
 				3AF4199925B5873300AB7741 /* Sentry */,
+				3AB4EE9D26DA5780009768E8 /* AWSDataStorePlugin */,
+				3AB4EE9F26DA5780009768E8 /* AWSAPIPlugin */,
+				3AB4EEA126DA5780009768E8 /* Amplify */,
 			);
 			productName = MyEnglishDiary;
 			productReference = 3A94086F255D9F390090DB55 /* MyEnglishDiary.app */;
@@ -664,8 +670,8 @@
 			);
 			mainGroup = 3A940866255D9F390090DB55;
 			packageReferences = (
-				3A121DDD25B1C5BE00E24FB1 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				3AF4199825B5873300AB7741 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+				3AB4EE9C26DA5780009768E8 /* XCRemoteSwiftPackageReference "amplify-ios" */,
 			);
 			productRefGroup = 3A940870255D9F390090DB55 /* Products */;
 			projectDirPath = "";
@@ -685,6 +691,8 @@
 			files = (
 				3A94087A255D9F390090DB55 /* Preview Assets.xcassets in Resources */,
 				3A940877255D9F390090DB55 /* Assets.xcassets in Resources */,
+				7C9E6E35A8C53C763B324E49 /* awsconfiguration.json in Resources */,
+				9A7A2D143D155CABC84BB597 /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,7 +755,6 @@
 				3AF05DB4258A4EF300E300C3 /* Lexeme.swift in Sources */,
 				3A2C599B25A6C9700068FC28 /* LexemeView.swift in Sources */,
 				3AF05DC6258A4FD800E300C3 /* Example.swift in Sources */,
-				3AD460B525B1BE6B0099849A /* RealmDictionaryDataProvider.swift in Sources */,
 				3A2C59A925A6D90E0068FC28 /* TitleLexemeView.swift in Sources */,
 				3A548691258BAC9E000EF8B0 /* UseCase.swift in Sources */,
 				3ABE249225C417160056E5AF /* ActivityIndicator.swift in Sources */,
@@ -870,7 +877,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -926,7 +933,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1122,7 +1129,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1244,7 +1251,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1372,7 +1379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1494,7 +1501,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1629,12 +1636,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3A121DDD25B1C5BE00E24FB1 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+		3AB4EE9C26DA5780009768E8 /* XCRemoteSwiftPackageReference "amplify-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			repositoryURL = "https://github.com/aws-amplify/amplify-ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 10.5.0;
+				minimumVersion = 1.15.1;
 			};
 		};
 		3AF4199825B5873300AB7741 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
@@ -1642,21 +1649,26 @@
 			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 6.1.2;
+				minimumVersion = 7.4.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3A121DDE25B1C5BE00E24FB1 /* Realm */ = {
+		3AB4EE9D26DA5780009768E8 /* AWSDataStorePlugin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3A121DDD25B1C5BE00E24FB1 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = Realm;
+			package = 3AB4EE9C26DA5780009768E8 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSDataStorePlugin;
 		};
-		3A121DE025B1C5BE00E24FB1 /* RealmSwift */ = {
+		3AB4EE9F26DA5780009768E8 /* AWSAPIPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3A121DDD25B1C5BE00E24FB1 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
-			productName = RealmSwift;
+			package = 3AB4EE9C26DA5780009768E8 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSAPIPlugin;
+		};
+		3AB4EEA126DA5780009768E8 /* Amplify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AB4EE9C26DA5780009768E8 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = Amplify;
 		};
 		3AF4199925B5873300AB7741 /* Sentry */ = {
 			isa = XCSwiftPackageProductDependency;

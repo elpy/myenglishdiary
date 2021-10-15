@@ -12,8 +12,7 @@ class DependencyContainer {
 
     // MARK: data providers
 
-    private var dictionaryDataProvider: DictionaryDataProvider = RealmDictionaryDataProvider()
-    // private var dictionaryDataProvider: DictionaryDataProvider = DevelopmentDictionaryDataProvider()
+    private var dictionaryDataProvider: DictionaryDataProvider = DevelopmentDictionaryDataProvider()
     private var diaryDataProvider: DiaryDataProvider = DevelopmentDiaryDataProvider()
 
     // MARK: services

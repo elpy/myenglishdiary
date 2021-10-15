@@ -2,21 +2,30 @@
   "object": {
     "pins": [
       {
-        "package": "Realm",
-        "repositoryURL": "https://github.com/realm/realm-cocoa.git",
+        "package": "Amplify",
+        "repositoryURL": "https://github.com/aws-amplify/amplify-ios",
         "state": {
           "branch": null,
-          "revision": "c236b2c1270fe41ba7c101a1d17ef56494987cb9",
-          "version": "10.5.0"
+          "revision": "e7f9c8f45a39db2608b7b91d703129f82eb2af7f",
+          "version": "1.15.1"
         }
       },
       {
-        "package": "RealmDatabase",
-        "repositoryURL": "https://github.com/realm/realm-core",
+        "package": "AppSyncRealTimeClient",
+        "repositoryURL": "https://github.com/aws-amplify/aws-appsync-realtime-client-ios.git",
         "state": {
           "branch": null,
-          "revision": "7390723ae39b432bd00f093ea84e3b79534a202c",
-          "version": "10.3.2"
+          "revision": "55d670f329b9cf9f4830d5f1b37e50b100934d09",
+          "version": "1.5.0"
+        }
+      },
+      {
+        "package": "AWSiOSSDKV2",
+        "repositoryURL": "https://github.com/aws-amplify/aws-sdk-ios-spm.git",
+        "state": {
+          "branch": null,
+          "revision": "c2a17883d70e26af054de7da73a5b5043a87af3a",
+          "version": "2.26.1"
         }
       },
       {
@@ -24,8 +33,35 @@
         "repositoryURL": "https://github.com/getsentry/sentry-cocoa.git",
         "state": {
           "branch": null,
-          "revision": "20ef85674f04c23a3357dfac6f451fc44e64f941",
-          "version": "6.1.2"
+          "revision": "a81616a8ac94a35b0761509d1814bfc2ca914e02",
+          "version": "7.4.4"
+        }
+      },
+      {
+        "package": "SQLite.swift",
+        "repositoryURL": "https://github.com/stephencelis/SQLite.swift.git",
+        "state": {
+          "branch": null,
+          "revision": "0a9893ec030501a3956bee572d6b4fdd3ae158a1",
+          "version": "0.12.2"
+        }
+      },
+      {
+        "package": "Starscream",
+        "repositoryURL": "https://github.com/daltoniam/Starscream",
+        "state": {
+          "branch": null,
+          "revision": "e6b65c6d9077ea48b4a7bdda8994a1d3c6969c8d",
+          "version": "3.1.1"
+        }
+      },
+      {
+        "package": "swift-nio-zlib-support",
+        "repositoryURL": "https://github.com/apple/swift-nio-zlib-support.git",
+        "state": {
+          "branch": null,
+          "revision": "37760e9a52030bb9011972c5213c3350fa9d41fd",
+          "version": "1.0.0"
         }
       }
     ]
