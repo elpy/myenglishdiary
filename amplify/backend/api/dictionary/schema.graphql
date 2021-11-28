@@ -1,20 +1,37 @@
-type Blog @model {
-  id: ID!
-  name: String!
-  posts: [Post] @connection(keyName: "byBlog", fields: ["id"])
+enum LanguageGraphQLEnum {
+  EN
+  RU
 }
 
-type Post @model @key(name: "byBlog", fields: ["blogID"]) {
+type LexemeGraphQLModel @model {
   id: ID!
-  title: String!
-  blogID: ID!
-  blog: Blog @connection(fields: ["blogID"])
-  comments: [Comment] @connection(keyName: "byPost", fields: ["id"])
+  language: LanguageGraphQLEnum!
+  text: String!
+  transcription: [String!]
+  partOfSpeech: String
+  forms: [String!]
+  translations: [TranslationGraphQLModel!]! @connection(keyName: "byLexeme", fields: ["id"])
+  lessCommonTranslations: [TranslationGraphQLModel!] @connection(keyName: "byLexeme", fields: ["id"])
 }
 
-type Comment @model @key(name: "byPost", fields: ["postID", "content"]) {
+type TranslationGraphQLModel @model @key(name: "byLexeme", fields: ["lexemeId", "text"]) {
   id: ID!
-  postID: ID!
-  post: Post @connection(fields: ["postID"])
-  content: String!
+  lexemeId: ID!
+  text: String!
+  tip: String
+  examples: [ExampleGraphQLModel!] @connection(keyName: "byTranslation", fields: ["id"])
+  tags: [TagGraphQLModel!] @connection(keyName: "byTranslation", fields: ["id"])
+}
+
+type ExampleGraphQLModel @model @key(name: "byTranslation", fields: ["translationId", "text"]) {
+  id: ID!
+  translationId: ID!
+  text: String!
+  translation: String!
+}
+
+type TagGraphQLModel @model @key(name: "byTranslation", fields: ["translationId", "text"]) {
+  id: ID!
+  translationId: ID!
+  text: String!
 }

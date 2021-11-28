@@ -22,6 +22,8 @@ enum Configuration {
         return Configuration.readValue(for: "SentryDebug")
     }
 
+    // MARK: private stuff
+
     private static func readValue(for key: String) -> Configuration {
         guard let object = Bundle.main.object(forInfoDictionaryKey: key) else {
             return .missingKey
