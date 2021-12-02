@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NoteCard: View {
-    let note: Note
+    let note: DiaryRecord
 
     var body: some View {
         GroupBox(
@@ -55,19 +55,29 @@ struct NoteCard: View {
 
 struct NoteCard_Previews: PreviewProvider {
     static var previews: some View {
-        let note = Note(
+        let note = DiaryRecord(
+            id: UUID().uuidString,
             lexeme: Lexeme(
-                language: Language.ENG,
-                text: "last",
-                partOfSpeech: PartOfSpeech.ADJECTIVE,
-                transcription: "l a s t",
-                meanings: [
-                    Meaning(text: "последний", lexemesWithSimilarMeaning: [], examples: [])
-                ]
+                id: "LEXEME_1",
+                language: Language.english,
+                text: "lounge",
+                partOfSpeech: PartOfSpeech.VERB,
+                transcription: ["laʊnʤ"],
+                forms: [],
+                translations: [
+                    LexemeTranslation(
+                        id: "TRANSLATION_1",
+                        text: "бездельничать",
+                        tip: nil,
+                        examples: [],
+                        tags: []
+                    )
+                ],
+                lessCommonTranslations: []
             ),
             group: nil,
             date: Date(),
-            tags: []
+            studyingLog: []
         )
 
         NoteCard(note: note)

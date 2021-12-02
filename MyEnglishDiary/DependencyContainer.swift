@@ -12,12 +12,14 @@ class DependencyContainer {
 
     // MARK: data providers
 
-    private var dictionaryDataProvider: DictionaryDataProvider = DevelopmentDictionaryDataProvider()
+//    private var dictionaryDataProvider: DictionaryDataProvider = DevelopmentDictionaryDataProvider()
+    private var dictionaryDataProvider: DictionaryDataProvider = AmplifyDictionaryDataProvider()
     private var diaryDataProvider: DiaryDataProvider = DevelopmentDiaryDataProvider()
 
     // MARK: services
 
-    private let loggingServer: LoggingService = LoggingService()
+    private let loggingService: LoggingService = LoggingService()
+    private let amplifyService: AmplifyService = AmplifyService()
 
     init() {
 
@@ -29,15 +31,15 @@ class DependencyContainer {
         return SearchUseCase(for: text, dictionaryDataProvider)
     }
 
-    func makeReadNotesUseCase() -> ReadNotesUseCase {
-        return ReadNotesUseCase(diaryDataProvider)
+    func makeReadDiaryRecordsUseCase() -> ReadDiaryRecordsUseCase {
+        return ReadDiaryRecordsUseCase(diaryDataProvider)
     }
 
-    func makeReadGroupsUseCase() -> ReadGroupsUseCase {
-        return ReadGroupsUseCase(diaryDataProvider)
+    func makeReadRecordsGroupsUseCase() -> ReadRecordsGroupsUseCase {
+        return ReadRecordsGroupsUseCase(diaryDataProvider)
     }
 
-    func makeMakeNoteUseCase(from lexeme: Lexeme, in group: NotesGroup? = nil) -> MakeNoteUseCase {
-        return MakeNoteUseCase(from: lexeme, in: group, diaryDataProvider)
+    func makeMakeDiaryRecordUseCase(from lexeme: Lexeme, in group: DiaryRecordsGroup? = nil) -> MakeDiaryRecordUseCase {
+        return MakeDiaryRecordUseCase(from: lexeme, in: group, diaryDataProvider)
     }
 }

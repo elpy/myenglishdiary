@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DiaryView: View {
     @ObservedObject var viewModel = DiaryViewModel()
-    @State private var lastPressedCard: Note?
+    @State private var lastPressedCard: DiaryRecord?
 
     var body: some View {
         NavigationView {

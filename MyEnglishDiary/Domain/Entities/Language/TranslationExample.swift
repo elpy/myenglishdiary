@@ -1,5 +1,5 @@
 //
-//  Example.swift
+//  TranslationExample.swift
 //  MyEnglishDiary
 //
 //  Created by Антон Скворцов on 16.12.2020.
@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Example {
+struct TranslationExample {
+    let id: String
     let text: String
-    let meaning: String
+    let translation: String
 }

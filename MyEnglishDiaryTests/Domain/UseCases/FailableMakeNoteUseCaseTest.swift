@@ -17,13 +17,13 @@ final class FailableMakeNoteUseCaseTest: XCTestCase {
 
     func testMakeNote() {
         let lexeme = Lexeme(
-            language: Language.RUS,
+            language: Language.Russian,
             text: "some lexeme",
             partOfSpeech: PartOfSpeech.INTERJECTION,
             transcription: "a",
             meanings: []
         )
-        let useCase = MakeNoteUseCase(from: lexeme, in: nil, diaryDataProvider!)
+        let useCase = MakeDiaryRecordUseCase(from: lexeme, in: nil, diaryDataProvider!)
         let expectation = XCTestExpectation(description: "Method fails once")
         useCase.execute {
             if case .failure(let error) = $0, case DataProviderError.networkError = error {

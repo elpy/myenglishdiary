@@ -8,50 +8,57 @@
 import Foundation
 
 final class DevelopmentDiaryDataProvider: DiaryDataProvider {
-    func addNewNote(_ note: Note, _ completion: @escaping (Result<Void, Error>) -> Void) {
+    func addNewRecord(_ note: DiaryRecord, _ completion: @escaping (Result<Void, Error>) -> Void) {
         notes.append(note)
         completion(.success(()))
     }
 
-    func addNewGroup(_ group: NotesGroup, _ completion: @escaping (Result<Void, Error>) -> Void) {
+    func addNewGroup(_ group: DiaryRecordsGroup, _ completion: @escaping (Result<Void, Error>) -> Void) {
         groups.append(group)
         completion(.success(()))
     }
 
-    func getNotes(_ completion: @escaping (Result<[Note], Error>) -> Void) {
+    func getRecords(_ completion: @escaping (Result<[DiaryRecord], Error>) -> Void) {
         completion(.success(notes))
     }
 
-    func getGroups(_ completion: @escaping (Result<[NotesGroup], Error>) -> Void) {
+    func getGroups(_ completion: @escaping (Result<[DiaryRecordsGroup], Error>) -> Void) {
         completion(.success(groups))
     }
 
-    func markNote(_ note: Note, with tag: Tag, _ completion: @escaping (Result<Void, Error>) -> Void) {
+    func markNote(_ note: DiaryRecord, with tag: TranslationTag, _ completion: @escaping (Result<Void, Error>) -> Void) {
         completion(.success(()))
     }
 }
 
 fileprivate var notes = [
-    Note(
+    DiaryRecord(
+        id: UUID().uuidString,
         lexeme: Lexeme(
-            language: Language.ENG,
-            text: "left",
-            partOfSpeech: PartOfSpeech.ADJECTIVE,
-            transcription: nil,
-            meanings: [
-                Meaning(
-                    text: "Dev meaning",
-                    lexemesWithSimilarMeaning: [],
-                    examples: [])
-            ]
+            id: "LEXEME_1",
+            language: Language.english,
+            text: "lounge",
+            partOfSpeech: PartOfSpeech.VERB,
+            transcription: ["laʊnʤ"],
+            forms: [],
+            translations: [
+                LexemeTranslation(
+                    id: "TRANSLATION_1",
+                    text: "бездельничать",
+                    tip: nil,
+                    examples: [],
+                    tags: []
+                )
+            ],
+            lessCommonTranslations: []
         ),
         group: nil,
         date: Date(),
-        tags: []
+        studyingLog: []
     )
 ]
 
 fileprivate var groups = [
-    NotesGroup(name: "First group"),
-    NotesGroup(name: "Sun and moon")
+    DiaryRecordsGroup(id: UUID().uuidString, name: "First group"),
+    DiaryRecordsGroup(id: UUID().uuidString, name: "Sun and moon")
 ]

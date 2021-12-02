@@ -9,69 +9,91 @@ import Foundation
 
 final class DevelopmentDictionaryDataProvider: DictionaryDataProvider {
     func search(for text: String, _ completion: (Result<DictionarySearchResult, Error>) -> Void) {
-        completion(.success(searchResult))
+        completion(.success(developmentLexemesSet))
     }
 }
 
-fileprivate let searchResult = [
+let developmentLexemesSet = [
     Lexeme(
-        language: Language.ENG,
+        id: "LEXEME_1",
+        language: Language.english,
         text: "lounge",
         partOfSpeech: PartOfSpeech.NOUN,
-        transcription: "laʊnʤ",
-        meanings: [
-            Meaning(
+        transcription: ["laʊnʤ"],
+        forms: [],
+        translations: [
+            LexemeTranslation(
+                id: "TRANSLATION_1",
                 text: "гостиная",
-                lexemesWithSimilarMeaning: ["hall", "lobby", "waiting room"],
+                tip: nil,
                 examples: [
-                    Example(
+                    TranslationExample(
+                        id: "EXAMPLE_1",
                         text: "comfortable lounge",
-                        meaning: "уютный холл"
+                        translation: "уютный холл"
                     ),
-                    Example(
+                    TranslationExample(
+                        id: "EXAMPLE_2",
                         text: "cocktail lounge",
-                        meaning: "коктейльный зал"
+                        translation: "коктейльный зал"
                     )
-                ]
+                ],
+                tags: []
             ),
-            Meaning(
+            LexemeTranslation(
+                id: "TRANSLATION_2",
                 text: "комната отдыха",
-                lexemesWithSimilarMeaning: ["rest room"],
-                examples: []
+                tip: nil,
+                examples: [],
+                tags: []
             ),
-            Meaning(
+            LexemeTranslation(
+                id: "TRANSLATION_3",
                 text: "шезлонг",
-                lexemesWithSimilarMeaning: ["chaise", "sun bed"],
-                examples: []
+                tip: nil,
+                examples: [],
+                tags: []
             ),
-            Meaning(
+            LexemeTranslation(
+                id: "TRANSLATION_4",
                 text: "буфет",
-                lexemesWithSimilarMeaning: ["buffet", "bar"],
-                examples: []
+                tip: nil,
+                examples: [],
+                tags: []
             ),
-            Meaning(
+            LexemeTranslation(
+                id: "TRANSLATION_5",
                 text: "салон",
-                lexemesWithSimilarMeaning: ["salon"],
-                examples: []
+                tip: nil,
+                examples: [],
+                tags: []
             ),
-            Meaning(
+            LexemeTranslation(
+                id: "TRANSLATION_6",
                 text: "лаунжа",
-                lexemesWithSimilarMeaning: [],
-                examples: []
+                tip: nil,
+                examples: [],
+                tags: []
             )
-        ]
+        ],
+        lessCommonTranslations: []
     ),
     Lexeme(
-        language: Language.ENG,
+        id: "LEXEME_2",
+        language: Language.english,
         text: "lounge",
         partOfSpeech: PartOfSpeech.VERB,
-        transcription: "laʊnʤ",
-        meanings: [
-            Meaning(
+        transcription: ["laʊnʤ"],
+        forms: [],
+        translations: [
+            LexemeTranslation(
+                id: "TRANSLATION_1",
                 text: "бездельничать",
-                lexemesWithSimilarMeaning: ["sit"],
-                examples: []
+                tip: nil,
+                examples: [],
+                tags: []
             )
-        ]
+        ],
+        lessCommonTranslations: []
     )
 ]

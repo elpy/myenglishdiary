@@ -51,7 +51,7 @@ struct LexemeView: View {
                 leading: Text(viewModel.title),
                 trailing:
                     HStack {
-                        if viewModel.noteBasedOnLexeme == nil {
+                        if viewModel.record == nil {
                             Button("Добавить в дневник", action: {
                                 presentingPlacementSheet.toggle()
                             })
@@ -69,17 +69,22 @@ struct LexemeView: View {
 struct LexemeView_Previews: PreviewProvider {
     static var previews: some View {
         LexemeView(lexeme: Lexeme(
-            language: Language.ENG,
+            id: "LEXEME_1",
+            language: Language.english,
             text: "lounge",
             partOfSpeech: PartOfSpeech.VERB,
-            transcription: "laʊnʤ",
-            meanings: [
-                Meaning(
+            transcription: ["laʊnʤ"],
+            forms: [],
+            translations: [
+                LexemeTranslation(
+                    id: "TRANSLATION_1",
                     text: "бездельничать",
-                    lexemesWithSimilarMeaning: ["sit"],
-                    examples: []
+                    tip: nil,
+                    examples: [],
+                    tags: []
                 )
-            ]
+            ],
+            lessCommonTranslations: []
         ))
     }
 }

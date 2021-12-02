@@ -19,6 +19,10 @@
 		3A3C5FEC274FEEBC00A3AF9B /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 3A3C5FEB274FEEBC00A3AF9B /* Amplify */; };
 		3A3C5FEE274FF1F400A3AF9B /* schema.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 3A3C5FED274FF1F400A3AF9B /* schema.graphql */; };
 		3A434EAC25C0264600438724 /* LexemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A434EAB25C0264600438724 /* LexemeViewModel.swift */; };
+		3A44274C2758EDC3008F675D /* DiaryRecord+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44274B2758EDC3008F675D /* DiaryRecord+Extensions.swift */; };
+		3A44274E2758EE8C008F675D /* DiaryRecordsGroup+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44274D2758EE8C008F675D /* DiaryRecordsGroup+Extensions.swift */; };
+		3A4427502758EF6A008F675D /* ExcerciseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44274F2758EF6A008F675D /* ExcerciseResult.swift */; };
+		3A4427522758EFD7008F675D /* Excercise+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4427512758EFD7008F675D /* Excercise+Extensions.swift */; };
 		3A469CF2258F6D55003561AE /* FailableSearchUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469CF1258F6D55003561AE /* FailableSearchUseCaseTest.swift */; };
 		3A469CFD258F6F15003561AE /* DiaryDataProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469CFC258F6F14003561AE /* DiaryDataProviderMock.swift */; };
 		3A469D02258F7515003561AE /* FailableDiaryDataProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D01258F7515003561AE /* FailableDiaryDataProviderMock.swift */; };
@@ -26,8 +30,16 @@
 		3A469D0F258F79C5003561AE /* MakeGroupUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D0E258F79C5003561AE /* MakeGroupUseCaseTest.swift */; };
 		3A469D14258F7A40003561AE /* FailableMakeGroupUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D13258F7A40003561AE /* FailableMakeGroupUseCaseTest.swift */; };
 		3A469D1C258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D1B258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift */; };
+		3A48091027550BD000522760 /* AmplifyModels+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A48090F27550BD000522760 /* AmplifyModels+Extensions.swift */; };
+		3A4809122755130900522760 /* Lexeme+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4809112755130900522760 /* Lexeme+Extensions.swift */; };
+		3A480914275513E100522760 /* LexemeTranslation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A480913275513E100522760 /* LexemeTranslation+Extensions.swift */; };
+		3A4809162755145100522760 /* TranslationExample+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4809152755145100522760 /* TranslationExample+Extensions.swift */; };
+		3A4809182755148B00522760 /* TranslationTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4809172755148B00522760 /* TranslationTag.swift */; };
+		3A48091A2755149900522760 /* TranslationTag+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4809192755149900522760 /* TranslationTag+Extensions.swift */; };
 		3A4D83B925B451B40091FDDC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D83B825B451B40091FDDC /* Configuration.swift */; };
 		3A548691258BAC9E000EF8B0 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A548690258BAC9E000EF8B0 /* UseCase.swift */; };
+		3A5820EE27539D0E00777489 /* AmplifyDictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5820ED27539D0E00777489 /* AmplifyDictionaryDataProvider.swift */; };
+		3A5820F12753A20100777489 /* AmplifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5820F02753A20100777489 /* AmplifyService.swift */; };
 		3A5AE23625841C4B00C5DB17 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE23525841C4B00C5DB17 /* DependencyContainer.swift */; };
 		3A646808259642F500D83F03 /* SearchResultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A646807259642F500D83F03 /* SearchResultCard.swift */; };
 		3A940873255D9F390090DB55 /* MyEnglishDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A940872255D9F390090DB55 /* MyEnglishDiaryApp.swift */; };
@@ -38,8 +50,8 @@
 		3ABE248C25C4123A0056E5AF /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE248B25C4123A0056E5AF /* Loadable.swift */; };
 		3ABE249225C417160056E5AF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE249125C417160056E5AF /* ActivityIndicator.swift */; };
 		3AC0B31F25B84FD200523745 /* DiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0B31E25B84FD200523745 /* DiaryViewModel.swift */; };
-		3AC0B32425B8527E00523745 /* ReadNotesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0B32325B8527E00523745 /* ReadNotesUseCase.swift */; };
-		3AC0B32925B854C000523745 /* ReadGroupsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0B32825B854C000523745 /* ReadGroupsUseCase.swift */; };
+		3AC0B32425B8527E00523745 /* ReadDiaryRecordsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0B32325B8527E00523745 /* ReadDiaryRecordsUseCase.swift */; };
+		3AC0B32925B854C000523745 /* ReadRecordsGroupsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0B32825B854C000523745 /* ReadRecordsGroupsUseCase.swift */; };
 		3AC0B32E25B85EC500523745 /* NoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC0B32D25B85EC500523745 /* NoteCard.swift */; };
 		3AD88C9A258DED7B002D4B07 /* DictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88C99258DED7B002D4B07 /* DictionaryDataProvider.swift */; };
 		3AD88CB4258DF8A0002D4B07 /* SearchUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88CB3258DF8A0002D4B07 /* SearchUseCaseTest.swift */; };
@@ -47,24 +59,24 @@
 		3AD88CD2258E00C7002D4B07 /* FailableDictionaryDataProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88CD1258E00C7002D4B07 /* FailableDictionaryDataProviderMock.swift */; };
 		3AD88D56258E024C002D4B07 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88D55258E024C002D4B07 /* DataProvider.swift */; };
 		3AD88D66258E0C83002D4B07 /* DiaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88D65258E0C83002D4B07 /* DiaryDataProvider.swift */; };
-		3AD88D77258E1325002D4B07 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88D76258E1325002D4B07 /* Tag.swift */; };
+		3AD88D77258E1325002D4B07 /* Excercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88D76258E1325002D4B07 /* Excercise.swift */; };
 		3AD88D82258E1671002D4B07 /* MarkNoteWithTagUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88D81258E1671002D4B07 /* MarkNoteWithTagUseCase.swift */; };
 		3ADABD232594E380003DF039 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADABD222594E380003DF039 /* SearchViewModel.swift */; };
 		3ADABD2A2594E658003DF039 /* SearchInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADABD292594E658003DF039 /* SearchInput.swift */; };
 		3ADB17AA258F9353004B0A80 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB17A9258F9353004B0A80 /* SearchView.swift */; };
 		3ADB17AF258F9361004B0A80 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB17AE258F9361004B0A80 /* DiaryView.swift */; };
-		3AE49E45256D745A00FBD65F /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E44256D745A00FBD65F /* Note.swift */; };
-		3AE49E4B256D747D00FBD65F /* NotesGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E4A256D747D00FBD65F /* NotesGroup.swift */; };
+		3AE49E45256D745A00FBD65F /* DiaryRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E44256D745A00FBD65F /* DiaryRecord.swift */; };
+		3AE49E4B256D747D00FBD65F /* DiaryRecordsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E4A256D747D00FBD65F /* DiaryRecordsGroup.swift */; };
 		3AE49E54256D759A00FBD65F /* DictionarySearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E53256D759A00FBD65F /* DictionarySearchResult.swift */; };
 		3AE49E61256D762400FBD65F /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E60256D762400FBD65F /* SearchUseCase.swift */; };
-		3AE49E66256D765D00FBD65F /* MakeNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E65256D765D00FBD65F /* MakeNoteUseCase.swift */; };
-		3AE49E6B256D76DC00FBD65F /* MakeGroupUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E6A256D76DC00FBD65F /* MakeGroupUseCase.swift */; };
-		3AE49E76256D777300FBD65F /* SelectNotesToStudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E75256D777300FBD65F /* SelectNotesToStudy.swift */; };
+		3AE49E66256D765D00FBD65F /* MakeDiaryRecordUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E65256D765D00FBD65F /* MakeDiaryRecordUseCase.swift */; };
+		3AE49E6B256D76DC00FBD65F /* MakeRecordsGroupUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E6A256D76DC00FBD65F /* MakeRecordsGroupUseCase.swift */; };
+		3AE49E76256D777300FBD65F /* Studying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE49E75256D777300FBD65F /* Studying.swift */; };
 		3AED4203258E72ED0068C294 /* MakeNoteUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AED4202258E72ED0068C294 /* MakeNoteUseCaseTest.swift */; };
 		3AED4209258E792C0068C294 /* DevelopmentDictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AED4208258E792C0068C294 /* DevelopmentDictionaryDataProvider.swift */; };
 		3AF05DB4258A4EF300E300C3 /* Lexeme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DB3258A4EF300E300C3 /* Lexeme.swift */; };
-		3AF05DC1258A4F5100E300C3 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DC0258A4F5100E300C3 /* Meaning.swift */; };
-		3AF05DC6258A4FD800E300C3 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DC5258A4FD800E300C3 /* Example.swift */; };
+		3AF05DC1258A4F5100E300C3 /* LexemeTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DC0258A4F5100E300C3 /* LexemeTranslation.swift */; };
+		3AF05DC6258A4FD800E300C3 /* TranslationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DC5258A4FD800E300C3 /* TranslationExample.swift */; };
 		3AF05DCB258A532F00E300C3 /* PartOfSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DCA258A532F00E300C3 /* PartOfSpeech.swift */; };
 		3AF05DD0258A535A00E300C3 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DCF258A535A00E300C3 /* Language.swift */; };
 		3AF4199A25B5873300AB7741 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF4199925B5873300AB7741 /* Sentry */; };
@@ -100,8 +112,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17DC5EA4D78C54B23F183E7B /* ExampleGraphQLModel+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = "ExampleGraphQLModel+Schema.swift"; path = "amplify/generated/models/ExampleGraphQLModel+Schema.swift"; sourceTree = "<group>"; };
-		18B865084F6E516B0D1A519F /* TagGraphQLModel+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = "TagGraphQLModel+Schema.swift"; path = "amplify/generated/models/TagGraphQLModel+Schema.swift"; sourceTree = "<group>"; };
+		17DC5EA4D78C54B23F183E7B /* ExampleGraphQLModel+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "ExampleGraphQLModel+Schema.swift"; path = "amplify/generated/models/ExampleGraphQLModel+Schema.swift"; sourceTree = "<group>"; };
+		18B865084F6E516B0D1A519F /* TagGraphQLModel+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "TagGraphQLModel+Schema.swift"; path = "amplify/generated/models/TagGraphQLModel+Schema.swift"; sourceTree = "<group>"; };
 		1F2C9293FF431898331B62D2 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		3A2C599A25A6C9700068FC28 /* LexemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexemeView.swift; sourceTree = "<group>"; };
 		3A2C59A825A6D90E0068FC28 /* TitleLexemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLexemeView.swift; sourceTree = "<group>"; };
@@ -111,6 +123,10 @@
 		3A3BDE0C25B841D00098A4FC /* DevelopmentDiaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentDiaryDataProvider.swift; sourceTree = "<group>"; };
 		3A3C5FED274FF1F400A3AF9B /* schema.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = schema.graphql; path = amplify/backend/api/dictionary/schema.graphql; sourceTree = "<group>"; };
 		3A434EAB25C0264600438724 /* LexemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexemeViewModel.swift; sourceTree = "<group>"; };
+		3A44274B2758EDC3008F675D /* DiaryRecord+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryRecord+Extensions.swift"; sourceTree = "<group>"; };
+		3A44274D2758EE8C008F675D /* DiaryRecordsGroup+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryRecordsGroup+Extensions.swift"; sourceTree = "<group>"; };
+		3A44274F2758EF6A008F675D /* ExcerciseResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcerciseResult.swift; sourceTree = "<group>"; };
+		3A4427512758EFD7008F675D /* Excercise+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Excercise+Extensions.swift"; sourceTree = "<group>"; };
 		3A469CF1258F6D55003561AE /* FailableSearchUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableSearchUseCaseTest.swift; sourceTree = "<group>"; };
 		3A469CFC258F6F14003561AE /* DiaryDataProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDataProviderMock.swift; sourceTree = "<group>"; };
 		3A469D01258F7515003561AE /* FailableDiaryDataProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableDiaryDataProviderMock.swift; sourceTree = "<group>"; };
@@ -118,8 +134,16 @@
 		3A469D0E258F79C5003561AE /* MakeGroupUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeGroupUseCaseTest.swift; sourceTree = "<group>"; };
 		3A469D13258F7A40003561AE /* FailableMakeGroupUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableMakeGroupUseCaseTest.swift; sourceTree = "<group>"; };
 		3A469D1B258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkNoteWithTagUseCaseTest.swift; sourceTree = "<group>"; };
+		3A48090F27550BD000522760 /* AmplifyModels+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AmplifyModels+Extensions.swift"; sourceTree = "<group>"; };
+		3A4809112755130900522760 /* Lexeme+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lexeme+Extensions.swift"; sourceTree = "<group>"; };
+		3A480913275513E100522760 /* LexemeTranslation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LexemeTranslation+Extensions.swift"; sourceTree = "<group>"; };
+		3A4809152755145100522760 /* TranslationExample+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslationExample+Extensions.swift"; sourceTree = "<group>"; };
+		3A4809172755148B00522760 /* TranslationTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationTag.swift; sourceTree = "<group>"; };
+		3A4809192755149900522760 /* TranslationTag+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslationTag+Extensions.swift"; sourceTree = "<group>"; };
 		3A4D83B825B451B40091FDDC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		3A548690258BAC9E000EF8B0 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		3A5820ED27539D0E00777489 /* AmplifyDictionaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplifyDictionaryDataProvider.swift; sourceTree = "<group>"; };
+		3A5820F02753A20100777489 /* AmplifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplifyService.swift; sourceTree = "<group>"; };
 		3A5AE23525841C4B00C5DB17 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		3A646807259642F500D83F03 /* SearchResultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCard.swift; sourceTree = "<group>"; };
 		3A94086F255D9F390090DB55 /* MyEnglishDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyEnglishDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,8 +160,8 @@
 		3ABE248B25C4123A0056E5AF /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		3ABE249125C417160056E5AF /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		3AC0B31E25B84FD200523745 /* DiaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewModel.swift; sourceTree = "<group>"; };
-		3AC0B32325B8527E00523745 /* ReadNotesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadNotesUseCase.swift; sourceTree = "<group>"; };
-		3AC0B32825B854C000523745 /* ReadGroupsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadGroupsUseCase.swift; sourceTree = "<group>"; };
+		3AC0B32325B8527E00523745 /* ReadDiaryRecordsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadDiaryRecordsUseCase.swift; sourceTree = "<group>"; };
+		3AC0B32825B854C000523745 /* ReadRecordsGroupsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadRecordsGroupsUseCase.swift; sourceTree = "<group>"; };
 		3AC0B32D25B85EC500523745 /* NoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCard.swift; sourceTree = "<group>"; };
 		3AD88C99258DED7B002D4B07 /* DictionaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDataProvider.swift; sourceTree = "<group>"; };
 		3AD88C9F258DEE4C002D4B07 /* DictionaryDataProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDataProviderMock.swift; sourceTree = "<group>"; };
@@ -145,24 +169,24 @@
 		3AD88CD1258E00C7002D4B07 /* FailableDictionaryDataProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableDictionaryDataProviderMock.swift; sourceTree = "<group>"; };
 		3AD88D55258E024C002D4B07 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		3AD88D65258E0C83002D4B07 /* DiaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryDataProvider.swift; sourceTree = "<group>"; };
-		3AD88D76258E1325002D4B07 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		3AD88D76258E1325002D4B07 /* Excercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Excercise.swift; sourceTree = "<group>"; };
 		3AD88D81258E1671002D4B07 /* MarkNoteWithTagUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkNoteWithTagUseCase.swift; sourceTree = "<group>"; };
 		3ADABD222594E380003DF039 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		3ADABD292594E658003DF039 /* SearchInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInput.swift; sourceTree = "<group>"; };
 		3ADB17A9258F9353004B0A80 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		3ADB17AE258F9361004B0A80 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
-		3AE49E44256D745A00FBD65F /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
-		3AE49E4A256D747D00FBD65F /* NotesGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesGroup.swift; sourceTree = "<group>"; };
+		3AE49E44256D745A00FBD65F /* DiaryRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryRecord.swift; sourceTree = "<group>"; };
+		3AE49E4A256D747D00FBD65F /* DiaryRecordsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryRecordsGroup.swift; sourceTree = "<group>"; };
 		3AE49E53256D759A00FBD65F /* DictionarySearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionarySearchResult.swift; sourceTree = "<group>"; };
 		3AE49E60256D762400FBD65F /* SearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
-		3AE49E65256D765D00FBD65F /* MakeNoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNoteUseCase.swift; sourceTree = "<group>"; };
-		3AE49E6A256D76DC00FBD65F /* MakeGroupUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeGroupUseCase.swift; sourceTree = "<group>"; };
-		3AE49E75256D777300FBD65F /* SelectNotesToStudy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNotesToStudy.swift; sourceTree = "<group>"; };
+		3AE49E65256D765D00FBD65F /* MakeDiaryRecordUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeDiaryRecordUseCase.swift; sourceTree = "<group>"; };
+		3AE49E6A256D76DC00FBD65F /* MakeRecordsGroupUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeRecordsGroupUseCase.swift; sourceTree = "<group>"; };
+		3AE49E75256D777300FBD65F /* Studying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Studying.swift; sourceTree = "<group>"; };
 		3AED4202258E72ED0068C294 /* MakeNoteUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNoteUseCaseTest.swift; sourceTree = "<group>"; };
 		3AED4208258E792C0068C294 /* DevelopmentDictionaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentDictionaryDataProvider.swift; sourceTree = "<group>"; };
 		3AF05DB3258A4EF300E300C3 /* Lexeme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lexeme.swift; sourceTree = "<group>"; };
-		3AF05DC0258A4F5100E300C3 /* Meaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
-		3AF05DC5258A4FD800E300C3 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
+		3AF05DC0258A4F5100E300C3 /* LexemeTranslation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexemeTranslation.swift; sourceTree = "<group>"; };
+		3AF05DC5258A4FD800E300C3 /* TranslationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationExample.swift; sourceTree = "<group>"; };
 		3AF05DCA258A532F00E300C3 /* PartOfSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartOfSpeech.swift; sourceTree = "<group>"; };
 		3AF05DCF258A535A00E300C3 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		3AF4199F25B5887B00AB7741 /* LoggingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingService.swift; sourceTree = "<group>"; };
@@ -170,15 +194,15 @@
 		3AFB17C625B1A4FC00C72BF7 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		3AFB17C725B1A53200C72BF7 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		3AFB17C825B1A54300C72BF7 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
-		3D8872B7679A1CE96B5E2244 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
+		3D8872B7679A1CE96B5E2244 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
 		4D75A88BDA9D176FF2E999DE /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
-		6850B850F23FE60A6583BA58 /* LexemeGraphQLModel+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = "LexemeGraphQLModel+Schema.swift"; path = "amplify/generated/models/LexemeGraphQLModel+Schema.swift"; sourceTree = "<group>"; };
-		7C536B1147B0F0108E65ACBC /* LanguageGraphQLEnum.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = LanguageGraphQLEnum.swift; path = amplify/generated/models/LanguageGraphQLEnum.swift; sourceTree = "<group>"; };
-		8E9FD35ED48CB4C8C09CEA99 /* LexemeGraphQLModel.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = LexemeGraphQLModel.swift; path = amplify/generated/models/LexemeGraphQLModel.swift; sourceTree = "<group>"; };
-		93401DDA60D55A8CE80CFB86 /* ExampleGraphQLModel.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = ExampleGraphQLModel.swift; path = amplify/generated/models/ExampleGraphQLModel.swift; sourceTree = "<group>"; };
-		A9BE3171BB66C2550AB68911 /* TranslationGraphQLModel.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = TranslationGraphQLModel.swift; path = amplify/generated/models/TranslationGraphQLModel.swift; sourceTree = "<group>"; };
-		D36BF6F231C67B26564B35AB /* TranslationGraphQLModel+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = "TranslationGraphQLModel+Schema.swift"; path = "amplify/generated/models/TranslationGraphQLModel+Schema.swift"; sourceTree = "<group>"; };
-		F85B3D6ED353B29B04360189 /* TagGraphQLModel.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = TagGraphQLModel.swift; path = amplify/generated/models/TagGraphQLModel.swift; sourceTree = "<group>"; };
+		6850B850F23FE60A6583BA58 /* LexemeGraphQLModel+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "LexemeGraphQLModel+Schema.swift"; path = "amplify/generated/models/LexemeGraphQLModel+Schema.swift"; sourceTree = "<group>"; };
+		7C536B1147B0F0108E65ACBC /* LanguageGraphQLEnum.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = LanguageGraphQLEnum.swift; path = amplify/generated/models/LanguageGraphQLEnum.swift; sourceTree = "<group>"; };
+		8E9FD35ED48CB4C8C09CEA99 /* LexemeGraphQLModel.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = LexemeGraphQLModel.swift; path = amplify/generated/models/LexemeGraphQLModel.swift; sourceTree = "<group>"; };
+		93401DDA60D55A8CE80CFB86 /* ExampleGraphQLModel.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = ExampleGraphQLModel.swift; path = amplify/generated/models/ExampleGraphQLModel.swift; sourceTree = "<group>"; };
+		A9BE3171BB66C2550AB68911 /* TranslationGraphQLModel.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = TranslationGraphQLModel.swift; path = amplify/generated/models/TranslationGraphQLModel.swift; sourceTree = "<group>"; };
+		D36BF6F231C67B26564B35AB /* TranslationGraphQLModel+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "TranslationGraphQLModel+Schema.swift"; path = "amplify/generated/models/TranslationGraphQLModel+Schema.swift"; sourceTree = "<group>"; };
+		F85B3D6ED353B29B04360189 /* TagGraphQLModel.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = TagGraphQLModel.swift; path = amplify/generated/models/TagGraphQLModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +332,7 @@
 		3A55DE6C25606C3300B3A4CA /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3A5820EF2753A1F000777489 /* AmplifyService */,
 				3AF4199E25B5886700AB7741 /* LoggingService */,
 			);
 			path = Services;
@@ -316,12 +341,33 @@
 		3A55DE6D256070A400B3A4CA /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				3AE49E44256D745A00FBD65F /* Note.swift */,
-				3AE49E4A256D747D00FBD65F /* NotesGroup.swift */,
-				3AD88D76258E1325002D4B07 /* Tag.swift */,
-				3AE49E75256D777300FBD65F /* SelectNotesToStudy.swift */,
+				3AE49E44256D745A00FBD65F /* DiaryRecord.swift */,
+				3A44274B2758EDC3008F675D /* DiaryRecord+Extensions.swift */,
+				3AE49E4A256D747D00FBD65F /* DiaryRecordsGroup.swift */,
+				3A44274D2758EE8C008F675D /* DiaryRecordsGroup+Extensions.swift */,
+				3AD88D76258E1325002D4B07 /* Excercise.swift */,
+				3A4427512758EFD7008F675D /* Excercise+Extensions.swift */,
+				3A44274F2758EF6A008F675D /* ExcerciseResult.swift */,
+				3AE49E75256D777300FBD65F /* Studying.swift */,
 			);
 			path = Diary;
+			sourceTree = "<group>";
+		};
+		3A5820EC27539CC600777489 /* AmplifyDictionaryDataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				3A5820ED27539D0E00777489 /* AmplifyDictionaryDataProvider.swift */,
+				3A48090F27550BD000522760 /* AmplifyModels+Extensions.swift */,
+			);
+			path = AmplifyDictionaryDataProvider;
+			sourceTree = "<group>";
+		};
+		3A5820EF2753A1F000777489 /* AmplifyService */ = {
+			isa = PBXGroup;
+			children = (
+				3A5820F02753A20100777489 /* AmplifyService.swift */,
+			);
+			path = AmplifyService;
 			sourceTree = "<group>";
 		};
 		3A5AE21A258415FC00C5DB17 /* DataProviders */ = {
@@ -336,6 +382,7 @@
 		3A5AE21B2584168100C5DB17 /* DictionaryDataProvider */ = {
 			isa = PBXGroup;
 			children = (
+				3A5820EC27539CC600777489 /* AmplifyDictionaryDataProvider */,
 				3AED4207258E78F90068C294 /* DevelopmentDictionaryDataProvider */,
 			);
 			path = DictionaryDataProvider;
@@ -453,11 +500,11 @@
 			isa = PBXGroup;
 			children = (
 				3AE49E60256D762400FBD65F /* SearchUseCase.swift */,
-				3AE49E65256D765D00FBD65F /* MakeNoteUseCase.swift */,
-				3AE49E6A256D76DC00FBD65F /* MakeGroupUseCase.swift */,
+				3AE49E65256D765D00FBD65F /* MakeDiaryRecordUseCase.swift */,
+				3AE49E6A256D76DC00FBD65F /* MakeRecordsGroupUseCase.swift */,
 				3AD88D81258E1671002D4B07 /* MarkNoteWithTagUseCase.swift */,
-				3AC0B32325B8527E00523745 /* ReadNotesUseCase.swift */,
-				3AC0B32825B854C000523745 /* ReadGroupsUseCase.swift */,
+				3AC0B32325B8527E00523745 /* ReadDiaryRecordsUseCase.swift */,
+				3AC0B32825B854C000523745 /* ReadRecordsGroupsUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -562,11 +609,16 @@
 		3AF05DB2258A4EE100E300C3 /* Language */ = {
 			isa = PBXGroup;
 			children = (
-				3AF05DB3258A4EF300E300C3 /* Lexeme.swift */,
-				3AF05DC0258A4F5100E300C3 /* Meaning.swift */,
-				3AF05DC5258A4FD800E300C3 /* Example.swift */,
-				3AF05DCA258A532F00E300C3 /* PartOfSpeech.swift */,
 				3AF05DCF258A535A00E300C3 /* Language.swift */,
+				3AF05DCA258A532F00E300C3 /* PartOfSpeech.swift */,
+				3AF05DB3258A4EF300E300C3 /* Lexeme.swift */,
+				3A4809112755130900522760 /* Lexeme+Extensions.swift */,
+				3AF05DC0258A4F5100E300C3 /* LexemeTranslation.swift */,
+				3A480913275513E100522760 /* LexemeTranslation+Extensions.swift */,
+				3AF05DC5258A4FD800E300C3 /* TranslationExample.swift */,
+				3A4809152755145100522760 /* TranslationExample+Extensions.swift */,
+				3A4809172755148B00522760 /* TranslationTag.swift */,
+				3A4809192755149900522760 /* TranslationTag+Extensions.swift */,
 			);
 			path = Language;
 			sourceTree = "<group>";
@@ -778,22 +830,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AE49E61256D762400FBD65F /* SearchUseCase.swift in Sources */,
+				3A4809122755130900522760 /* Lexeme+Extensions.swift in Sources */,
 				3AF419A025B5887B00AB7741 /* LoggingService.swift in Sources */,
 				3A940875255D9F390090DB55 /* RootView.swift in Sources */,
 				3A940873255D9F390090DB55 /* MyEnglishDiaryApp.swift in Sources */,
 				3A434EAC25C0264600438724 /* LexemeViewModel.swift in Sources */,
-				3AD88D77258E1325002D4B07 /* Tag.swift in Sources */,
+				3AD88D77258E1325002D4B07 /* Excercise.swift in Sources */,
 				3A2C59AE25A6DA400068FC28 /* MeaningsLexemeView.swift in Sources */,
 				3AED4209258E792C0068C294 /* DevelopmentDictionaryDataProvider.swift in Sources */,
 				3A4D83B925B451B40091FDDC /* Configuration.swift in Sources */,
+				3A4427502758EF6A008F675D /* ExcerciseResult.swift in Sources */,
 				3AF465FD25BF17DA0030DBAE /* NotePlacementSelection.swift in Sources */,
-				3AE49E6B256D76DC00FBD65F /* MakeGroupUseCase.swift in Sources */,
-				3AC0B32425B8527E00523745 /* ReadNotesUseCase.swift in Sources */,
+				3A4427522758EFD7008F675D /* Excercise+Extensions.swift in Sources */,
+				3A48091A2755149900522760 /* TranslationTag+Extensions.swift in Sources */,
+				3AE49E6B256D76DC00FBD65F /* MakeRecordsGroupUseCase.swift in Sources */,
+				3A4809182755148B00522760 /* TranslationTag.swift in Sources */,
+				3A5820F12753A20100777489 /* AmplifyService.swift in Sources */,
+				3AC0B32425B8527E00523745 /* ReadDiaryRecordsUseCase.swift in Sources */,
 				3AD88D66258E0C83002D4B07 /* DiaryDataProvider.swift in Sources */,
 				3A646808259642F500D83F03 /* SearchResultCard.swift in Sources */,
 				3AF05DB4258A4EF300E300C3 /* Lexeme.swift in Sources */,
 				3A2C599B25A6C9700068FC28 /* LexemeView.swift in Sources */,
-				3AF05DC6258A4FD800E300C3 /* Example.swift in Sources */,
+				3AF05DC6258A4FD800E300C3 /* TranslationExample.swift in Sources */,
 				3A2C59A925A6D90E0068FC28 /* TitleLexemeView.swift in Sources */,
 				3A548691258BAC9E000EF8B0 /* UseCase.swift in Sources */,
 				3ABE249225C417160056E5AF /* ActivityIndicator.swift in Sources */,
@@ -801,18 +859,20 @@
 				3AE49E54256D759A00FBD65F /* DictionarySearchResult.swift in Sources */,
 				3AD88D82258E1671002D4B07 /* MarkNoteWithTagUseCase.swift in Sources */,
 				3ADB17AA258F9353004B0A80 /* SearchView.swift in Sources */,
+				3A48091027550BD000522760 /* AmplifyModels+Extensions.swift in Sources */,
 				3A36775325B493F7005DDE09 /* Theming.swift in Sources */,
 				3AC0B32E25B85EC500523745 /* NoteCard.swift in Sources */,
-				3AE49E66256D765D00FBD65F /* MakeNoteUseCase.swift in Sources */,
-				3AE49E45256D745A00FBD65F /* Note.swift in Sources */,
-				3AC0B32925B854C000523745 /* ReadGroupsUseCase.swift in Sources */,
+				3AE49E66256D765D00FBD65F /* MakeDiaryRecordUseCase.swift in Sources */,
+				3AE49E45256D745A00FBD65F /* DiaryRecord.swift in Sources */,
+				3AC0B32925B854C000523745 /* ReadRecordsGroupsUseCase.swift in Sources */,
 				3ABE248C25C4123A0056E5AF /* Loadable.swift in Sources */,
 				3AC0B31F25B84FD200523745 /* DiaryViewModel.swift in Sources */,
 				3A3BDE0D25B841D00098A4FC /* DevelopmentDiaryDataProvider.swift in Sources */,
 				3AF05DCB258A532F00E300C3 /* PartOfSpeech.swift in Sources */,
-				3AE49E76256D777300FBD65F /* SelectNotesToStudy.swift in Sources */,
-				3AE49E4B256D747D00FBD65F /* NotesGroup.swift in Sources */,
-				3AF05DC1258A4F5100E300C3 /* Meaning.swift in Sources */,
+				3AE49E76256D777300FBD65F /* Studying.swift in Sources */,
+				3AE49E4B256D747D00FBD65F /* DiaryRecordsGroup.swift in Sources */,
+				3A4809162755145100522760 /* TranslationExample+Extensions.swift in Sources */,
+				3AF05DC1258A4F5100E300C3 /* LexemeTranslation.swift in Sources */,
 				3A5AE23625841C4B00C5DB17 /* DependencyContainer.swift in Sources */,
 				3ADABD232594E380003DF039 /* SearchViewModel.swift in Sources */,
 				3A39FE1A25C9890A00F7BAB9 /* StudyingView.swift in Sources */,
@@ -821,12 +881,16 @@
 				3ADB17AF258F9361004B0A80 /* DiaryView.swift in Sources */,
 				3AF05DD0258A535A00E300C3 /* Language.swift in Sources */,
 				CFA0401DE54121B927643EA1 /* AmplifyModels.swift in Sources */,
+				3A5820EE27539D0E00777489 /* AmplifyDictionaryDataProvider.swift in Sources */,
+				3A44274E2758EE8C008F675D /* DiaryRecordsGroup+Extensions.swift in Sources */,
 				1D295DD26283E42E99BFCFF5 /* ExampleGraphQLModel+Schema.swift in Sources */,
+				3A480914275513E100522760 /* LexemeTranslation+Extensions.swift in Sources */,
 				8251BC3DACEC020741FFD90B /* ExampleGraphQLModel.swift in Sources */,
 				C60F2CB995057C0303889ED7 /* LanguageGraphQLEnum.swift in Sources */,
 				A5E14E16A6D6908719297A76 /* LexemeGraphQLModel+Schema.swift in Sources */,
 				9B3BFF80A70F8FF3A501FF8F /* LexemeGraphQLModel.swift in Sources */,
 				0821780C0B33A93B65C332AD /* TagGraphQLModel+Schema.swift in Sources */,
+				3A44274C2758EDC3008F675D /* DiaryRecord+Extensions.swift in Sources */,
 				D4FA8E9E7ACB47C06F371598 /* TagGraphQLModel.swift in Sources */,
 				9FCC3A46A56EE540281552FB /* TranslationGraphQLModel+Schema.swift in Sources */,
 				B0FDD156308B54BA62355D09 /* TranslationGraphQLModel.swift in Sources */,

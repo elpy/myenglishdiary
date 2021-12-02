@@ -63,7 +63,7 @@ final class SearchViewModel: ObservableObject {
     }
 
     func fetchDiary() {
-        let readNotesUseCase = DependencyContainer.shared.makeReadNotesUseCase()
+        let readNotesUseCase = DependencyContainer.shared.makeReadDiaryRecordsUseCase()
         readNotesUseCase.execute { result in
             switch result {
             case .success(let notes): self.lexemeIdsInDiary = notes.map { $0.lexeme.id }

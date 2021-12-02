@@ -1,5 +1,5 @@
 //
-//  ReadGroupsUseCase.swift
+//  ReadRecordsGroupsUseCase.swift
 //  MyEnglishDiary
 //
 //  Created by Антон Скворцов on 20.01.2021.
@@ -7,14 +7,14 @@
 
 import Foundation
 
-final class ReadGroupsUseCase: UseCase {
+final class ReadRecordsGroupsUseCase: UseCase {
     private let diaryDataProvider: DiaryDataProvider
 
     init(_ diaryDataProvider: DiaryDataProvider) {
         self.diaryDataProvider = diaryDataProvider
     }
 
-    func execute(_ completion: @escaping (Result<[NotesGroup], Error>) -> Void) {
+    func execute(_ completion: @escaping (Result<[DiaryRecordsGroup], Error>) -> Void) {
         diaryDataProvider.getGroups { result in
             switch result {
             case .success(let groups): completion(.success(groups))

@@ -9,11 +9,11 @@ import SwiftUI
 
 struct MeaningsLexemeView: View {
     let lexeme: Lexeme
-    var meaningsWithExamples: [Meaning] {
-        lexeme.meanings.filter { !$0.examples.isEmpty }
+    var meaningsWithExamples: [LexemeTranslation] {
+        lexeme.translations.filter { !$0.examples.isEmpty }
     }
-    var meanings: [Meaning] {
-        lexeme.meanings.filter { $0.examples.isEmpty }
+    var meanings: [LexemeTranslation] {
+        lexeme.translations.filter { $0.examples.isEmpty }
     }
 
     var body: some View {
@@ -31,7 +31,7 @@ struct MeaningsLexemeView: View {
                         ForEach(meaning.examples, id: \.text) { example in
                             VStack(alignment: .leading) {
                                 Text(example.text).font(.caption)
-                                Text(example.meaning).font(.caption)
+                                Text(example.translation).font(.caption)
                             }.padding(Edge.Set.leading, 5)
                         }.padding(2)
                     }
@@ -51,17 +51,22 @@ struct MeaningsLexemeView: View {
 struct MeaningsLexemeView_Previews: PreviewProvider {
     static var previews: some View {
         MeaningsLexemeView(lexeme: Lexeme(
-            language: Language.ENG,
+            id: "LEXEME_1",
+            language: Language.english,
             text: "lounge",
             partOfSpeech: PartOfSpeech.VERB,
-            transcription: "laʊnʤ",
-            meanings: [
-                Meaning(
+            transcription: ["laʊnʤ"],
+            forms: [],
+            translations: [
+                LexemeTranslation(
+                    id: "TRANSLATION_1",
                     text: "бездельничать",
-                    lexemesWithSimilarMeaning: ["sit"],
-                    examples: []
+                    tip: nil,
+                    examples: [],
+                    tags: []
                 )
-            ]
+            ],
+            lessCommonTranslations: []
         ))
     }
 }

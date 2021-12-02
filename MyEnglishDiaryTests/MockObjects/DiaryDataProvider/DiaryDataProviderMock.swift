@@ -11,12 +11,12 @@ import XCTest
 final class DiaryDataProviderMock: DiaryDataProvider {
     // MARK: test helpers
 
-    var notesAdded: [Note] = []
-    var groupsAdded: [NotesGroup] = []
-    var notes: [Note] = [
-        Note(
+    var notesAdded: [DiaryRecord] = []
+    var groupsAdded: [DiaryRecordsGroup] = []
+    var notes: [DiaryRecord] = [
+        DiaryRecord(
             lexeme: Lexeme(
-                language: Language.ENG,
+                language: Language.English,
                 text: "any value",
                 partOfSpeech: PartOfSpeech.ADVERB,
                 transcription: "any value",
@@ -27,36 +27,36 @@ final class DiaryDataProviderMock: DiaryDataProvider {
             tags: []
         )
     ]
-    var groups: [NotesGroup] = [
-        NotesGroup(name: "Any value")
+    var groups: [DiaryRecordsGroup] = [
+        DiaryRecordsGroup(name: "Any value")
     ]
-    var notesMarked: [Note] = []
+    var notesMarked: [DiaryRecord] = []
 
     // MARK: mock methods
 
-    func addNewNote(_ note: Note, _ completion: @escaping (Result<Void, Error>) -> Void) {
+    func addNewRecord(_ note: DiaryRecord, _ completion: @escaping (Result<Void, Error>) -> Void) {
         notesAdded.append(note)
         completion(.success(()))
     }
 
-    func addNewGroup(_ group: NotesGroup, _ completion: @escaping (Result<Void, Error>) -> Void) {
+    func addNewGroup(_ group: DiaryRecordsGroup, _ completion: @escaping (Result<Void, Error>) -> Void) {
         groupsAdded.append(group)
         completion(.success(()))
     }
 
-    func getNotes(_ completion: @escaping (Result<[Note], Error>) -> Void) {
+    func getRecords(_ completion: @escaping (Result<[DiaryRecord], Error>) -> Void) {
         completion(.success(notes))
     }
 
-    func getGroups(_ completion: @escaping (Result<[NotesGroup], Error>) -> Void) {
+    func getGroups(_ completion: @escaping (Result<[DiaryRecordsGroup], Error>) -> Void) {
         completion(.success(groups))
     }
 
-    func markNote(_ note: Note, with tag: Tag, _ completion: @escaping (Result<Void, Error>) -> Void) {
-        var tags: [Tag] = note.tags
+    func markNote(_ note: DiaryRecord, with tag: TranslationTag, _ completion: @escaping (Result<Void, Error>) -> Void) {
+        var tags: [TranslationTag] = note.studyingLog
         tags.append(tag)
 
-        let newNote = Note(
+        let newNote = DiaryRecord(
             lexeme: note.lexeme,
             group: note.group,
             date: note.date,

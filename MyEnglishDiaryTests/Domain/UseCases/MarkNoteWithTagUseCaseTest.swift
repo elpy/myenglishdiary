@@ -16,9 +16,9 @@ final class MarkNoteWithTagUseCaseTest: XCTestCase {
     }
 
     func testMakeNote() {
-        let note = Note(
+        let note = DiaryRecord(
             lexeme: Lexeme(
-                language: Language.ENG,
+                language: Language.English,
                 text: "any value",
                 partOfSpeech: PartOfSpeech.ADVERB,
                 transcription: "any value",
@@ -28,7 +28,7 @@ final class MarkNoteWithTagUseCaseTest: XCTestCase {
             date: Date(),
             tags: []
         )
-        let tag = Tag(type: TagType.lastSuccessfulAttemptToStudy, date: Date())
+        let tag = TranslationTag(type: TagType.lastSuccessfulAttemptToStudy, date: Date())
 
         let useCase = MarkNoteWithTagUseCase(note: note, tag: tag, diaryDataProvider!)
         let expectation = XCTestExpectation(description: "Method executes successfully once")
@@ -37,7 +37,7 @@ final class MarkNoteWithTagUseCaseTest: XCTestCase {
                 XCTAssertEqual(1, self.diaryDataProvider?.notesMarked.count)
                 XCTAssertEqual(note.lexeme, self.diaryDataProvider?.notesMarked.first?.lexeme)
                 XCTAssertEqual(note.lexeme.partOfSpeech, self.diaryDataProvider?.notesMarked.first?.lexeme.partOfSpeech)
-                XCTAssertEqual([tag], self.diaryDataProvider?.notesMarked.first?.tags)
+                XCTAssertEqual([tag], self.diaryDataProvider?.notesMarked.first?.studyingLog)
                 expectation.fulfill()
             } else {
                 XCTFail("Success result expected")

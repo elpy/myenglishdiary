@@ -7,12 +7,13 @@
 
 import Foundation
 
+// TODO: rename and ...
 final class MarkNoteWithTagUseCase: UseCase {
-    private let note: Note
-    private let tag: Tag
+    private let note: DiaryRecord
+    private let tag: TranslationTag
     private let diaryDataProvider: DiaryDataProvider
 
-    init(note: Note, tag: Tag, _ diaryDataProvider: DiaryDataProvider) {
+    init(note: DiaryRecord, tag: TranslationTag, _ diaryDataProvider: DiaryDataProvider) {
         self.note = note
         self.tag = tag
         self.diaryDataProvider = diaryDataProvider

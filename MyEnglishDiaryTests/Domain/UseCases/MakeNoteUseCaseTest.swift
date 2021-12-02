@@ -17,13 +17,13 @@ final class MakeNoteUseCaseTest: XCTestCase {
 
     func testMakeNote() {
         let lexeme = Lexeme(
-            language: Language.RUS,
+            language: Language.Russian,
             text: "some lexeme",
             partOfSpeech: PartOfSpeech.INTERJECTION,
             transcription: "a",
             meanings: []
         )
-        let useCase = MakeNoteUseCase(from: lexeme, in: nil, diaryDataProvider!)
+        let useCase = MakeDiaryRecordUseCase(from: lexeme, in: nil, diaryDataProvider!)
         let expectation = XCTestExpectation(description: "Method executes successfully once")
         useCase.execute {
             if case .success = $0 {

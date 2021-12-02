@@ -24,7 +24,7 @@ struct TitleLexemeView: View {
                 }
 
                 if let transcription = lexeme.transcription, !transcription.isEmpty {
-                    Text("[\(transcription)]").foregroundColor(.gray)
+                    Text("[\(transcription.first!)]").foregroundColor(.gray)
                 }
             }
 
@@ -43,17 +43,22 @@ struct TitleLexemeView: View {
 struct TitleLexemeView_Previews: PreviewProvider {
     static var previews: some View {
         TitleLexemeView(lexeme: Lexeme(
-            language: Language.ENG,
+            id: "LEXEME_1",
+            language: Language.english,
             text: "lounge",
             partOfSpeech: PartOfSpeech.VERB,
-            transcription: "laʊnʤ",
-            meanings: [
-                Meaning(
+            transcription: ["laʊnʤ"],
+            forms: [],
+            translations: [
+                LexemeTranslation(
+                    id: "TRANSLATION_1",
                     text: "бездельничать",
-                    lexemesWithSimilarMeaning: ["sit"],
-                    examples: []
+                    tip: nil,
+                    examples: [],
+                    tags: []
                 )
-            ]
+            ],
+            lessCommonTranslations: []
         ))
     }
 }

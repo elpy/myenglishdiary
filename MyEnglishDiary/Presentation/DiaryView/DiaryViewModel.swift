@@ -8,14 +8,14 @@
 import Combine
 
 final class DiaryViewModel: ObservableObject {
-    @Published var notes: [Note] = []
-    @Published var groups: [NotesGroup] = []
+    @Published var notes: [DiaryRecord] = []
+    @Published var groups: [DiaryRecordsGroup] = []
     @Published var displayReadingFailure: WtfFailure?
 
     private var cancellableSet: Set<AnyCancellable> = []
 
     func fetchDiary() {
-        let readNotesUseCase = DependencyContainer.shared.makeReadNotesUseCase()
+        let readNotesUseCase = DependencyContainer.shared.makeReadDiaryRecordsUseCase()
         readNotesUseCase.execute { result in
             switch result {
             case .success(let notes): self.notes = notes
@@ -23,7 +23,7 @@ final class DiaryViewModel: ObservableObject {
             }
         }
 
-        let readGroupsUseCase = DependencyContainer.shared.makeReadGroupsUseCase()
+        let readGroupsUseCase = DependencyContainer.shared.makeReadRecordsGroupsUseCase()
         readGroupsUseCase.execute { result in
             switch result {
             case .success(let groups): self.groups = groups

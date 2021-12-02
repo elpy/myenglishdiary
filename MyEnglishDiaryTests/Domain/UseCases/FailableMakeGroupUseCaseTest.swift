@@ -16,7 +16,7 @@ final class FailableMakeGroupUseCaseTest: XCTestCase {
     }
 
     func testMakeNote() {
-        let useCase = MakeGroupUseCase(named: "test value", diaryDataProvider!)
+        let useCase = MakeRecordsGroupUseCase(named: "test value", diaryDataProvider!)
         let expectation = XCTestExpectation(description: "Method fails once")
         useCase.execute {
             if case .failure(let error) = $0, case DataProviderError.networkError = error {

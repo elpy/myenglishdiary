@@ -25,10 +25,10 @@ struct SearchResultCard: View {
                         }
 
                         if let transcription = lexeme.transcription, !transcription.isEmpty {
-                            Text("[\(transcription)]").foregroundColor(.gray)
+                            Text("[\(transcription.first!)]").foregroundColor(.gray)
                         }
 
-                        Text(lexeme.meanings.asString()).italic()
+                        Text(lexeme.translations.asString()).italic()
                     })
 
                     Spacer()
@@ -41,17 +41,22 @@ struct SearchResultCard: View {
 struct SearchResultCard_Previews: PreviewProvider {
     static var previews: some View {
         let result = Lexeme(
-            language: Language.ENG,
+            id: "LEXEME_1",
+            language: Language.english,
             text: "lounge",
             partOfSpeech: PartOfSpeech.VERB,
-            transcription: "laʊnʤ",
-            meanings: [
-                Meaning(
+            transcription: ["laʊnʤ"],
+            forms: [],
+            translations: [
+                LexemeTranslation(
+                    id: "TRANSLATION_1",
                     text: "бездельничать",
-                    lexemesWithSimilarMeaning: ["sit"],
-                    examples: []
+                    tip: nil,
+                    examples: [],
+                    tags: []
                 )
-            ]
+            ],
+            lessCommonTranslations: []
         )
 
         SearchResultCard(lexeme: result, inDiary: true).padding()

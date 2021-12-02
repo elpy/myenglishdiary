@@ -11,12 +11,12 @@ import XCTest
 final class DictionaryDataProviderMock: DictionaryDataProvider {
     let searchResult = [
         Lexeme(
-            language: Language.ENG,
+            language: Language.English,
             text: "Mock",
             partOfSpeech: PartOfSpeech.NOUN,
             transcription: "Mock",
             meanings: [
-                Meaning(
+                LexemeTranslation(
                     text: "Mock",
                     lexemesWithSimilarMeaning: [],
                     examples: []

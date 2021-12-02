@@ -17,7 +17,7 @@ final class MakeGroupUseCaseTest: XCTestCase {
 
     func testMakeNote() {
         let groupName = "test value"
-        let useCase = MakeGroupUseCase(named: "test value", diaryDataProvider!)
+        let useCase = MakeRecordsGroupUseCase(named: "test value", diaryDataProvider!)
         let expectation = XCTestExpectation(description: "Method executes successfully once")
         useCase.execute {
             if case .success = $0 {
