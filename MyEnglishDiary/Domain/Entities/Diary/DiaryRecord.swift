@@ -12,5 +12,5 @@ struct DiaryRecord {
     let lexeme: Lexeme
     let group: DiaryRecordsGroup?
     let date: Date
-    let studyingLog: [Excercise]
+    let studyingLog: [Exercise]
 }

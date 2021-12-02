@@ -1,5 +1,5 @@
 //
-//  Excercise.swift
+//  Exercise.swift
 //  MyEnglishDiary
 //
 //  Created by Антон Скворцов on 19.12.2020.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Excercise {
+struct Exercise {
     let id: String
     let diaryRecord: DiaryRecord
-    let type: ExcerciseResult
+    let type: ExerciseResult
     let date: Date
 }
