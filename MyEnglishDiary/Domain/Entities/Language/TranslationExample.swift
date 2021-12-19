@@ -10,5 +10,5 @@ import Foundation
 struct TranslationExample {
     let id: String
     let text: String
-    let translation: String
+    let meaning: String
 }

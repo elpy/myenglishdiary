@@ -4,33 +4,33 @@ import Foundation
 
 public struct ExampleGraphQLModel: Model {
   public let id: String
-  public var translationId: String
+  public var translation: TranslationGraphQLModel
   public var text: String
-  public var translation: String
+  public var meaning: String
   public var createdAt: Temporal.DateTime?
   public var updatedAt: Temporal.DateTime?
   
   public init(id: String = UUID().uuidString,
-      translationId: String,
+      translation: TranslationGraphQLModel,
       text: String,
-      translation: String) {
+      meaning: String) {
     self.init(id: id,
-      translationId: translationId,
-      text: text,
       translation: translation,
+      text: text,
+      meaning: meaning,
       createdAt: nil,
       updatedAt: nil)
   }
   internal init(id: String = UUID().uuidString,
-      translationId: String,
+      translation: TranslationGraphQLModel,
       text: String,
-      translation: String,
+      meaning: String,
       createdAt: Temporal.DateTime? = nil,
       updatedAt: Temporal.DateTime? = nil) {
       self.id = id
-      self.translationId = translationId
-      self.text = text
       self.translation = translation
+      self.text = text
+      self.meaning = meaning
       self.createdAt = createdAt
       self.updatedAt = updatedAt
   }

@@ -15,8 +15,6 @@
 		3A36775325B493F7005DDE09 /* Theming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A36775225B493F7005DDE09 /* Theming.swift */; };
 		3A39FE1A25C9890A00F7BAB9 /* StudyingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A39FE1925C9890A00F7BAB9 /* StudyingView.swift */; };
 		3A3BDE0D25B841D00098A4FC /* DevelopmentDiaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3BDE0C25B841D00098A4FC /* DevelopmentDiaryDataProvider.swift */; };
-		3A3C5FEA274FEEBC00A3AF9B /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 3A3C5FE9274FEEBC00A3AF9B /* AWSDataStorePlugin */; };
-		3A3C5FEC274FEEBC00A3AF9B /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 3A3C5FEB274FEEBC00A3AF9B /* Amplify */; };
 		3A3C5FEE274FF1F400A3AF9B /* schema.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 3A3C5FED274FF1F400A3AF9B /* schema.graphql */; };
 		3A434EAC25C0264600438724 /* LexemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A434EAB25C0264600438724 /* LexemeViewModel.swift */; };
 		3A44274C2758EDC3008F675D /* DiaryRecord+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44274B2758EDC3008F675D /* DiaryRecord+Extensions.swift */; };
@@ -61,6 +59,10 @@
 		3AD88D66258E0C83002D4B07 /* DiaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88D65258E0C83002D4B07 /* DiaryDataProvider.swift */; };
 		3AD88D77258E1325002D4B07 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88D76258E1325002D4B07 /* Exercise.swift */; };
 		3AD88D82258E1671002D4B07 /* MarkNoteWithTagUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88D81258E1671002D4B07 /* MarkNoteWithTagUseCase.swift */; };
+		3AD8C2D2276E02780076EEF9 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD8C2D1276E02780076EEF9 /* Sentry */; };
+		3AD8C2D5276E030B0076EEF9 /* AWSAPIPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD8C2D4276E030B0076EEF9 /* AWSAPIPlugin */; };
+		3AD8C2D7276E030B0076EEF9 /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD8C2D6276E030B0076EEF9 /* AWSDataStorePlugin */; };
+		3AD8C2D9276E030B0076EEF9 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD8C2D8276E030B0076EEF9 /* Amplify */; };
 		3ADABD232594E380003DF039 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADABD222594E380003DF039 /* SearchViewModel.swift */; };
 		3ADABD2A2594E658003DF039 /* SearchInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADABD292594E658003DF039 /* SearchInput.swift */; };
 		3ADB17AA258F9353004B0A80 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB17A9258F9353004B0A80 /* SearchView.swift */; };
@@ -79,7 +81,6 @@
 		3AF05DC6258A4FD800E300C3 /* TranslationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DC5258A4FD800E300C3 /* TranslationExample.swift */; };
 		3AF05DCB258A532F00E300C3 /* PartOfSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DCA258A532F00E300C3 /* PartOfSpeech.swift */; };
 		3AF05DD0258A535A00E300C3 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DCF258A535A00E300C3 /* Language.swift */; };
-		3AF4199A25B5873300AB7741 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 3AF4199925B5873300AB7741 /* Sentry */; };
 		3AF419A025B5887B00AB7741 /* LoggingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF4199F25B5887B00AB7741 /* LoggingService.swift */; };
 		3AF465FD25BF17DA0030DBAE /* NotePlacementSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF465FC25BF17DA0030DBAE /* NotePlacementSelection.swift */; };
 		7C9E6E35A8C53C763B324E49 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D75A88BDA9D176FF2E999DE /* awsconfiguration.json */; };
@@ -210,9 +211,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A3C5FEC274FEEBC00A3AF9B /* Amplify in Frameworks */,
-				3AF4199A25B5873300AB7741 /* Sentry in Frameworks */,
-				3A3C5FEA274FEEBC00A3AF9B /* AWSDataStorePlugin in Frameworks */,
+				3AD8C2D7276E030B0076EEF9 /* AWSDataStorePlugin in Frameworks */,
+				3AD8C2D9276E030B0076EEF9 /* Amplify in Frameworks */,
+				3AD8C2D5276E030B0076EEF9 /* AWSAPIPlugin in Frameworks */,
+				3AD8C2D2276E02780076EEF9 /* Sentry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,9 +686,10 @@
 			);
 			name = MyEnglishDiary;
 			packageProductDependencies = (
-				3AF4199925B5873300AB7741 /* Sentry */,
-				3A3C5FE9274FEEBC00A3AF9B /* AWSDataStorePlugin */,
-				3A3C5FEB274FEEBC00A3AF9B /* Amplify */,
+				3AD8C2D1276E02780076EEF9 /* Sentry */,
+				3AD8C2D4276E030B0076EEF9 /* AWSAPIPlugin */,
+				3AD8C2D6276E030B0076EEF9 /* AWSDataStorePlugin */,
+				3AD8C2D8276E030B0076EEF9 /* Amplify */,
 			);
 			productName = MyEnglishDiary;
 			productReference = 3A94086F255D9F390090DB55 /* MyEnglishDiary.app */;
@@ -760,8 +763,8 @@
 			);
 			mainGroup = 3A940866255D9F390090DB55;
 			packageReferences = (
-				3AF4199825B5873300AB7741 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
-				3A3C5FE8274FEEBC00A3AF9B /* XCRemoteSwiftPackageReference "amplify-ios" */,
+				3AD8C2D0276E02780076EEF9 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+				3AD8C2D3276E030B0076EEF9 /* XCRemoteSwiftPackageReference "amplify-ios" */,
 			);
 			productRefGroup = 3A940870255D9F390090DB55 /* Products */;
 			projectDirPath = "";
@@ -1749,7 +1752,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3A3C5FE8274FEEBC00A3AF9B /* XCRemoteSwiftPackageReference "amplify-ios" */ = {
+		3AD8C2D0276E02780076EEF9 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 7.7.0;
+			};
+		};
+		3AD8C2D3276E030B0076EEF9 /* XCRemoteSwiftPackageReference "amplify-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/aws-amplify/amplify-ios";
 			requirement = {
@@ -1757,31 +1768,28 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		3AF4199825B5873300AB7741 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.4.4;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3A3C5FE9274FEEBC00A3AF9B /* AWSDataStorePlugin */ = {
+		3AD8C2D1276E02780076EEF9 /* Sentry */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3A3C5FE8274FEEBC00A3AF9B /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			package = 3AD8C2D0276E02780076EEF9 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
+		};
+		3AD8C2D4276E030B0076EEF9 /* AWSAPIPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AD8C2D3276E030B0076EEF9 /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			productName = AWSAPIPlugin;
+		};
+		3AD8C2D6276E030B0076EEF9 /* AWSDataStorePlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3AD8C2D3276E030B0076EEF9 /* XCRemoteSwiftPackageReference "amplify-ios" */;
 			productName = AWSDataStorePlugin;
 		};
-		3A3C5FEB274FEEBC00A3AF9B /* Amplify */ = {
+		3AD8C2D8276E030B0076EEF9 /* Amplify */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3A3C5FE8274FEEBC00A3AF9B /* XCRemoteSwiftPackageReference "amplify-ios" */;
+			package = 3AD8C2D3276E030B0076EEF9 /* XCRemoteSwiftPackageReference "amplify-ios" */;
 			productName = Amplify;
-		};
-		3AF4199925B5873300AB7741 /* Sentry */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3AF4199825B5873300AB7741 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
-			productName = Sentry;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

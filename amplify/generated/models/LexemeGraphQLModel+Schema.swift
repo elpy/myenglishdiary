@@ -23,6 +23,10 @@ extension LexemeGraphQLModel {
   public static let schema = defineSchema { model in
     let lexemeGraphQLModel = LexemeGraphQLModel.keys
     
+    model.authRules = [
+      rule(allow: .public, operations: [.create, .update, .delete, .read])
+    ]
+    
     model.pluralName = "LexemeGraphQLModels"
     
     model.fields(
@@ -32,8 +36,8 @@ extension LexemeGraphQLModel {
       .field(lexemeGraphQLModel.transcription, is: .optional, ofType: .embeddedCollection(of: String.self)),
       .field(lexemeGraphQLModel.partOfSpeech, is: .optional, ofType: .string),
       .field(lexemeGraphQLModel.forms, is: .optional, ofType: .embeddedCollection(of: String.self)),
-      .hasMany(lexemeGraphQLModel.translations, is: .optional, ofType: TranslationGraphQLModel.self, associatedWith: TranslationGraphQLModel.keys.lexemeId),
-      .hasMany(lexemeGraphQLModel.lessCommonTranslations, is: .optional, ofType: TranslationGraphQLModel.self, associatedWith: TranslationGraphQLModel.keys.lexemeId),
+      .hasMany(lexemeGraphQLModel.translations, is: .optional, ofType: TranslationGraphQLModel.self, associatedWith: TranslationGraphQLModel.keys.lexeme),
+      .hasMany(lexemeGraphQLModel.lessCommonTranslations, is: .optional, ofType: TranslationGraphQLModel.self, associatedWith: TranslationGraphQLModel.keys.lexeme),
       .field(lexemeGraphQLModel.createdAt, is: .optional, isReadOnly: true, ofType: .dateTime),
       .field(lexemeGraphQLModel.updatedAt, is: .optional, isReadOnly: true, ofType: .dateTime)
     )

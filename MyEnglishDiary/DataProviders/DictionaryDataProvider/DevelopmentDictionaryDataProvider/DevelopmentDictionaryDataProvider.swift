@@ -30,12 +30,12 @@ let developmentLexemesSet = [
                     TranslationExample(
                         id: "EXAMPLE_1",
                         text: "comfortable lounge",
-                        translation: "уютный холл"
+                        meaning: "уютный холл"
                     ),
                     TranslationExample(
                         id: "EXAMPLE_2",
                         text: "cocktail lounge",
-                        translation: "коктейльный зал"
+                        meaning: "коктейльный зал"
                     )
                 ],
                 tags: []

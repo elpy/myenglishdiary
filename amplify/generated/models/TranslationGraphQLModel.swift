@@ -4,7 +4,7 @@ import Foundation
 
 public struct TranslationGraphQLModel: Model {
   public let id: String
-  public var lexemeId: String
+  public var lexeme: LexemeGraphQLModel
   public var text: String
   public var tip: String?
   public var examples: List<ExampleGraphQLModel>?
@@ -13,13 +13,13 @@ public struct TranslationGraphQLModel: Model {
   public var updatedAt: Temporal.DateTime?
   
   public init(id: String = UUID().uuidString,
-      lexemeId: String,
+      lexeme: LexemeGraphQLModel,
       text: String,
       tip: String? = nil,
       examples: List<ExampleGraphQLModel> = [],
       tags: List<TagGraphQLModel> = []) {
     self.init(id: id,
-      lexemeId: lexemeId,
+      lexeme: lexeme,
       text: text,
       tip: tip,
       examples: examples,
@@ -28,7 +28,7 @@ public struct TranslationGraphQLModel: Model {
       updatedAt: nil)
   }
   internal init(id: String = UUID().uuidString,
-      lexemeId: String,
+      lexeme: LexemeGraphQLModel,
       text: String,
       tip: String? = nil,
       examples: List<ExampleGraphQLModel> = [],
@@ -36,7 +36,7 @@ public struct TranslationGraphQLModel: Model {
       createdAt: Temporal.DateTime? = nil,
       updatedAt: Temporal.DateTime? = nil) {
       self.id = id
-      self.lexemeId = lexemeId
+      self.lexeme = lexeme
       self.text = text
       self.tip = tip
       self.examples = examples

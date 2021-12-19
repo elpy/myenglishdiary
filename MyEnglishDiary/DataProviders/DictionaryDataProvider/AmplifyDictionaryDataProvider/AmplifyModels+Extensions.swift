@@ -37,7 +37,7 @@ extension TranslationGraphQLModel {
 
 extension ExampleGraphQLModel {
     func mapModel() -> TranslationExample {
-        return TranslationExample(id: id, text: text, translation: translation)
+        return TranslationExample(id: id, text: text, meaning: meaning)
     }
 }
 

@@ -3,35 +3,38 @@ enum LanguageGraphQLEnum {
   RU
 }
 
-type LexemeGraphQLModel @model {
+type LexemeGraphQLModel @model @auth(rules: [{allow: public}]) {
   id: ID!
   language: LanguageGraphQLEnum!
   text: String!
   transcription: [String!]
   partOfSpeech: String
   forms: [String!]
-  translations: [TranslationGraphQLModel!]! @connection(keyName: "byLexeme", fields: ["id"])
-  lessCommonTranslations: [TranslationGraphQLModel!] @connection(keyName: "byLexeme", fields: ["id"])
+  translations: [TranslationGraphQLModel!]! @hasMany(indexName: "byLexeme", fields: ["id"])
+  lessCommonTranslations: [TranslationGraphQLModel!] @hasMany(indexName: "byLexeme", fields: ["id"])
 }
 
-type TranslationGraphQLModel @model @key(name: "byLexeme", fields: ["lexemeId", "text"]) {
+type TranslationGraphQLModel @model @auth(rules: [{allow: public}]) {
   id: ID!
-  lexemeId: ID!
+  lexemeId: ID! @index(name: "byLexeme", sortKeyFields: ["text"])
+  lexeme: LexemeGraphQLModel! @belongsTo(fields: ["lexemeId"])
   text: String!
   tip: String
-  examples: [ExampleGraphQLModel!] @connection(keyName: "byTranslation", fields: ["id"])
-  tags: [TagGraphQLModel!] @connection(keyName: "byTranslation", fields: ["id"])
+  examples: [ExampleGraphQLModel!] @hasMany(indexName: "byTranslation", fields: ["id"])
+  tags: [TagGraphQLModel!] @hasMany(indexName: "byTranslation", fields: ["id"])
 }
 
-type ExampleGraphQLModel @model @key(name: "byTranslation", fields: ["translationId", "text"]) {
+type ExampleGraphQLModel @model @auth(rules: [{allow: public}]) {
   id: ID!
-  translationId: ID!
+  translationId: ID! @index(name: "byTranslation", sortKeyFields: ["text"])
+  translation: TranslationGraphQLModel! @belongsTo(fields: ["translationId"])
   text: String!
-  translation: String!
+  meaning: String!
 }
 
-type TagGraphQLModel @model @key(name: "byTranslation", fields: ["translationId", "text"]) {
+type TagGraphQLModel @model @auth(rules: [{allow: public}]) {
   id: ID!
-  translationId: ID!
+  translationId: ID! @index(name: "byTranslation", sortKeyFields: ["text"])
+  translation: TranslationGraphQLModel! @belongsTo(fields: ["translationId"])
   text: String!
 }

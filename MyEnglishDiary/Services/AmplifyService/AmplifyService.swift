@@ -7,8 +7,10 @@
 
 import Amplify
 import AWSDataStorePlugin
+import AWSAPIPlugin
 
 final class AmplifyService {
+    var hubEventSubscriber: Any?
     init() {
         initializeAmplifyService()
     }
@@ -18,7 +20,16 @@ final class AmplifyService {
 
         do {
             try Amplify.add(plugin: dataStorePlugin)
+            try Amplify.add(plugin: AWSAPIPlugin())
             try Amplify.configure()
+
+//            Amplify.Logging.logLevel = .verbose
+//            hubEventSubscriber = Amplify.Hub.publisher(for: .dataStore).sink { event in
+//                if event.eventName == HubPayload.EventName.DataStore.ready {
+//                    print("**EVENT**: \(event.eventName)")
+//                    print("**EVENT DATA**: \(event.data)")
+//                }
+//            }
         } catch {
             fatalError("Amplify configuration failed with \(error.localizedDescription)")
         }

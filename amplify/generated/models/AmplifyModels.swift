@@ -5,7 +5,7 @@ import Foundation
 // Contains the set of classes that conforms to the `Model` protocol. 
 
 final public class AmplifyModels: AmplifyModelRegistration {
-  public let version: String = "27a457c64e41fdd15ead7496e70aca37"
+  public let version: String = "d1e534247cb431e5bb2513af937a0541"
   
   public func registerModels(registry: ModelRegistry.Type) {
     ModelRegistry.register(modelType: LexemeGraphQLModel.self)

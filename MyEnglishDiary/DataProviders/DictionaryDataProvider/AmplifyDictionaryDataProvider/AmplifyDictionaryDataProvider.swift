@@ -10,11 +10,8 @@ import Amplify
 
 final class AmplifyDictionaryDataProvider: DictionaryDataProvider {
     func search(for text: String, _ completion: @escaping (Result<DictionarySearchResult, Error>) -> Void) {
-        Amplify.DataStore.query(
-            LexemeGraphQLModel.self,
-            where: nil,
-            sort: nil,
-            paginate: nil) { result in
+        let lexemeModelKeys = LexemeGraphQLModel.keys
+        Amplify.DataStore.query(LexemeGraphQLModel.self, where: lexemeModelKeys.text.beginsWith(text)) { result in
                 switch result {
                 case .success(let models): completion(.success(models.mapModels()))
                 case .failure(let dataStoreError): print(dataStoreError)

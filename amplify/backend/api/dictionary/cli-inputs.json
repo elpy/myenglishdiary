@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "serviceName": "AppSync",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 365,
+      "keyDescription": "DictionaryAPIKey"
+    },
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    },
+    "apiName": "dictionary",
+    "gqlSchemaPath": "/Users/anton/Code/MobileApps/Swift/MyEnglishDiary/amplify/backend/api/dictionary/schema.graphql"
+  }
+}
