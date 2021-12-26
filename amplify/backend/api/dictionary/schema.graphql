@@ -10,7 +10,7 @@ type LexemeGraphQLModel @model @auth(rules: [{allow: public}]) {
   transcription: [String!]
   partOfSpeech: String
   forms: [String!]
-  translations: [TranslationGraphQLModel!]! @hasMany(indexName: "byLexeme", fields: ["id"])
+  translations: [TranslationGraphQLModel!] @hasMany(indexName: "byLexeme", fields: ["id"])
   lessCommonTranslations: [TranslationGraphQLModel!] @hasMany(indexName: "byLexeme", fields: ["id"])
 }
 
