@@ -12,14 +12,12 @@ class DependencyContainer {
 
     // MARK: data providers
 
-//    private var dictionaryDataProvider: DictionaryDataProvider = DevelopmentDictionaryDataProvider()
-    private var dictionaryDataProvider: DictionaryDataProvider = AmplifyDictionaryDataProvider()
+    private var dictionaryDataProvider: DictionaryDataProvider = DevelopmentDictionaryDataProvider()
     private var diaryDataProvider: DiaryDataProvider = DevelopmentDiaryDataProvider()
 
     // MARK: services
 
     private let loggingService: LoggingService = LoggingService()
-    private let amplifyService: AmplifyService = AmplifyService()
 
     init() {
 

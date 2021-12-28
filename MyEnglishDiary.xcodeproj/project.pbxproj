@@ -7,15 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0821780C0B33A93B65C332AD /* TagGraphQLModel+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B865084F6E516B0D1A519F /* TagGraphQLModel+Schema.swift */; };
-		1D295DD26283E42E99BFCFF5 /* ExampleGraphQLModel+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DC5EA4D78C54B23F183E7B /* ExampleGraphQLModel+Schema.swift */; };
 		3A2C599B25A6C9700068FC28 /* LexemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C599A25A6C9700068FC28 /* LexemeView.swift */; };
 		3A2C59A925A6D90E0068FC28 /* TitleLexemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C59A825A6D90E0068FC28 /* TitleLexemeView.swift */; };
 		3A2C59AE25A6DA400068FC28 /* MeaningsLexemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C59AD25A6DA3F0068FC28 /* MeaningsLexemeView.swift */; };
 		3A36775325B493F7005DDE09 /* Theming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A36775225B493F7005DDE09 /* Theming.swift */; };
 		3A39FE1A25C9890A00F7BAB9 /* StudyingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A39FE1925C9890A00F7BAB9 /* StudyingView.swift */; };
 		3A3BDE0D25B841D00098A4FC /* DevelopmentDiaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3BDE0C25B841D00098A4FC /* DevelopmentDiaryDataProvider.swift */; };
-		3A3C5FEE274FF1F400A3AF9B /* schema.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 3A3C5FED274FF1F400A3AF9B /* schema.graphql */; };
 		3A434EAC25C0264600438724 /* LexemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A434EAB25C0264600438724 /* LexemeViewModel.swift */; };
 		3A44274C2758EDC3008F675D /* DiaryRecord+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44274B2758EDC3008F675D /* DiaryRecord+Extensions.swift */; };
 		3A44274E2758EE8C008F675D /* DiaryRecordsGroup+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A44274D2758EE8C008F675D /* DiaryRecordsGroup+Extensions.swift */; };
@@ -28,7 +25,6 @@
 		3A469D0F258F79C5003561AE /* MakeGroupUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D0E258F79C5003561AE /* MakeGroupUseCaseTest.swift */; };
 		3A469D14258F7A40003561AE /* FailableMakeGroupUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D13258F7A40003561AE /* FailableMakeGroupUseCaseTest.swift */; };
 		3A469D1C258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A469D1B258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift */; };
-		3A48091027550BD000522760 /* AmplifyModels+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A48090F27550BD000522760 /* AmplifyModels+Extensions.swift */; };
 		3A4809122755130900522760 /* Lexeme+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4809112755130900522760 /* Lexeme+Extensions.swift */; };
 		3A480914275513E100522760 /* LexemeTranslation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A480913275513E100522760 /* LexemeTranslation+Extensions.swift */; };
 		3A4809162755145100522760 /* TranslationExample+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4809152755145100522760 /* TranslationExample+Extensions.swift */; };
@@ -36,8 +32,6 @@
 		3A48091A2755149900522760 /* TranslationTag+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4809192755149900522760 /* TranslationTag+Extensions.swift */; };
 		3A4D83B925B451B40091FDDC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D83B825B451B40091FDDC /* Configuration.swift */; };
 		3A548691258BAC9E000EF8B0 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A548690258BAC9E000EF8B0 /* UseCase.swift */; };
-		3A5820EE27539D0E00777489 /* AmplifyDictionaryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5820ED27539D0E00777489 /* AmplifyDictionaryDataProvider.swift */; };
-		3A5820F12753A20100777489 /* AmplifyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5820F02753A20100777489 /* AmplifyService.swift */; };
 		3A5AE23625841C4B00C5DB17 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5AE23525841C4B00C5DB17 /* DependencyContainer.swift */; };
 		3A646808259642F500D83F03 /* SearchResultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A646807259642F500D83F03 /* SearchResultCard.swift */; };
 		3A940873255D9F390090DB55 /* MyEnglishDiaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A940872255D9F390090DB55 /* MyEnglishDiaryApp.swift */; };
@@ -60,9 +54,6 @@
 		3AD88D77258E1325002D4B07 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88D76258E1325002D4B07 /* Exercise.swift */; };
 		3AD88D82258E1671002D4B07 /* MarkNoteWithTagUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD88D81258E1671002D4B07 /* MarkNoteWithTagUseCase.swift */; };
 		3AD8C2D2276E02780076EEF9 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD8C2D1276E02780076EEF9 /* Sentry */; };
-		3AD8C2D5276E030B0076EEF9 /* AWSAPIPlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD8C2D4276E030B0076EEF9 /* AWSAPIPlugin */; };
-		3AD8C2D7276E030B0076EEF9 /* AWSDataStorePlugin in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD8C2D6276E030B0076EEF9 /* AWSDataStorePlugin */; };
-		3AD8C2D9276E030B0076EEF9 /* Amplify in Frameworks */ = {isa = PBXBuildFile; productRef = 3AD8C2D8276E030B0076EEF9 /* Amplify */; };
 		3ADABD232594E380003DF039 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADABD222594E380003DF039 /* SearchViewModel.swift */; };
 		3ADABD2A2594E658003DF039 /* SearchInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADABD292594E658003DF039 /* SearchInput.swift */; };
 		3ADB17AA258F9353004B0A80 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB17A9258F9353004B0A80 /* SearchView.swift */; };
@@ -83,16 +74,6 @@
 		3AF05DD0258A535A00E300C3 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF05DCF258A535A00E300C3 /* Language.swift */; };
 		3AF419A025B5887B00AB7741 /* LoggingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF4199F25B5887B00AB7741 /* LoggingService.swift */; };
 		3AF465FD25BF17DA0030DBAE /* NotePlacementSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF465FC25BF17DA0030DBAE /* NotePlacementSelection.swift */; };
-		7C9E6E35A8C53C763B324E49 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D75A88BDA9D176FF2E999DE /* awsconfiguration.json */; };
-		8251BC3DACEC020741FFD90B /* ExampleGraphQLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93401DDA60D55A8CE80CFB86 /* ExampleGraphQLModel.swift */; };
-		9A7A2D143D155CABC84BB597 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F2C9293FF431898331B62D2 /* amplifyconfiguration.json */; };
-		9B3BFF80A70F8FF3A501FF8F /* LexemeGraphQLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FD35ED48CB4C8C09CEA99 /* LexemeGraphQLModel.swift */; };
-		9FCC3A46A56EE540281552FB /* TranslationGraphQLModel+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36BF6F231C67B26564B35AB /* TranslationGraphQLModel+Schema.swift */; };
-		A5E14E16A6D6908719297A76 /* LexemeGraphQLModel+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6850B850F23FE60A6583BA58 /* LexemeGraphQLModel+Schema.swift */; };
-		B0FDD156308B54BA62355D09 /* TranslationGraphQLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BE3171BB66C2550AB68911 /* TranslationGraphQLModel.swift */; };
-		C60F2CB995057C0303889ED7 /* LanguageGraphQLEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C536B1147B0F0108E65ACBC /* LanguageGraphQLEnum.swift */; };
-		CFA0401DE54121B927643EA1 /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8872B7679A1CE96B5E2244 /* AmplifyModels.swift */; };
-		D4FA8E9E7ACB47C06F371598 /* TagGraphQLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85B3D6ED353B29B04360189 /* TagGraphQLModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,16 +94,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17DC5EA4D78C54B23F183E7B /* ExampleGraphQLModel+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "ExampleGraphQLModel+Schema.swift"; path = "amplify/generated/models/ExampleGraphQLModel+Schema.swift"; sourceTree = "<group>"; };
-		18B865084F6E516B0D1A519F /* TagGraphQLModel+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "TagGraphQLModel+Schema.swift"; path = "amplify/generated/models/TagGraphQLModel+Schema.swift"; sourceTree = "<group>"; };
-		1F2C9293FF431898331B62D2 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		3A2C599A25A6C9700068FC28 /* LexemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexemeView.swift; sourceTree = "<group>"; };
 		3A2C59A825A6D90E0068FC28 /* TitleLexemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLexemeView.swift; sourceTree = "<group>"; };
 		3A2C59AD25A6DA3F0068FC28 /* MeaningsLexemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningsLexemeView.swift; sourceTree = "<group>"; };
 		3A36775225B493F7005DDE09 /* Theming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theming.swift; sourceTree = "<group>"; };
 		3A39FE1925C9890A00F7BAB9 /* StudyingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyingView.swift; sourceTree = "<group>"; };
 		3A3BDE0C25B841D00098A4FC /* DevelopmentDiaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentDiaryDataProvider.swift; sourceTree = "<group>"; };
-		3A3C5FED274FF1F400A3AF9B /* schema.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = schema.graphql; path = amplify/backend/api/dictionary/schema.graphql; sourceTree = "<group>"; };
 		3A434EAB25C0264600438724 /* LexemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexemeViewModel.swift; sourceTree = "<group>"; };
 		3A44274B2758EDC3008F675D /* DiaryRecord+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryRecord+Extensions.swift"; sourceTree = "<group>"; };
 		3A44274D2758EE8C008F675D /* DiaryRecordsGroup+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryRecordsGroup+Extensions.swift"; sourceTree = "<group>"; };
@@ -135,7 +112,6 @@
 		3A469D0E258F79C5003561AE /* MakeGroupUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeGroupUseCaseTest.swift; sourceTree = "<group>"; };
 		3A469D13258F7A40003561AE /* FailableMakeGroupUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailableMakeGroupUseCaseTest.swift; sourceTree = "<group>"; };
 		3A469D1B258F7AA7003561AE /* MarkNoteWithTagUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkNoteWithTagUseCaseTest.swift; sourceTree = "<group>"; };
-		3A48090F27550BD000522760 /* AmplifyModels+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AmplifyModels+Extensions.swift"; sourceTree = "<group>"; };
 		3A4809112755130900522760 /* Lexeme+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lexeme+Extensions.swift"; sourceTree = "<group>"; };
 		3A480913275513E100522760 /* LexemeTranslation+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LexemeTranslation+Extensions.swift"; sourceTree = "<group>"; };
 		3A4809152755145100522760 /* TranslationExample+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslationExample+Extensions.swift"; sourceTree = "<group>"; };
@@ -143,8 +119,6 @@
 		3A4809192755149900522760 /* TranslationTag+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslationTag+Extensions.swift"; sourceTree = "<group>"; };
 		3A4D83B825B451B40091FDDC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		3A548690258BAC9E000EF8B0 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
-		3A5820ED27539D0E00777489 /* AmplifyDictionaryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplifyDictionaryDataProvider.swift; sourceTree = "<group>"; };
-		3A5820F02753A20100777489 /* AmplifyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmplifyService.swift; sourceTree = "<group>"; };
 		3A5AE23525841C4B00C5DB17 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		3A646807259642F500D83F03 /* SearchResultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCard.swift; sourceTree = "<group>"; };
 		3A94086F255D9F390090DB55 /* MyEnglishDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyEnglishDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,15 +169,6 @@
 		3AFB17C625B1A4FC00C72BF7 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		3AFB17C725B1A53200C72BF7 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		3AFB17C825B1A54300C72BF7 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
-		3D8872B7679A1CE96B5E2244 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
-		4D75A88BDA9D176FF2E999DE /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
-		6850B850F23FE60A6583BA58 /* LexemeGraphQLModel+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "LexemeGraphQLModel+Schema.swift"; path = "amplify/generated/models/LexemeGraphQLModel+Schema.swift"; sourceTree = "<group>"; };
-		7C536B1147B0F0108E65ACBC /* LanguageGraphQLEnum.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = LanguageGraphQLEnum.swift; path = amplify/generated/models/LanguageGraphQLEnum.swift; sourceTree = "<group>"; };
-		8E9FD35ED48CB4C8C09CEA99 /* LexemeGraphQLModel.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = LexemeGraphQLModel.swift; path = amplify/generated/models/LexemeGraphQLModel.swift; sourceTree = "<group>"; };
-		93401DDA60D55A8CE80CFB86 /* ExampleGraphQLModel.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = ExampleGraphQLModel.swift; path = amplify/generated/models/ExampleGraphQLModel.swift; sourceTree = "<group>"; };
-		A9BE3171BB66C2550AB68911 /* TranslationGraphQLModel.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = TranslationGraphQLModel.swift; path = amplify/generated/models/TranslationGraphQLModel.swift; sourceTree = "<group>"; };
-		D36BF6F231C67B26564B35AB /* TranslationGraphQLModel+Schema.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = "TranslationGraphQLModel+Schema.swift"; path = "amplify/generated/models/TranslationGraphQLModel+Schema.swift"; sourceTree = "<group>"; };
-		F85B3D6ED353B29B04360189 /* TagGraphQLModel.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = TagGraphQLModel.swift; path = amplify/generated/models/TagGraphQLModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,9 +176,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AD8C2D7276E030B0076EEF9 /* AWSDataStorePlugin in Frameworks */,
-				3AD8C2D9276E030B0076EEF9 /* Amplify in Frameworks */,
-				3AD8C2D5276E030B0076EEF9 /* AWSAPIPlugin in Frameworks */,
 				3AD8C2D2276E02780076EEF9 /* Sentry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,16 +197,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		174A495BE8A302920A247AEB /* AmplifyConfig */ = {
-			isa = PBXGroup;
-			children = (
-				3A3C5FED274FF1F400A3AF9B /* schema.graphql */,
-				4D75A88BDA9D176FF2E999DE /* awsconfiguration.json */,
-				1F2C9293FF431898331B62D2 /* amplifyconfiguration.json */,
-			);
-			name = AmplifyConfig;
-			sourceTree = "<group>";
-		};
 		3A2C599925A6C9460068FC28 /* LexemeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,7 +286,6 @@
 		3A55DE6C25606C3300B3A4CA /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				3A5820EF2753A1F000777489 /* AmplifyService */,
 				3AF4199E25B5886700AB7741 /* LoggingService */,
 			);
 			path = Services;
@@ -355,23 +306,6 @@
 			path = Diary;
 			sourceTree = "<group>";
 		};
-		3A5820EC27539CC600777489 /* AmplifyDictionaryDataProvider */ = {
-			isa = PBXGroup;
-			children = (
-				3A5820ED27539D0E00777489 /* AmplifyDictionaryDataProvider.swift */,
-				3A48090F27550BD000522760 /* AmplifyModels+Extensions.swift */,
-			);
-			path = AmplifyDictionaryDataProvider;
-			sourceTree = "<group>";
-		};
-		3A5820EF2753A1F000777489 /* AmplifyService */ = {
-			isa = PBXGroup;
-			children = (
-				3A5820F02753A20100777489 /* AmplifyService.swift */,
-			);
-			path = AmplifyService;
-			sourceTree = "<group>";
-		};
 		3A5AE21A258415FC00C5DB17 /* DataProviders */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,7 +318,6 @@
 		3A5AE21B2584168100C5DB17 /* DictionaryDataProvider */ = {
 			isa = PBXGroup;
 			children = (
-				3A5820EC27539CC600777489 /* AmplifyDictionaryDataProvider */,
 				3AED4207258E78F90068C294 /* DevelopmentDictionaryDataProvider */,
 			);
 			path = DictionaryDataProvider;
@@ -415,8 +348,6 @@
 				3A940883255D9F390090DB55 /* MyEnglishDiaryTests */,
 				3A94088E255D9F3A0090DB55 /* MyEnglishDiaryUITests */,
 				3A940870255D9F390090DB55 /* Products */,
-				174A495BE8A302920A247AEB /* AmplifyConfig */,
-				8AEDB9EDDAA7D9D23CD896F0 /* AmplifyModels */,
 			);
 			sourceTree = "<group>";
 		};
@@ -651,23 +582,6 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
-		8AEDB9EDDAA7D9D23CD896F0 /* AmplifyModels */ = {
-			isa = PBXGroup;
-			children = (
-				3D8872B7679A1CE96B5E2244 /* AmplifyModels.swift */,
-				17DC5EA4D78C54B23F183E7B /* ExampleGraphQLModel+Schema.swift */,
-				93401DDA60D55A8CE80CFB86 /* ExampleGraphQLModel.swift */,
-				7C536B1147B0F0108E65ACBC /* LanguageGraphQLEnum.swift */,
-				6850B850F23FE60A6583BA58 /* LexemeGraphQLModel+Schema.swift */,
-				8E9FD35ED48CB4C8C09CEA99 /* LexemeGraphQLModel.swift */,
-				18B865084F6E516B0D1A519F /* TagGraphQLModel+Schema.swift */,
-				F85B3D6ED353B29B04360189 /* TagGraphQLModel.swift */,
-				D36BF6F231C67B26564B35AB /* TranslationGraphQLModel+Schema.swift */,
-				A9BE3171BB66C2550AB68911 /* TranslationGraphQLModel.swift */,
-			);
-			name = AmplifyModels;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -687,9 +601,6 @@
 			name = MyEnglishDiary;
 			packageProductDependencies = (
 				3AD8C2D1276E02780076EEF9 /* Sentry */,
-				3AD8C2D4276E030B0076EEF9 /* AWSAPIPlugin */,
-				3AD8C2D6276E030B0076EEF9 /* AWSDataStorePlugin */,
-				3AD8C2D8276E030B0076EEF9 /* Amplify */,
 			);
 			productName = MyEnglishDiary;
 			productReference = 3A94086F255D9F390090DB55 /* MyEnglishDiary.app */;
@@ -764,7 +675,6 @@
 			mainGroup = 3A940866255D9F390090DB55;
 			packageReferences = (
 				3AD8C2D0276E02780076EEF9 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
-				3AD8C2D3276E030B0076EEF9 /* XCRemoteSwiftPackageReference "amplify-ios" */,
 			);
 			productRefGroup = 3A940870255D9F390090DB55 /* Products */;
 			projectDirPath = "";
@@ -784,9 +694,6 @@
 			files = (
 				3A94087A255D9F390090DB55 /* Preview Assets.xcassets in Resources */,
 				3A940877255D9F390090DB55 /* Assets.xcassets in Resources */,
-				7C9E6E35A8C53C763B324E49 /* awsconfiguration.json in Resources */,
-				3A3C5FEE274FF1F400A3AF9B /* schema.graphql in Resources */,
-				9A7A2D143D155CABC84BB597 /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,7 +755,6 @@
 				3A48091A2755149900522760 /* TranslationTag+Extensions.swift in Sources */,
 				3AE49E6B256D76DC00FBD65F /* MakeRecordsGroupUseCase.swift in Sources */,
 				3A4809182755148B00522760 /* TranslationTag.swift in Sources */,
-				3A5820F12753A20100777489 /* AmplifyService.swift in Sources */,
 				3AC0B32425B8527E00523745 /* ReadDiaryRecordsUseCase.swift in Sources */,
 				3AD88D66258E0C83002D4B07 /* DiaryDataProvider.swift in Sources */,
 				3A646808259642F500D83F03 /* SearchResultCard.swift in Sources */,
@@ -862,7 +768,6 @@
 				3AE49E54256D759A00FBD65F /* DictionarySearchResult.swift in Sources */,
 				3AD88D82258E1671002D4B07 /* MarkNoteWithTagUseCase.swift in Sources */,
 				3ADB17AA258F9353004B0A80 /* SearchView.swift in Sources */,
-				3A48091027550BD000522760 /* AmplifyModels+Extensions.swift in Sources */,
 				3A36775325B493F7005DDE09 /* Theming.swift in Sources */,
 				3AC0B32E25B85EC500523745 /* NoteCard.swift in Sources */,
 				3AE49E66256D765D00FBD65F /* MakeDiaryRecordUseCase.swift in Sources */,
@@ -883,20 +788,9 @@
 				3AD88C9A258DED7B002D4B07 /* DictionaryDataProvider.swift in Sources */,
 				3ADB17AF258F9361004B0A80 /* DiaryView.swift in Sources */,
 				3AF05DD0258A535A00E300C3 /* Language.swift in Sources */,
-				CFA0401DE54121B927643EA1 /* AmplifyModels.swift in Sources */,
-				3A5820EE27539D0E00777489 /* AmplifyDictionaryDataProvider.swift in Sources */,
 				3A44274E2758EE8C008F675D /* DiaryRecordsGroup+Extensions.swift in Sources */,
-				1D295DD26283E42E99BFCFF5 /* ExampleGraphQLModel+Schema.swift in Sources */,
 				3A480914275513E100522760 /* LexemeTranslation+Extensions.swift in Sources */,
-				8251BC3DACEC020741FFD90B /* ExampleGraphQLModel.swift in Sources */,
-				C60F2CB995057C0303889ED7 /* LanguageGraphQLEnum.swift in Sources */,
-				A5E14E16A6D6908719297A76 /* LexemeGraphQLModel+Schema.swift in Sources */,
-				9B3BFF80A70F8FF3A501FF8F /* LexemeGraphQLModel.swift in Sources */,
-				0821780C0B33A93B65C332AD /* TagGraphQLModel+Schema.swift in Sources */,
 				3A44274C2758EDC3008F675D /* DiaryRecord+Extensions.swift in Sources */,
-				D4FA8E9E7ACB47C06F371598 /* TagGraphQLModel.swift in Sources */,
-				9FCC3A46A56EE540281552FB /* TranslationGraphQLModel+Schema.swift in Sources */,
-				B0FDD156308B54BA62355D09 /* TranslationGraphQLModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1760,14 +1654,6 @@
 				minimumVersion = 7.7.0;
 			};
 		};
-		3AD8C2D3276E030B0076EEF9 /* XCRemoteSwiftPackageReference "amplify-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/aws-amplify/amplify-ios";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1775,21 +1661,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3AD8C2D0276E02780076EEF9 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
 			productName = Sentry;
-		};
-		3AD8C2D4276E030B0076EEF9 /* AWSAPIPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3AD8C2D3276E030B0076EEF9 /* XCRemoteSwiftPackageReference "amplify-ios" */;
-			productName = AWSAPIPlugin;
-		};
-		3AD8C2D6276E030B0076EEF9 /* AWSDataStorePlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3AD8C2D3276E030B0076EEF9 /* XCRemoteSwiftPackageReference "amplify-ios" */;
-			productName = AWSDataStorePlugin;
-		};
-		3AD8C2D8276E030B0076EEF9 /* Amplify */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3AD8C2D3276E030B0076EEF9 /* XCRemoteSwiftPackageReference "amplify-ios" */;
-			productName = Amplify;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
